@@ -1,6 +1,9 @@
 
 #include <xc.h>
 #include <plib/xlcd.h>
+#include <math.h>
+#include <plib/timers.h>
+#include <plib/capture.h>
 #define _XTAL_FREQ 20000000     // Usar cristal de 20MHz 
 
 
@@ -69,9 +72,11 @@
 
 #define  TRIG PORTCbits.RC0
 
-char txt[4];          // Usado para convers?o de dados em string
-char Tempo_H, Tempo_L, distancia_cm;
-unsigned int periodo;  // Periodo do pulso de ECHO do sensor de ultrassom
+char txt[5];          // Usado para convers?o de dados em string
+unsigned long long int Tempo_H, Tempo_L, distancia_cm;
+unsigned  long long int periodo;  // Periodo do pulso de ECHO do sensor de ultrassom
+unsigned long quant=0; // contador de overflows no registrador pir1
+unsigned char eventoInicio=0;
 
 // Prototipos das funcoes
 void inic_XLCD(void); 		// Inicializa o LCD
@@ -81,77 +86,113 @@ void DelayFor18TCY(void);
 void DelayPORXLCD(void);
 void DelayXLCD(void);
 
+void interrupt captura(void);
+void trata_interrup_CCP1(void);
 void distance(void);
-void trigger();
+void trigger(void);
 
-void interrupt capture()
+
+
+void interrupt captura(void){
+   if (PIR1 & 0x01) //se ocorreu overflow no registrador pir1
+   {
+     quant++;
+     PIR1 = PIR1 & 0xFE;  //reseta o bit e trata do overflow
+   }
+   else //if( PIR1 & 0x04) // interrupt flag, occoreu uma interrupçao 
+   {
+      trata_interrup_CCP1();
+      //PIR1 = PIR1 & 0x00;
+   }
+   
+}
+
+void trata_interrup_CCP1(void)
 {
-     if(PIR1bits.CCP1IF && (CCP1CONbits.CCP1M0 == 0x05))  // Captura por CCP1 e borda de subida
-     {
-       PIR1bits.CCP1IF  = 0x00;     // Limpa a flag para nova captura
-       PIE1bits.CCP1IE  = 0x00;     // Desabilita a interrupcao por perifericos (CCP1)
-       PIE1bits.CCP1IE  = 0x04;     // Configura a borda de captura para descida
-       PIE1bits.CCP1IE  = 0x01;     // Habilita a interrupcao por perifericos (CCP1)
-       TMR1H       = 0x00;     // Zeram os registradores do TIMER1 para contagem de tempo
-       TMR1L       = 0x00;
-       T1CONbits.TMR1ON  = 0x01;     // Habilita contagem de tempo
-     }
-     else if(PIR1bits.CCP1IF && PIR1bits.CCP1IF == 0x04) // captura por CCP1 e borda de descida
-     {
-       PIR1bits.CCP1IF  = 0x00;     // Limpa a flag para nova captura
-       T1CONbits.TMR1ON  = 0x00;     // Desabilita a contagem de tempo
-       PIE1bits.CCP1IE = 0x00;     // Desabilita a interrupcao por perifericos
-       CCP1CON     = 0x05;     // Configura a borda de captura para subida
-       PIE1bits.CCP1IE  = 0x01;     // Habilita a interrupcao por perifericos
-       Tempo_H     = CCPR1H;   // Carrega valores de tempo capturado (us)
-       Tempo_L     = CCPR1L;
-     }
-}     // end interrupt
+   unsigned int valorTimer1;
+   float tempofloat;
+   unsigned char tempo8bits;
+   if(eventoInicio==0) // se é inicio de evento
+   {
+      quant = 0; // zera-se a variavel para saber quantos overflows ocorreram ate o fim  do evento
+      eventoInicio = 1; // flag para inicio de evento
+      WriteTimer1(0); // coloca timer em 0
+      OpenCapture1(CAPTURE_INT_ON & CAP_EVERY_FALL_EDGE); // Interrupção e borda de descida do ccp 1
+   }
+   else // se é fim de evento
+   {
+      valorTimer1=ReadCapture1(); // le o valor da captura do timer 1
+      periodo= (65536 * quant) + valorTimer1; //multiplica quantidade de overflows por 2^18 que é o que se passou para se obter 1 overflow
+      //periodo=(float)periodo*(0.0000002); // (4/_XTAL_FREQ) para retornar em segundos
+      periodo = periodo / 5;
+      eventoInicio=0;
+      OpenCapture1(CAPTURE_INT_ON & CAP_EVERY_RISE_EDGE); // Interrupção e borda de subida
+   }
+}
+
 
 
 void main(void) {
    TRISB = 0; // TUDO COMO SAIDA
    TRISC = 0x04; // TUDO COMO SAIDA EXCETO PINO RC2 POIS É A ENTRADA DO CCP
- 
+   inic_XLCD();
    
-     CMCON  = 0x07;               // desabilita os comparadores
-     PORTC  = 0x00;               // inicia todo PORTC nivel low
-     
-     INTCON = 0b11000000;         // Liga interruptores GIE e PEIE
-     PIE1bits.TMR1IE = 0x00;           // desabilita interrupcao de TMR1
-     PIE1bits.CCP1IE = 0x01;           // habilita interrupcoes por captura
-     CCP1CON    = 0x05;           // COnfigura modulo CCP1 para borda de subida
-     
-     T1CONbits.T1CKPS1 = 1;             // Prescaller TMR1 1:4
-     T1CONbits.T1CKPS0 = 0;             //
-    T1CONbits.TMR1CS  = 0;             // clock selecionado OSC/4
-     T1CONbits.TMR1ON  = 0;             // desabilita contagem do timer1  
    
-    inic_XLCD();
+   CMCON = 0x07; // DESABILITA COMPARADORES
    
-  
+   //configuracao do timer 1
+   OpenTimer1(TIMER_INT_ON & T1_16BIT_RW & T1_SOURCE_INT & T1_OSC1EN_OFF & T1_SYNC_EXT_OFF & T1_PS_1_1);
+   // HABILITA INTERRUPCAO, REGISTRADOR DE 16 BITS, FONTE DE CLOCK INTERNA, DESATIVA OSCILADOR, MODO ASSINCRONO, PRESCALER 1
+   SetTmrCCPSrc (T1_SOURCE_CCP); // TIMER 1 COMO FONTE PARA MODULO CCP
+   // configuracao do CCP1
+    OpenCapture1(CAPTURE_INT_ON & CAP_EVERY_RISE_EDGE);
+   // HABILITA INTERRUPCAO  E DEFINE BORDA DE SUBIDA
    
-while(1){
-   distance(); 
+   IPR1bits.TMR1IP = 1; //prioridade do timer 1 como alta
+   IPR1bits.CCP1IP = 1; // Prioridade do CCP1 como alta;
+   RCONbits.IPEN = 0; // uma só prioridade
+   
+   INTCON = 0b11000000;
+   //INTCONbits.GIEH = 1; // habilita todas as fontes de interrupção
+   //INTCONbits.GIEL = 1; // habilita todas as fontes de interrupção de perifericos
+   WriteTimer1(0);
+   //ZERA O TIMER 1
+   while(1){
+      distance();
+   }
 }
+
+void traduz(int numero){   
+      char a,b,c,d,e;
+      a = (numero % 10) + 48;
+      numero=numero /10 ;
+      b = (numero % 10) + 48;
+      numero=numero /10 ;
+      c = (numero % 10) + 48;
+      numero=numero /10 ;
+      d = (numero % 10) + 48 ;
+      e = numero /10  + 48;
+      txt[0]=e;
+      txt[1]=d;
+      txt[2]=c;
+      txt[3]=b;
+      txt[4]=a;
+   
 }
 void distance(void)
 {
-  trigger();                  // dispara o "gatilho" do sensor
-  Mydelay(100);              // aguarda 100 milisegundos
-  
-  periodo = (Tempo_H<<8)  + Tempo_L;  // periodo relativo ao ECHO em us
-  
+   trigger();                  // dispara o "gatilho" do sensor
+   //periodo = ceil (periodo);
   distancia_cm = periodo/58;          // converte a distancia informada para cm
-   
+  //distancia_cm = ceil(distancia_cm);
+   //distancia_cm = 1000;
    SetDDRamAddr(0x00);
-    while(BusyXLCD());
-   if(periodo == 0){
-    periodo = periodo + 48;   
-    putcXLCD(periodo);
+   traduz(distancia_cm);
+   while(BusyXLCD());    
+   putsXLCD(txt);
       
       
-   }
+  // }
   
   
   /*if((distancia_cm < 3)||(distancia_cm > 300)){
@@ -182,6 +223,7 @@ void trigger()
    TRIG = 1;
    __delay_us(10);
    TRIG = 0;
+   __delay_ms(60);
 }
 
 
