@@ -37,11 +37,11 @@
 /* CTRL_PORT defines the port where the control lines are connected.
  * These are just samples, change to match your application.
  */
- #define RW_PIN   LATDbits.LATD6   		/* PORT for RW */
- #define TRIS_RW  TRISDbits.TRISD6    	/* TRIS for RW */
+ #define RW_PIN   LATDbits.LATD5   		/* PORT for RW */
+ #define TRIS_RW  TRISDbits.TRISD5    	/* TRIS for RW */
 
- #define RS_PIN   LATDbits.LATD5   		/* PORT for RS */
- #define TRIS_RS  TRISDbits.TRISD5    	/* TRIS for RS */
+ #define RS_PIN   LATDbits.LATD6   		/* PORT for RS */
+ #define TRIS_RS  TRISDbits.TRISD6    	/* TRIS for RS */
 
  #define E_PIN    LATDbits.LATD4  		/* PORT for D  */
  #define TRIS_E   TRISDbits.TRISD4    	/* TRIS for E  */
