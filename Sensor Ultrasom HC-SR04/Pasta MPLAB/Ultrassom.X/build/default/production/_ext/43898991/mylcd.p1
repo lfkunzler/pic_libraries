@@ -4182,12 +4182,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 5: {
 [e :U _BusyXLCD ]
 [f ]
-[; ;mylcd.c: 6: LATDbits.LATD6 = 1;
+[; ;mylcd.c: 6: LATDbits.LATD5 = 1;
 "6
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[; ;mylcd.c: 7: LATDbits.LATD5 = 0;
+[e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
+[; ;mylcd.c: 7: LATDbits.LATD6 = 0;
 "7
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 [; ;mylcd.c: 8: DelayFor18TCY();
 "8
 [e ( _DelayFor18TCY ..  ]
@@ -4218,9 +4218,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 35: LATDbits.LATD4 = 0;
 "35
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;mylcd.c: 36: LATDbits.LATD6 = 0;
+[; ;mylcd.c: 36: LATDbits.LATD5 = 0;
 "36
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 [; ;mylcd.c: 37: return 1;
 "37
 [e ) -> -> 1 `i `uc ]
@@ -4250,9 +4250,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 45: LATDbits.LATD4 = 0;
 "45
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;mylcd.c: 46: LATDbits.LATD6 = 0;
+[; ;mylcd.c: 46: LATDbits.LATD5 = 0;
 "46
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 [; ;mylcd.c: 47: return 0;
 "47
 [e ) -> -> 0 `i `uc ]
@@ -4327,21 +4327,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 76: TRISD &= 0xF0;
 "76
 [e =& _TRISD -> -> 240 `i `uc ]
-[; ;mylcd.c: 79: TRISDbits.TRISD6 = 0;
+[; ;mylcd.c: 79: TRISDbits.TRISD5 = 0;
 "79
-[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
-[; ;mylcd.c: 80: TRISDbits.TRISD5 = 0;
-"80
 [e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
+[; ;mylcd.c: 80: TRISDbits.TRISD6 = 0;
+"80
+[e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
 [; ;mylcd.c: 81: TRISDbits.TRISD4 = 0;
 "81
 [e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-[; ;mylcd.c: 82: LATDbits.LATD6 = 0;
+[; ;mylcd.c: 82: LATDbits.LATD5 = 0;
 "82
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;mylcd.c: 83: LATDbits.LATD5 = 0;
-"83
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[; ;mylcd.c: 83: LATDbits.LATD6 = 0;
+"83
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 [; ;mylcd.c: 84: LATDbits.LATD4 = 0;
 "84
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
@@ -4493,12 +4493,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "137
 [v _data `uc ~T0 @X0 1 a ]
 [; ;mylcd.c: 137: char data;
-[; ;mylcd.c: 149: LATDbits.LATD6 = 1;
+[; ;mylcd.c: 149: LATDbits.LATD5 = 1;
 "149
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[; ;mylcd.c: 150: LATDbits.LATD5 = 0;
+[e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
+[; ;mylcd.c: 150: LATDbits.LATD6 = 0;
 "150
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 [; ;mylcd.c: 151: DelayFor18TCY();
 "151
 [e ( _DelayFor18TCY ..  ]
@@ -4529,9 +4529,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 168: LATDbits.LATD4 = 0;
 "168
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;mylcd.c: 169: LATDbits.LATD6 = 0;
+[; ;mylcd.c: 169: LATDbits.LATD5 = 0;
 "169
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 [; ;mylcd.c: 171: return (data&0x7f);
 "171
 [e ) -> & -> _data `i -> 127 `i `uc ]
@@ -4551,12 +4551,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "175
 [v _data `uc ~T0 @X0 1 a ]
 [; ;mylcd.c: 175: char data;
-[; ;mylcd.c: 188: LATDbits.LATD6 = 1;
+[; ;mylcd.c: 188: LATDbits.LATD5 = 1;
 "188
-[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[; ;mylcd.c: 189: LATDbits.LATD5 = 1;
-"189
 [e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
+[; ;mylcd.c: 189: LATDbits.LATD6 = 1;
+"189
+[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
 [; ;mylcd.c: 190: DelayFor18TCY();
 "190
 [e ( _DelayFor18TCY ..  ]
@@ -4587,12 +4587,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 207: LATDbits.LATD4 = 0;
 "207
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;mylcd.c: 208: LATDbits.LATD5 = 0;
+[; ;mylcd.c: 208: LATDbits.LATD6 = 0;
 "208
-[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;mylcd.c: 209: LATDbits.LATD6 = 0;
-"209
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[; ;mylcd.c: 209: LATDbits.LATD5 = 0;
+"209
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 [; ;mylcd.c: 211: return(data);
 "211
 [e ) _data ]
@@ -4621,12 +4621,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 234: PORTD |= (((CGaddr |0b01000000)>>4) & 0x0f);
 "234
 [e =| _PORTD -> & >> | -> _CGaddr `i -> 64 `i -> 4 `i -> 15 `i `uc ]
-[; ;mylcd.c: 236: LATDbits.LATD6 = 0;
+[; ;mylcd.c: 236: LATDbits.LATD5 = 0;
 "236
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;mylcd.c: 237: LATDbits.LATD5 = 0;
-"237
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[; ;mylcd.c: 237: LATDbits.LATD6 = 0;
+"237
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 [; ;mylcd.c: 238: DelayFor18TCY();
 "238
 [e ( _DelayFor18TCY ..  ]
@@ -4687,12 +4687,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 282: PORTD |= (((DDaddr | 0b10000000)>>4) & 0x0f);
 "282
 [e =| _PORTD -> & >> | -> _DDaddr `i -> 128 `i -> 4 `i -> 15 `i `uc ]
-[; ;mylcd.c: 284: LATDbits.LATD6 = 0;
+[; ;mylcd.c: 284: LATDbits.LATD5 = 0;
 "284
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;mylcd.c: 285: LATDbits.LATD5 = 0;
-"285
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[; ;mylcd.c: 285: LATDbits.LATD6 = 0;
+"285
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 [; ;mylcd.c: 286: DelayFor18TCY();
 "286
 [e ( _DelayFor18TCY ..  ]
@@ -4753,12 +4753,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 330: PORTD |= (cmd>>4)&0x0f;
 "330
 [e =| _PORTD -> & >> -> _cmd `i -> 4 `i -> 15 `i `uc ]
-[; ;mylcd.c: 332: LATDbits.LATD6 = 0;
+[; ;mylcd.c: 332: LATDbits.LATD5 = 0;
 "332
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;mylcd.c: 333: LATDbits.LATD5 = 0;
-"333
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
+[; ;mylcd.c: 333: LATDbits.LATD6 = 0;
+"333
+[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 [; ;mylcd.c: 334: DelayFor18TCY();
 "334
 [e ( _DelayFor18TCY ..  ]
@@ -4819,12 +4819,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mylcd.c: 378: PORTD |= ((data>>4)&0x0f);
 "378
 [e =| _PORTD -> & >> -> _data `i -> 4 `i -> 15 `i `uc ]
-[; ;mylcd.c: 380: LATDbits.LATD5 = 1;
+[; ;mylcd.c: 380: LATDbits.LATD6 = 1;
 "380
-[e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
-[; ;mylcd.c: 381: LATDbits.LATD6 = 0;
+[e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
+[; ;mylcd.c: 381: LATDbits.LATD5 = 0;
 "381
-[e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
+[e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 [; ;mylcd.c: 382: DelayFor18TCY();
 "382
 [e ( _DelayFor18TCY ..  ]

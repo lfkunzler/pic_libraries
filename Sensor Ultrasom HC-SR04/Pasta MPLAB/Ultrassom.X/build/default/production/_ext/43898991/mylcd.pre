@@ -5700,8 +5700,8 @@ extern void DelayXLCD(void);
 # 4 "../../mylcd.c"
 unsigned char BusyXLCD(void)
 {
-LATDbits.LATD6 = 1;
-LATDbits.LATD5 = 0;
+LATDbits.LATD5 = 1;
+LATDbits.LATD6 = 0;
 DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
@@ -5715,7 +5715,7 @@ DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
 LATDbits.LATD4 = 0;
-LATDbits.LATD6 = 0;
+LATDbits.LATD5 = 0;
 return 1;
 }
 else
@@ -5725,7 +5725,7 @@ DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
 LATDbits.LATD4 = 0;
-LATDbits.LATD6 = 0;
+LATDbits.LATD5 = 0;
 return 0;
 }
 
@@ -5750,11 +5750,11 @@ PORTD &= 0xf0;
 TRISD &= 0xF0;
 
 
-TRISDbits.TRISD6 = 0;
 TRISDbits.TRISD5 = 0;
+TRISDbits.TRISD6 = 0;
 TRISDbits.TRISD4 = 0;
-LATDbits.LATD6 = 0;
 LATDbits.LATD5 = 0;
+LATDbits.LATD6 = 0;
 LATDbits.LATD4 = 0;
 
 
@@ -5811,8 +5811,8 @@ unsigned char ReadAddrXLCD(void)
 char data;
 
 # 149
-LATDbits.LATD6 = 1;
-LATDbits.LATD5 = 0;
+LATDbits.LATD5 = 1;
+LATDbits.LATD6 = 0;
 DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
@@ -5831,7 +5831,7 @@ DelayFor18TCY();
 data |= PORTD&0x0f;
 
 LATDbits.LATD4 = 0;
-LATDbits.LATD6 = 0;
+LATDbits.LATD5 = 0;
 
 return (data&0x7f);
 }
@@ -5840,8 +5840,8 @@ char ReadDataXLCD(void)
 char data;
 
 # 188
-LATDbits.LATD6 = 1;
 LATDbits.LATD5 = 1;
+LATDbits.LATD6 = 1;
 DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
@@ -5860,8 +5860,8 @@ DelayFor18TCY();
 data |= PORTD&0x0f;
 
 LATDbits.LATD4 = 0;
-LATDbits.LATD5 = 0;
 LATDbits.LATD6 = 0;
+LATDbits.LATD5 = 0;
 
 return(data);
 }
@@ -5873,8 +5873,8 @@ TRISD &= 0xf0;
 PORTD &= 0xf0;
 PORTD |= (((CGaddr |0b01000000)>>4) & 0x0f);
 
-LATDbits.LATD6 = 0;
 LATDbits.LATD5 = 0;
+LATDbits.LATD6 = 0;
 DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
@@ -5906,8 +5906,8 @@ TRISD &= 0xf0;
 PORTD &= 0xf0;
 PORTD |= (((DDaddr | 0b10000000)>>4) & 0x0f);
 
-LATDbits.LATD6 = 0;
 LATDbits.LATD5 = 0;
+LATDbits.LATD6 = 0;
 DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
@@ -5939,8 +5939,8 @@ TRISD &= 0xf0;
 PORTD &= 0xf0;
 PORTD |= (cmd>>4)&0x0f;
 
-LATDbits.LATD6 = 0;
 LATDbits.LATD5 = 0;
+LATDbits.LATD6 = 0;
 DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();
@@ -5972,8 +5972,8 @@ TRISD &= 0xf0;
 PORTD &= 0xf0;
 PORTD |= ((data>>4)&0x0f);
 
-LATDbits.LATD5 = 1;
-LATDbits.LATD6 = 0;
+LATDbits.LATD6 = 1;
+LATDbits.LATD5 = 0;
 DelayFor18TCY();
 LATDbits.LATD4 = 1;
 DelayFor18TCY();

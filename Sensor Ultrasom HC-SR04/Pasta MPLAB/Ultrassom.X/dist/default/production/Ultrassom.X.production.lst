@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.45 build -152302408 
-                                                                                               Fri May 25 00:40:39 2018
+                                                                                               Fri Jun 08 09:20:07 2018
 
 Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160504
      1                           	processor	18F4550
@@ -592,20 +592,20 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    577  000B08  0EF0               	movlw	240
    578  000B0A  1695               	andwf	3989,f,c	;volatile
    579                           
-   580                           ;mylcd.c: 79: TRISDbits.TRISD6 = 0;
-   581  000B0C  9C95               	bcf	3989,6,c	;volatile
+   580                           ;mylcd.c: 79: TRISDbits.TRISD5 = 0;
+   581  000B0C  9A95               	bcf	3989,5,c	;volatile
    582                           
-   583                           ;mylcd.c: 80: TRISDbits.TRISD5 = 0;
-   584  000B0E  9A95               	bcf	3989,5,c	;volatile
+   583                           ;mylcd.c: 80: TRISDbits.TRISD6 = 0;
+   584  000B0E  9C95               	bcf	3989,6,c	;volatile
    585                           
    586                           ;mylcd.c: 81: TRISDbits.TRISD4 = 0;
    587  000B10  9895               	bcf	3989,4,c	;volatile
    588                           
-   589                           ;mylcd.c: 82: LATDbits.LATD6 = 0;
-   590  000B12  9C8C               	bcf	3980,6,c	;volatile
+   589                           ;mylcd.c: 82: LATDbits.LATD5 = 0;
+   590  000B12  9A8C               	bcf	3980,5,c	;volatile
    591                           
-   592                           ;mylcd.c: 83: LATDbits.LATD5 = 0;
-   593  000B14  9A8C               	bcf	3980,5,c	;volatile
+   592                           ;mylcd.c: 83: LATDbits.LATD6 = 0;
+   593  000B14  9C8C               	bcf	3980,6,c	;volatile
    594                           
    595                           ;mylcd.c: 84: LATDbits.LATD4 = 0;
    596  000B16  988C               	bcf	3980,4,c	;volatile
@@ -752,11 +752,11 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
    737  000E9A  0B0F               	andlw	15
    738  000E9C  1283               	iorwf	3971,f,c	;volatile
    739                           
-   740                           ;mylcd.c: 332: LATDbits.LATD6 = 0;
-   741  000E9E  9C8C               	bcf	3980,6,c	;volatile
+   740                           ;mylcd.c: 332: LATDbits.LATD5 = 0;
+   741  000E9E  9A8C               	bcf	3980,5,c	;volatile
    742                           
-   743                           ;mylcd.c: 333: LATDbits.LATD5 = 0;
-   744  000EA0  9A8C               	bcf	3980,5,c	;volatile
+   743                           ;mylcd.c: 333: LATDbits.LATD6 = 0;
+   744  000EA0  9C8C               	bcf	3980,6,c	;volatile
    745                           
    746                           ;mylcd.c: 334: DelayFor18TCY();
    747  000EA2  EC42  F008         	call	_DelayFor18TCY	;wreg free
@@ -1706,11 +1706,11 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1691  000ED8  0B0F               	andlw	15
   1692  000EDA  1283               	iorwf	3971,f,c	;volatile
   1693                           
-  1694                           ;mylcd.c: 380: LATDbits.LATD5 = 1;
-  1695  000EDC  8A8C               	bsf	3980,5,c	;volatile
+  1694                           ;mylcd.c: 380: LATDbits.LATD6 = 1;
+  1695  000EDC  8C8C               	bsf	3980,6,c	;volatile
   1696                           
-  1697                           ;mylcd.c: 381: LATDbits.LATD6 = 0;
-  1698  000EDE  9C8C               	bcf	3980,6,c	;volatile
+  1697                           ;mylcd.c: 381: LATDbits.LATD5 = 0;
+  1698  000EDE  9A8C               	bcf	3980,5,c	;volatile
   1699                           
   1700                           ;mylcd.c: 382: DelayFor18TCY();
   1701  000EE0  EC42  F008         	call	_DelayFor18TCY	;wreg free
@@ -1807,13 +1807,13 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1792  000F08                     _BusyXLCD:
   1793                           	opt stack 24
   1794                           
-  1795                           ;mylcd.c: 6: LATDbits.LATD6 = 1;
+  1795                           ;mylcd.c: 6: LATDbits.LATD5 = 1;
   1796                           
   1797                           ;incstack = 0
-  1798  000F08  8C8C               	bsf	3980,6,c	;volatile
+  1798  000F08  8A8C               	bsf	3980,5,c	;volatile
   1799                           
-  1800                           ;mylcd.c: 7: LATDbits.LATD5 = 0;
-  1801  000F0A  9A8C               	bcf	3980,5,c	;volatile
+  1800                           ;mylcd.c: 7: LATDbits.LATD6 = 0;
+  1801  000F0A  9C8C               	bcf	3980,6,c	;volatile
   1802                           
   1803                           ;mylcd.c: 8: DelayFor18TCY();
   1804  000F0C  EC42  F008         	call	_DelayFor18TCY	;wreg free
@@ -1844,8 +1844,8 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1829                           ;mylcd.c: 35: LATDbits.LATD4 = 0;
   1830  000F26  988C               	bcf	3980,4,c	;volatile
   1831                           
-  1832                           ;mylcd.c: 36: LATDbits.LATD6 = 0;
-  1833  000F28  9C8C               	bcf	3980,6,c	;volatile
+  1832                           ;mylcd.c: 36: LATDbits.LATD5 = 0;
+  1833  000F28  9A8C               	bcf	3980,5,c	;volatile
   1834                           
   1835                           ;mylcd.c: 37: return 1;
   1836  000F2A  0E01               	movlw	1
@@ -1871,8 +1871,8 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   1856                           ;mylcd.c: 45: LATDbits.LATD4 = 0;
   1857  000F3A  988C               	bcf	3980,4,c	;volatile
   1858                           
-  1859                           ;mylcd.c: 46: LATDbits.LATD6 = 0;
-  1860  000F3C  9C8C               	bcf	3980,6,c	;volatile
+  1859                           ;mylcd.c: 46: LATDbits.LATD5 = 0;
+  1860  000F3C  9A8C               	bcf	3980,5,c	;volatile
   1861                           
   1862                           ;mylcd.c: 47: return 0;
   1863  000F3E  0E00               	movlw	0
@@ -2119,11 +2119,11 @@ Microchip Technology Omniscient Code Generator v1.45 (Free mode) build 201711160
   2104  000E1E  0B0F               	andlw	15
   2105  000E20  1283               	iorwf	3971,f,c	;volatile
   2106                           
-  2107                           ;mylcd.c: 284: LATDbits.LATD6 = 0;
-  2108  000E22  9C8C               	bcf	3980,6,c	;volatile
+  2107                           ;mylcd.c: 284: LATDbits.LATD5 = 0;
+  2108  000E22  9A8C               	bcf	3980,5,c	;volatile
   2109                           
-  2110                           ;mylcd.c: 285: LATDbits.LATD5 = 0;
-  2111  000E24  9A8C               	bcf	3980,5,c	;volatile
+  2110                           ;mylcd.c: 285: LATDbits.LATD6 = 0;
+  2111  000E24  9C8C               	bcf	3980,6,c	;volatile
   2112                           
   2113                           ;mylcd.c: 286: DelayFor18TCY();
   2114  000E26  EC42  F008         	call	_DelayFor18TCY	;wreg free
@@ -3531,7 +3531,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
-Symbol Table                                                                                   Fri May 25 00:40:39 2018
+Symbol Table                                                                                   Fri Jun 08 09:20:07 2018
 
                             l72 0E86                              l82 0930                              l92 0984  
                             l84 097E                              l88 0966                    ___awdiv@sign 002B  

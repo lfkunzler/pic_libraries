@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+$C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -431,22 +431,22 @@ E7A text0 CODE >150:C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\Sensor Ul
 E86 text0 CODE >152:C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\Sensor Ultrasom HC-SR04/Main.c
 E86 text0 CODE >153:C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\Sensor Ultrasom HC-SR04/Main.c
 E8A text0 CODE >152:C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\Sensor Ultrasom HC-SR04/Main.c
-FC4 cinit CODE >920:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FC4 cinit CODE >922:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FC4 cinit CODE >925:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FC4 cinit CODE >946:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FC8 cinit CODE >947:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FCA cinit CODE >948:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FCA cinit CODE >949:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FCC cinit CODE >950:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FCE cinit CODE >951:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FD0 cinit CODE >957:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FD0 cinit CODE >959:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FD2 cinit CODE >960:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FD4 cinit CODE >962:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FD6 cinit CODE >963:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FD8 cinit CODE >964:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
-FDA cinit CODE >965:C:\Users\USER_I~1\AppData\Local\Temp\s5rc.
+FC4 cinit CODE >920:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FC4 cinit CODE >922:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FC4 cinit CODE >925:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FC4 cinit CODE >946:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FC8 cinit CODE >947:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FCA cinit CODE >948:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FCA cinit CODE >949:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FCC cinit CODE >950:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FCE cinit CODE >951:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FD0 cinit CODE >957:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FD0 cinit CODE >959:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FD2 cinit CODE >960:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FD4 cinit CODE >962:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FD6 cinit CODE >963:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FD8 cinit CODE >964:C:\Users\USER_I~1\AppData\Local\Temp\s610.
+FDA cinit CODE >965:C:\Users\USER_I~1\AppData\Local\Temp\s610.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -469,17 +469,17 @@ __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 __size_of_SetTmrCCPSrc 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\Ultrassom.X.production.obj
 __end_of_WriteTimer1 1060 0 CODE 0 text17 dist/default/production\Ultrassom.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 _OpenCapture1 1026 0 CODE 0 text20 dist/default/production\Ultrassom.X.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Ultrassom.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 _T1CONbits FCD 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\Ultrassom.X.production.obj
 _PIR1 F9E 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+___sp 0 0 STACK 2 stack C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 _main E4E 0 CODE 0 text0 dist/default/production\Ultrassom.X.production.obj
 btemp 38 0 COMRAM 1 temp dist/default/production\Ultrassom.X.production.obj
-start E 0 CODE 0 init C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+start E 0 CODE 0 init C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
@@ -492,11 +492,11 @@ i2___lldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\Ultrassom.
 _distance 8E0 0 CODE 0 text6 dist/default/production\Ultrassom.X.production.obj
 ___awmod@sign 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\Ultrassom.X.production.obj
 __size_of_OpenCapture1 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
-intlevel0 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
-intlevel1 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
-intlevel2 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
-intlevel3 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+__accesstop 60 0 ABS 0 - C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
+intlevel0 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
+intlevel1 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
+intlevel2 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
+intlevel3 0 0 CODE 0 text C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 i2_WriteTimer1 1072 0 CODE 0 text24 dist/default/production\Ultrassom.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\Ultrassom.X.production.obj
 __CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
@@ -516,8 +516,8 @@ _CapStatus 32 0 COMRAM 1 bssCOMRAM dist/default/production\Ultrassom.X.productio
 __end_of_OpenCapture1 103A 0 CODE 0 text20 dist/default/production\Ultrassom.X.production.obj
 ___awdiv@dividend 26 0 COMRAM 1 cstackCOMRAM dist/default/production\Ultrassom.X.production.obj
 _Delay10KTCYx 1010 0 CODE 0 text5 dist/default/production\Ultrassom.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 _CCPR1H FBF 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 _CCPR1L FBE 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\Ultrassom.X.production.obj
@@ -593,7 +593,7 @@ __end_ofi2_WriteTimer1 1084 0 CODE 0 text24 dist/default/production\Ultrassom.X.
 __end_of_traduz 8E0 0 CODE 0 text8 dist/default/production\Ultrassom.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\Ultrassom.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\Ultrassom.X.production.obj
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 __end_of_ReadCapture1 1010 0 CODE 0 text26 dist/default/production\Ultrassom.X.production.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\Ultrassom.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\Ultrassom.X.production.obj
@@ -739,8 +739,8 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\Ultrassom.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\Ultrassom.X.production.obj
 _traduz 816 0 CODE 0 text8 dist/default/production\Ultrassom.X.production.obj
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
-stacklo 6D 0 ABS 0 - C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+stackhi 7FF 0 ABS 0 - C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
+stacklo 6D 0 ABS 0 - C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\Ultrassom.X.production.obj
 __size_of_putsXLCD 0 0 ABS 0 - dist/default/production\Ultrassom.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\Ultrassom.X.production.obj
@@ -812,7 +812,7 @@ __Ltext24 0 0 ABS 0 text24 dist/default/production\Ultrassom.X.production.obj
 __Ltext25 0 0 ABS 0 text25 dist/default/production\Ultrassom.X.production.obj
 __Ltext26 0 0 ABS 0 text26 dist/default/production\Ultrassom.X.production.obj
 _periodo 2E 0 COMRAM 1 bssCOMRAM dist/default/production\Ultrassom.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\USER_I~1\AppData\Local\Temp\s5rc.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\USER_I~1\AppData\Local\Temp\s610.obj
 __Lpowerup E 0 CODE 0 powerup dist/default/production\Ultrassom.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\Ultrassom.X.production.obj
 _putsXLCD DA0 0 CODE 0 text11 dist/default/production\Ultrassom.X.production.obj
