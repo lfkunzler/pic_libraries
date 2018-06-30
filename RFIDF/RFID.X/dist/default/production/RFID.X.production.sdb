@@ -3,19 +3,19 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"20 C:\Users\USER_IURI\Desktop\RFIDF/main.c
+"9 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/main.c
 [v _traduz traduz `(v  1 e 1 0 ]
-"41
+"30
 [v _Mydelay Mydelay `(v  1 e 1 0 ]
-"51
+"40
 [v _inic_XLCD inic_XLCD `(v  1 e 1 0 ]
-"68
+"57
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
-"73
+"62
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
-"78
+"69
 [v _main main `(i  1 e 2 0 ]
-"4 C:\Users\USER_IURI\Desktop\RFIDF/mylcd.c
+"4 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/mylcd.c
 [v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
 "63
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
@@ -27,7 +27,7 @@
 [v _WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
 "357
 [v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
-"240 C:\Users\USER_IURI\Desktop\RFIDF/RFIDlib.h
+"240 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/RFIDlib.h
 [v _MFRC522_Rd MFRC522_Rd `(ui  1 e 2 0 ]
 "295
 [v _MFRC522_Wr MFRC522_Wr `(v  1 e 1 0 ]
@@ -53,10 +53,6 @@
 [v _MFRC522_isCard MFRC522_isCard `(uc  1 e 1 0 ]
 "984
 [v _MFRC522_ReadCardSerial MFRC522_ReadCardSerial `(uc  1 e 1 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
@@ -141,7 +137,7 @@
 [v _PORTCbits PORTCbits `VES105  1 e 1 @3970 ]
 "2703
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S342 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S333 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -151,7 +147,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "3288
-[s S351 . 1 `uc 1 LD0 1 0 :1:0 
+[s S342 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -160,8 +156,8 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S360 . 1 `S342 1 . 1 0 `S351 1 . 1 0 ]
-[v _LATDbits LATDbits `VES360  1 e 1 @3980 ]
+[u S351 . 1 `S333 1 . 1 0 `S342 1 . 1 0 ]
+[v _LATDbits LATDbits `VES351  1 e 1 @3980 ]
 "3425
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "3623
@@ -170,7 +166,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "3999
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S390 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S381 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -180,7 +176,7 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "4031
-[s S399 . 1 `uc 1 RD0 1 0 :1:0 
+[s S390 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -189,77 +185,41 @@
 `uc 1 RD6 1 0 :1:6 
 `uc 1 RD7 1 0 :1:7 
 ]
-[u S408 . 1 `S390 1 . 1 0 `S399 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES408  1 e 1 @3989 ]
+[u S399 . 1 `S381 1 . 1 0 `S390 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES399  1 e 1 @3989 ]
 "6579
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "7984
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
 "9857
 [v _RA0 RA0 `VEb  1 e 0 @31744 ]
-"78 C:\Users\USER_IURI\Desktop\RFIDF/main.c
+"69 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"126
-[v main@i_340 i `i  1 a 2 85 ]
-"123
-[v main@var var `i  1 a 2 81 ]
-"89
-[v main@UID UID `[10]uc  1 a 10 66 ]
-"90
-[v main@buffer buffer `[5]uc  1 a 5 76 ]
-"104
-[v main@vetor vetor `[5]uc  1 a 5 49 ]
+"95
+[v main@i i `i  1 a 2 66 ]
 "92
-[v main@TagType TagType `ui  1 a 2 83 ]
-"94
-[v main@j j `i  1 a 2 64 ]
-[v main@valor valor `i  1 a 2 62 ]
-[v main@cont cont `i  1 a 2 60 ]
-[v main@i i `i  1 a 2 58 ]
-[v main@k k `i  1 a 2 56 ]
-[v main@t t `i  1 a 2 54 ]
-"101
-[v main@F4143 F4143 `[5]uc  1 s 5 F4143 ]
-"234
+[v main@var var `i  1 a 2 62 ]
+"78
+[v main@UID UID `[10]uc  1 a 10 49 ]
+"79
+[v main@buffer buffer `[3]uc  1 a 3 59 ]
+"81
+[v main@TagType TagType `ui  1 a 2 64 ]
+"104
 } 0
-"20
+"9
 [v _traduz traduz `(v  1 e 1 0 ]
 {
-"21
-[v traduz@c c `uc  1 a 1 14 ]
-[v traduz@b b `uc  1 a 1 13 ]
-[v traduz@a a `uc  1 a 1 12 ]
-"20
-[v traduz@numero numero `i  1 p 2 8 ]
-[v traduz@txt txt `*.39uc  1 p 2 10 ]
-"35
+"10
+[v traduz@b b `uc  1 a 1 8 ]
+[v traduz@a a `uc  1 a 1 7 ]
+"9
+[v traduz@numero numero `i  1 p 2 0 ]
+[v traduz@txt txt `*.39uc  1 p 2 2 ]
+"28
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
-{
-"11
-[v ___awmod@sign sign `uc  1 a 1 5 ]
-[v ___awmod@counter counter `uc  1 a 1 4 ]
-"8
-[v ___awmod@dividend dividend `i  1 p 2 0 ]
-[v ___awmod@divisor divisor `i  1 p 2 2 ]
-"35
-} 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"11
-[v ___awdiv@quotient quotient `i  1 a 2 6 ]
-"12
-[v ___awdiv@sign sign `uc  1 a 1 5 ]
-[v ___awdiv@counter counter `uc  1 a 1 4 ]
-"8
-[v ___awdiv@dividend dividend `i  1 p 2 0 ]
-[v ___awdiv@divisor divisor `i  1 p 2 2 ]
-"42
-} 0
-"125 C:\Users\USER_IURI\Desktop\RFIDF/mylcd.c
+"125 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/mylcd.c
 [v _putsXLCD putsXLCD `(v  1 e 1 0 ]
 {
 [v putsXLCD@buffer buffer `*.35uc  1 p 2 1 ]
@@ -274,12 +234,12 @@
 [v WriteDataXLCD@data data `uc  1 a 1 0 ]
 "404
 } 0
-"51 C:\Users\USER_IURI\Desktop\RFIDF/main.c
+"40 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/main.c
 [v _inic_XLCD inic_XLCD `(v  1 e 1 0 ]
 {
-"59
+"48
 } 0
-"63 C:\Users\USER_IURI\Desktop\RFIDF/mylcd.c
+"63 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/mylcd.c
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
 {
 [v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
@@ -306,10 +266,10 @@
 [v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 3 ]
 "308
 } 0
-"73 C:\Users\USER_IURI\Desktop\RFIDF/main.c
+"62 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/main.c
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
 {
-"74
+"63
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
 [v _Delay10KTCYx Delay10KTCYx `(v  1 e 1 0 ]
@@ -319,26 +279,26 @@
 [v Delay10KTCYx@unit unit `uc  1 a 1 1 ]
 "13
 } 0
-"4 C:\Users\USER_IURI\Desktop\RFIDF/mylcd.c
+"4 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/mylcd.c
 [v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
 {
 "50
 } 0
-"68 C:\Users\USER_IURI\Desktop\RFIDF/main.c
+"57 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/main.c
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
 {
-"72
+"61
 } 0
-"41
+"30
 [v _Mydelay Mydelay `(v  1 e 1 0 ]
 {
-"43
+"32
 [v Mydelay@i i `i  1 a 2 3 ]
-"41
+"30
 [v Mydelay@tempo tempo `i  1 p 2 0 ]
-"48
+"37
 } 0
-"971 C:\Users\USER_IURI\Desktop\RFIDF/RFIDlib.h
+"971 C:\Users\USER_IURI\Desktop\TRABALHOS QUASE PRONTOS\RFIDF/RFIDlib.h
 [v _MFRC522_isCard MFRC522_isCard `(uc  1 e 1 0 ]
 {
 [v MFRC522_isCard@TagType TagType `*.39uc  1 p 2 43 ]

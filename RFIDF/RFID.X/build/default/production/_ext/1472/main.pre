@@ -5792,28 +5792,28 @@ extern void DelayFor18TCY(void);
 extern void DelayPORXLCD(void);
 extern void DelayXLCD(void);
 
-# 20 "../main.c"
+# 9 "../main.c"
 void traduz(int numero, char *txt){
 char a,b,c,d,e;
-a = (numero % 10) + 48;
-numero = numero / 10 ;
-b = (numero % 10) + 48;
-numero=numero / 10 ;
-c = (numero % 10) + 48;
-
-
-
-(txt)[0]=c;
-(txt)[1]=b;
-(txt)[2]=a;
-(txt)[3]='\0';
-
+a = numero & 0b00001111;
+if (a > 9){
+a = a + 55;
+}
+else{
+a = a + 48;
+}
+b = numero >> 4;
+if (b > 9){
+b = b + 55;
+}
+else{
+b = b + 48;
+}
+(txt)[0]=b;
+(txt)[1]=a;
+(txt)[2]='\0';
 }
 
-
-
-
-char key[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 void Mydelay(int tempo)
 {
 int i;
@@ -5851,6 +5851,8 @@ void DelayPORXLCD(void)
 void DelayXLCD(void)
 { _delay((unsigned long)((20)*(8000000/4000.0))); }
 
+
+
 int main() {
 ADCON1 = 0x0F;
 OSCCON = 0b01110111;
@@ -5858,41 +5860,22 @@ TRISA = 0x00;
 TRISD = 0b00000010;
 TRISC = 0b11111111;
 TRISB = 0b00000000;
-
-
 MFRC522_Init();
 inic_XLCD();
 char UID[10];
-char buffer[5];
+char buffer[3];
 
 unsigned TagType;
 char size;
-int t = 0, k = 1, i = 0, cont = 0, valor = 0, j = 0;
-
-
-
-
 SetDDRamAddr(0x03);
 while(BusyXLCD());
 putsXLCD("ID DA TAG");
-
-
-char vetor[5] = {0x14,0xB5,0xCE, 0xFC};
-
-# 110
 while (1) {
-
-
 if (MFRC522_isCard(&TagType)) {
-
-
-
 
 if (MFRC522_ReadCardSerial(&UID)) {
 RA0 = ! RA0;
 Mydelay(500);
-
-
 int var= 0x40;
 SetDDRamAddr(var);
 while(BusyXLCD());
@@ -5901,13 +5884,9 @@ traduz(UID[i],buffer);
 putsXLCD(buffer);
 var = var +4;
 }
-
-# 143
 }
 }
 
 }
-
-# 234
 }
 
