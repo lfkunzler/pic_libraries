@@ -7,6 +7,10 @@
       <itemPath>main.h</itemPath>
       <itemPath>display.h</itemPath>
       <itemPath>xlcd_mod.h</itemPath>
+      <itemPath>menu.h</itemPath>
+      <itemPath>i2c.h</itemPath>
+      <itemPath>uart.h</itemPath>
+      <itemPath>magnetometro.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -18,6 +22,10 @@
       <itemPath>main.c</itemPath>
       <itemPath>display.c</itemPath>
       <itemPath>xlcd_mod.c</itemPath>
+      <itemPath>menu.c</itemPath>
+      <itemPath>i2c.c</itemPath>
+      <itemPath>uart.c</itemPath>
+      <itemPath>magnetometro.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

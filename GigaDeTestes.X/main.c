@@ -1,12 +1,41 @@
 #include <xc.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "main.h"
 #include "xlcd_mod.h"
 #include "display.h"
+#include "menu.h"
+#include "magnetometro.h"
 
 #define LED_TESTE PORTCbits.RC0
 
-volatile lcd_t lcd;
+char buffer[32];
+lcd_t lcd;
+coordenadas_t cord;
+
+/* impleentacao dos callback do menu 1 */
+void OnEnterMenu1()
+{
+
+}
+
+void OnRenderMenu1()
+{
+    sprintf(buffer, "%4d %4d %4d\0", cord.x, cord.y, cord.z);
+    lcdWrite(&lcd, 2, 1, buffer);
+}
+
+void OnExitMenu1()
+{
+
+}
+
+MenuItem menu1 = {
+    OnEnterMenu1,
+    OnRenderMenu1,
+    OnExitMenu1
+};
 
 void interrupt ISR()
 {
@@ -22,12 +51,16 @@ void interrupt low_priority ISR_LP()
 
         // TODO: rotinas que rodam a cada 20ms
         LED_TESTE = !LED_TESTE;
-        lcd.NeedsRedraw = 1;
+        menuDraw();
     }
 }
 
 void main(void)
 {
+    uint8_t opcao = MAGNETOMETRO;
+
+    memset(buffer, 0, 32);
+
     ADCON1 = 0x0F;
     OSCCON = 0x72; // osc interno a 8MHz
 
@@ -61,10 +94,19 @@ void main(void)
 
     /* UTILIZACAO DO DISPLAY */
     lcdInit(&lcd);
-    lcdWrite(&lcd, 1, 1, "pau no cu do        patric\0");
+    menuInit(&lcd);
+    menuSetPosition(0, &menu1);
+    menuGoto(0); // abre a tela 0
 
+    while (1) {
+        switch (opcao) {
+        case MAGNETOMETRO:
+            magnetoGetCord(&cord);
 
-    while (1);
+            break;
+        }
+        menuRuntime();
+    }
 
     return;
 }

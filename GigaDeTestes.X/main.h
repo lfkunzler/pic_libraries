@@ -5,6 +5,7 @@
 #include <stdint.h>
 
 #define _XTAL_FREQ 8000000   // frequencia de osc interna
+#define MAGNETOMETRO 1
 
 // CONFIG1L
 #pragma config PLLDIV = 1       // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))

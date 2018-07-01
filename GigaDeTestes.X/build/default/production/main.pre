@@ -5662,6 +5662,98 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+# 7 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdarg.h"
+typedef void * va_list[1];
+
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
+
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+
+# 43 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h"
+struct __prbuf
+{
+char * ptr;
+void (* func)(char);
+};
+
+# 29 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\errno.h"
+extern int errno;
+
+# 12 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\conio.h"
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+# 23
+extern char * cgets(char *);
+extern void cputs(const char *);
+
+# 88 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h"
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+
+
+# 180
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+
+#pragma printf_check(printf) const
+#pragma printf_check(sprintf) const
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
+
+# 14 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
 # 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdint.h"
 typedef signed char int8_t;
 
@@ -5753,7 +5845,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 10 "main.h"
+# 11 "main.h"
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
@@ -5872,8 +5964,71 @@ void DelayXLCD(void);
 
 extern void delay_ms(uint16_t milis);
 
-# 9 "main.c"
-volatile lcd_t lcd;
+# 10 "menu.h"
+typedef void (*OnEnter)();
+typedef void (*OnRender)();
+typedef void (*OnExit)();
+
+typedef struct {
+OnEnter Enter;
+OnRender Render;
+OnExit Exit;
+} MenuItem;
+
+struct
+{
+lcd_t *lcd;
+uint8_t NeedsRedraw;
+uint8_t Index;
+MenuItem *Current;
+MenuItem *Items[1];
+} Menu;
+
+void menuInit(lcd_t *lcd);
+void menuGoto(uint8_t pos);
+void menuSetPosition(uint8_t pos, MenuItem *item);
+void menuNext();
+void menuPrev();
+void menuReset();
+void menuRuntime();
+
+void menuDraw();
+
+# 8 "magnetometro.h"
+typedef struct {
+uint16_t x, y, z;
+} coordenadas_t;
+
+void magnetoInit(void);
+void magnetoGetCord(coordenadas_t *coord);
+
+# 13 "main.c"
+char buffer[32];
+lcd_t lcd;
+coordenadas_t cord;
+
+
+void OnEnterMenu1()
+{
+
+}
+
+void OnRenderMenu1()
+{
+sprintf(buffer, "%4d %4d %4d\0", cord.x, cord.y, cord.z);
+lcdWrite(&lcd, 2, 1, buffer);
+}
+
+void OnExitMenu1()
+{
+
+}
+
+MenuItem menu1 = {
+OnEnterMenu1,
+OnRenderMenu1,
+OnExitMenu1
+};
 
 void interrupt ISR()
 {
@@ -5889,12 +6044,16 @@ TMR1L = 0xC0;
 
 
 PORTCbits.RC0 = !PORTCbits.RC0;
-lcd.NeedsRedraw = 1;
+menuDraw();
 }
 }
 
 void main(void)
 {
+uint8_t opcao = 1;
+
+memset(buffer, 0, 32);
+
 ADCON1 = 0x0F;
 OSCCON = 0x72;
 
@@ -5906,7 +6065,7 @@ IPEN = 1;
 GIEH = 1;
 PEIE = 1;
 
-# 50
+# 83
 T1CONbits.RD16 = 1;
 T1CONbits.T1RUN = 0;
 T1CONbits.T1CKPS = 0;
@@ -5921,10 +6080,19 @@ TMR1IP = 0;
 
 
 lcdInit(&lcd);
-lcdWrite(&lcd, 1, 1, "pau no cu do        patric\0");
+menuInit(&lcd);
+menuSetPosition(0, &menu1);
+menuGoto(0);
 
+while (1) {
+switch (opcao) {
+case 1:
+magnetoGetCord(&cord);
 
-while (1);
+break;
+}
+menuRuntime();
+}
 
 return;
 }

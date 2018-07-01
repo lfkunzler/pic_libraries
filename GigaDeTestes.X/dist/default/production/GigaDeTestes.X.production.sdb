@@ -3,6 +3,8 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
@@ -13,6 +15,14 @@
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
 "20 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
@@ -21,6 +31,8 @@
 [v ___fldiv __fldiv `(d  1 e 3 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
@@ -35,18 +47,59 @@
 [v _lcdCleanAll lcdCleanAll `(v  1 e 1 0 ]
 "52
 [v _lcdWrite lcdWrite `(i  1 e 2 0 ]
+"81
+[v _lcdRuntime lcdRuntime `(v  1 e 1 0 ]
 "102
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
 "108
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
-"11 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-[v _ISR ISR `II(v  1 e 1 0 ]
-"16
-[v _ISR_LP ISR_LP `IIL(v  1 e 1 0 ]
+"16 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+[v _I2C_Start I2C_Start `(uc  1 e 1 0 ]
+"26
+[v _I2C_Start_Wait I2C_Start_Wait `(v  1 e 1 0 ]
+"45
+[v _I2C_Repeated_Start I2C_Repeated_Start `(uc  1 e 1 0 ]
+"59
+[v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
+"69
+[v _I2C_Ack I2C_Ack `(v  1 e 1 0 ]
+"76
+[v _I2C_Nack I2C_Nack `(v  1 e 1 0 ]
+"82
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+"96
+[v _I2C_Stop I2C_Stop `(uc  1 e 1 0 ]
+"105
+[v _I2C_Ready I2C_Ready `(v  1 e 1 0 ]
+"18 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+[v _magnetoGetCord magnetoGetCord `(v  1 e 1 0 ]
+"18 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+[v _OnEnterMenu1 OnEnterMenu1 `(v  1 e 1 0 ]
+"23
+[v _OnRenderMenu1 OnRenderMenu1 `(v  1 e 1 0 ]
 "29
+[v _OnExitMenu1 OnExitMenu1 `(v  1 e 1 0 ]
+"40
+[v _ISR ISR `II(v  1 e 1 0 ]
+"45
+[v _ISR_LP ISR_LP `IIL(v  1 e 1 0 ]
+"58
 [v _main main `(v  1 e 1 0 ]
-"72
+"114
 [v _delay_ms delay_ms `(v  1 e 1 0 ]
+"5 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+[v _menuInit menuInit `(v  1 e 1 0 ]
+"10
+[v _menuGoto menuGoto `(v  1 e 1 0 ]
+"15
+[v _menuSetPosition menuSetPosition `(v  1 e 1 0 ]
+"20
+[v __menuEnterPosition _menuEnterPosition `(v  1 e 1 0 ]
+"47
+[v _menuDraw menuDraw `(v  1 e 1 0 ]
+[v i1_menuDraw menuDraw `(v  1 e 1 0 ]
+"59
+[v _menuRuntime menuRuntime `(v  1 e 1 0 ]
 "6 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
 [v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
 "63
@@ -57,7 +110,7 @@
 [v _WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
 "364
 [v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
-[s S28 . 1 `uc 1 RC0 1 0 :1:0 
+[s S59 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -67,32 +120,32 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "2603 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
-[s S37 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S68 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S44 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S75 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S51 . 1 `uc 1 . 1 0 :1:0 
+[s S82 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S55 . 1 `uc 1 . 1 0 :1:0 
+[s S86 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S58 . 1 `S28 1 . 1 0 `S37 1 . 1 0 `S44 1 . 1 0 `S51 1 . 1 0 `S55 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES58  1 e 1 @3970 ]
+[u S89 . 1 `S59 1 . 1 0 `S68 1 . 1 0 `S75 1 . 1 0 `S82 1 . 1 0 `S86 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES89  1 e 1 @3970 ]
 "2703
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S270 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S348 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -102,7 +155,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "3288
-[s S279 . 1 `uc 1 LD0 1 0 :1:0 
+[s S357 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -111,13 +164,32 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S288 . 1 `S270 1 . 1 0 `S279 1 . 1 0 ]
-[v _LATDbits LATDbits `VES288  1 e 1 @3980 ]
+[u S366 . 1 `S348 1 . 1 0 `S357 1 . 1 0 ]
+[v _LATDbits LATDbits `VES366  1 e 1 @3980 ]
+[s S834 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"3455
+[s S842 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+[u S850 . 1 `S834 1 . 1 0 `S842 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES850  1 e 1 @3986 ]
 "3845
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "3999
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S314 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S392 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -127,7 +199,7 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "4031
-[s S323 . 1 `uc 1 RD0 1 0 :1:0 
+[s S401 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -136,15 +208,139 @@
 `uc 1 RD6 1 0 :1:6 
 `uc 1 RD7 1 0 :1:7 
 ]
-[u S332 . 1 `S314 1 . 1 0 `S323 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES332  1 e 1 @3989 ]
+[u S410 . 1 `S392 1 . 1 0 `S401 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES410  1 e 1 @3989 ]
+"4934
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+[s S756 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4975
+[s S765 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S768 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S771 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S774 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S777 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S779 . 1 `S756 1 . 1 0 `S765 1 . 1 0 `S768 1 . 1 0 `S771 1 . 1 0 `S774 1 . 1 0 `S777 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES779  1 e 1 @4011 ]
+"5144
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+"5400
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5412
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5424
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "6579
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
-[s S101 . 1 `uc 1 . 1 0 :2:0 
+"6804
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
+[s S537 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6821
+[u S546 . 1 `S537 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES546  1 e 1 @4037 ]
+"6866
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+"6936
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S558 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"7019
+[s S561 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S564 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S573 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S578 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S584 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S589 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S592 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S595 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S600 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S605 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S610 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+`uc 1 START 1 0 :1:3 
+`uc 1 STOP 1 0 :1:4 
+`uc 1 DA 1 0 :1:5 
+]
+[s S616 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S621 . 1 `S558 1 . 1 0 `S561 1 . 1 0 `S564 1 . 1 0 `S573 1 . 1 0 `S578 1 . 1 0 `S584 1 . 1 0 `S589 1 . 1 0 `S592 1 . 1 0 `S595 1 . 1 0 `S600 1 . 1 0 `S605 1 . 1 0 `S610 1 . 1 0 `S616 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES621  1 e 1 @4039 ]
+"7184
+[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
+"7191
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+[s S143 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
 "7446
-[s S104 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S146 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -152,77 +348,333 @@
 `uc 1 T1RUN 1 0 :1:6 
 `uc 1 RD16 1 0 :1:7 
 ]
-[s S112 . 1 `uc 1 . 1 0 :2:0 
+[s S154 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S118 . 1 `uc 1 . 1 0 :3:0 
+[s S160 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 SOSCEN 1 0 :1:3 
 `uc 1 . 1 0 :3:4 
 `uc 1 T1RD16 1 0 :1:7 
 ]
-[u S123 . 1 `S101 1 . 1 0 `S104 1 . 1 0 `S112 1 . 1 0 `S118 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES123  1 e 1 @4045 ]
+[u S165 . 1 `S143 1 . 1 0 `S146 1 . 1 0 `S154 1 . 1 0 `S160 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES165  1 e 1 @4045 ]
 "7523
 [v _TMR1L TMR1L `VEuc  1 e 1 @4046 ]
 "7530
 [v _TMR1H TMR1H `VEuc  1 e 1 @4047 ]
 "7984
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
+"8905
+[v _ACKDT ACKDT `VEb  1 e 0 @32301 ]
+"8907
+[v _ACKEN ACKEN `VEb  1 e 0 @32300 ]
+"8909
+[v _ACKSTAT ACKSTAT `VEb  1 e 0 @32302 ]
 "9461
 [v _GIEH GIEH `VEb  1 e 0 @32663 ]
 "9557
 [v _IPEN IPEN `VEb  1 e 0 @32391 ]
 "9811
 [v _PEIE PEIE `VEb  1 e 0 @32662 ]
+"9815
+[v _PEN PEN `VEb  1 e 0 @32298 ]
+"9921
+[v _RCEN RCEN `VEb  1 e 0 @32299 ]
+"9927
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
+"9975
+[v _RSEN RSEN `VEb  1 e 0 @32297 ]
+"10059
+[v _SSPIE SSPIE `VEb  1 e 0 @31979 ]
+"10061
+[v _SSPIF SSPIF `VEb  1 e 0 @31987 ]
 "10183
 [v _TMR1IE TMR1IE `VEb  1 e 0 @31976 ]
 "10185
 [v _TMR1IF TMR1IF `VEb  1 e 0 @31984 ]
 "10187
 [v _TMR1IP TMR1IP `VEb  1 e 0 @31992 ]
+"10233
+[v _TRISB0 TRISB0 `VEb  1 e 0 @31896 ]
+"10235
+[v _TRISB1 TRISB1 `VEb  1 e 0 @31897 ]
+"10281
+[v _TRMT TRMT `VEb  1 e 0 @32097 ]
+"10327
+[v _TXIF TXIF `VEb  1 e 0 @31988 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
+"13 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+[v _buffer buffer `[32]uc  1 e 32 0 ]
 [s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
-"9 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-[v _lcd lcd `VES22  1 e 33 0 ]
-"29
+"14
+[v _lcd lcd `S22  1 e 33 0 ]
+[s S38 . 6 `ui 1 x 2 0 `ui 1 y 2 2 `ui 1 z 2 4 ]
+"15
+[v _cord cord `S38  1 e 6 0 ]
+[s S28 . 6 `*.37(v 1 Enter 2 0 `*.37(v 1 Render 2 2 `*.37(v 1 Exit 2 4 ]
+"34
+[v _menu1 menu1 `S28  1 e 6 0 ]
+"27 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.h
+[s S32 . 8 `*.39S22 1 lcd 2 0 `uc 1 NeedsRedraw 1 2 `uc 1 Index 1 3 `*.39S28 1 Current 2 4 `[1]*.39S28 1 Items 2 6 ]
+[v _Menu Menu `S32  1 e 8 0 ]
+"58 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"70
+"60
+[v main@opcao opcao `uc  1 a 1 30 ]
+"112
+} 0
+"15 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+[v _menuSetPosition menuSetPosition `(v  1 e 1 0 ]
+{
+[v menuSetPosition@pos pos `uc  1 a 1 wreg ]
+[v menuSetPosition@pos pos `uc  1 a 1 wreg ]
+[s S28 . 6 `*.37(v 1 Enter 2 0 `*.37(v 1 Render 2 2 `*.37(v 1 Exit 2 4 ]
+[v menuSetPosition@item item `*.39S28  1 p 2 40 ]
+"17
+[v menuSetPosition@pos pos `uc  1 a 1 42 ]
+"18
+} 0
+"59
+[v _menuRuntime menuRuntime `(v  1 e 1 0 ]
+{
+"68
+} 0
+"81 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+[v _lcdRuntime lcdRuntime `(v  1 e 1 0 ]
+{
+"91
+[v lcdRuntime@i_343 i `i  1 a 2 6 ]
+"86
+[v lcdRuntime@i i `i  1 a 2 4 ]
+[s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
+"81
+[v lcdRuntime@lcd lcd `*.39S22  1 p 2 0 ]
+"98
+} 0
+"364 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+[v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
+{
+[v WriteDataXLCD@data data `uc  1 a 1 wreg ]
+[v WriteDataXLCD@data data `uc  1 a 1 wreg ]
+"383
+[v WriteDataXLCD@data data `uc  1 a 1 42 ]
+"411
+} 0
+"23 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+[v _OnRenderMenu1 OnRenderMenu1 `(v  1 e 1 0 ]
+{
+"27
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+"501
+[v sprintf@width width `i  1 a 2 27 ]
+"528
+[v sprintf@val val `ui  1 a 2 25 ]
+"494
+[v sprintf@ap ap `[1]*.39v  1 a 2 21 ]
+"499
+[v sprintf@c c `c  1 a 1 29 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 24 ]
+"506
+[v sprintf@prec prec `c  1 a 1 23 ]
+"492
+[v sprintf@sp sp `*.39uc  1 p 2 7 ]
+[v sprintf@f f `*.25Cuc  1 p 2 9 ]
+"1541
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 42 ]
+"15
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 44 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 40 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 42 ]
+"53
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 44 ]
+"8
+[v ___lwmod@dividend dividend `ui  1 p 2 3 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 5 ]
+"26
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 1 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 0 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 40 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 42 ]
+"31
 } 0
 "52 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
 [v _lcdWrite lcdWrite `(i  1 e 2 0 ]
 {
 [s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
-[v lcdWrite@lcd lcd `*.39S22  1 p 2 0 ]
-[v lcdWrite@row row `uc  1 p 1 2 ]
-[v lcdWrite@col col `uc  1 p 1 3 ]
-[v lcdWrite@string string `*.32uc  1 p 2 4 ]
+[v lcdWrite@lcd lcd `*.39S22  1 p 2 40 ]
+[v lcdWrite@row row `uc  1 p 1 42 ]
+[v lcdWrite@col col `uc  1 p 1 43 ]
+[v lcdWrite@string string `*.39uc  1 p 2 44 ]
 "79
 } 0
-"16
+"5 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+[v _menuInit menuInit `(v  1 e 1 0 ]
+{
+[s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
+[v menuInit@lcd lcd `*.39S22  1 p 2 40 ]
+"8
+} 0
+"10
+[v _menuGoto menuGoto `(v  1 e 1 0 ]
+{
+[v menuGoto@pos pos `uc  1 a 1 wreg ]
+[v menuGoto@pos pos `uc  1 a 1 wreg ]
+"12
+[v menuGoto@pos pos `uc  1 a 1 41 ]
+"13
+} 0
+"20
+[v __menuEnterPosition _menuEnterPosition `(v  1 e 1 0 ]
+{
+[v __menuEnterPosition@pos pos `uc  1 a 1 wreg ]
+[v __menuEnterPosition@pos pos `uc  1 a 1 wreg ]
+"22
+[v __menuEnterPosition@pos pos `uc  1 a 1 40 ]
+"25
+} 0
+"47
+[v _menuDraw menuDraw `(v  1 e 1 0 ]
+{
+"50
+} 0
+"18 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+[v _OnEnterMenu1 OnEnterMenu1 `(v  1 e 1 0 ]
+{
+"21
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 0 ]
+"8
+[v memset@p1 p1 `*.39v  1 p 2 40 ]
+[v memset@c c `i  1 p 2 42 ]
+[v memset@n n `ui  1 p 2 44 ]
+"22
+} 0
+"18 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+[v _magnetoGetCord magnetoGetCord `(v  1 e 1 0 ]
+{
+[s S38 . 6 `ui 1 x 2 0 `ui 1 y 2 2 `ui 1 z 2 4 ]
+[v magnetoGetCord@coord coord `*.39S38  1 p 2 42 ]
+"28
+} 0
+"26 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+[v _I2C_Start_Wait I2C_Start_Wait `(v  1 e 1 0 ]
+{
+[v I2C_Start_Wait@slave_write_address slave_write_address `uc  1 a 1 wreg ]
+[v I2C_Start_Wait@slave_write_address slave_write_address `uc  1 a 1 wreg ]
+"30
+[v I2C_Start_Wait@slave_write_address slave_write_address `uc  1 a 1 41 ]
+"43
+} 0
+"96
+[v _I2C_Stop I2C_Stop `(uc  1 e 1 0 ]
+{
+"103
+} 0
+"45
+[v _I2C_Repeated_Start I2C_Repeated_Start `(uc  1 e 1 0 ]
+{
+[v I2C_Repeated_Start@slave_read_address slave_read_address `uc  1 a 1 wreg ]
+[v I2C_Repeated_Start@slave_read_address slave_read_address `uc  1 a 1 wreg ]
+"47
+[v I2C_Repeated_Start@slave_read_address slave_read_address `uc  1 a 1 41 ]
+"57
+} 0
+"59
+[v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
+{
+[v I2C_Write@data data `uc  1 a 1 wreg ]
+[v I2C_Write@data data `uc  1 a 1 wreg ]
+"61
+[v I2C_Write@data data `uc  1 a 1 40 ]
+"67
+} 0
+"82
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+{
+[v I2C_Read@flag flag `uc  1 a 1 wreg ]
+"84
+[v I2C_Read@buffer buffer `uc  1 a 1 41 ]
+"82
+[v I2C_Read@flag flag `uc  1 a 1 wreg ]
+"85
+[v I2C_Read@flag flag `uc  1 a 1 40 ]
+"94
+} 0
+"105
+[v _I2C_Ready I2C_Ready `(v  1 e 1 0 ]
+{
+"109
+} 0
+"76
+[v _I2C_Nack I2C_Nack `(v  1 e 1 0 ]
+{
+"81
+} 0
+"69
+[v _I2C_Ack I2C_Ack `(v  1 e 1 0 ]
+{
+"74
+} 0
+"16 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
 [v _lcdInit lcdInit `(v  1 e 1 0 ]
 {
 [s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
-[v lcdInit@lcd lcd `*.39S22  1 p 2 7 ]
+[v lcdInit@lcd lcd `*.39S22  1 p 2 2 ]
 "27
 } 0
 "46
 [v _lcdCleanAll lcdCleanAll `(v  1 e 1 0 ]
 {
 [s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
-[v lcdCleanAll@lcd lcd `*.39S22  1 p 2 5 ]
+[v lcdCleanAll@lcd lcd `*.39S22  1 p 2 0 ]
 "49
 } 0
 "38
 [v _lcdMemClean lcdMemClean `(v  1 e 1 0 ]
 {
 "39
-[v lcdMemClean@i i `uc  1 a 1 2 ]
+[v lcdMemClean@i i `uc  1 a 1 42 ]
 [s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
 "38
-[v lcdMemClean@lcd lcd `*.39S22  1 p 2 0 ]
+[v lcdMemClean@lcd lcd `*.39S22  1 p 2 40 ]
 "44
 } 0
 "30
@@ -236,7 +688,7 @@
 [v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
 [v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
 "75
-[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 6 ]
+[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 0 ]
 "124
 } 0
 "315
@@ -245,7 +697,7 @@
 [v WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
 [v WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
 "334
-[v WriteCmdXLCD@cmd cmd `uc  1 a 1 2 ]
+[v WriteCmdXLCD@cmd cmd `uc  1 a 1 42 ]
 "362
 } 0
 "266
@@ -254,7 +706,7 @@
 [v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 wreg ]
 [v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 wreg ]
 "285
-[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 5 ]
+[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 45 ]
 "313
 } 0
 "108 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
@@ -262,21 +714,21 @@
 {
 "110
 } 0
-"72 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+"114 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
 [v _delay_ms delay_ms `(v  1 e 1 0 ]
 {
-"74
-[v delay_ms@t t `uc  1 a 1 4 ]
-"72
-[v delay_ms@milis milis `ui  1 p 2 0 ]
-"78
+"116
+[v delay_ms@t t `uc  1 a 1 44 ]
+"114
+[v delay_ms@milis milis `ui  1 p 2 40 ]
+"120
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
 [v _Delay10KTCYx Delay10KTCYx `(v  1 e 1 0 ]
 {
 [v Delay10KTCYx@unit unit `uc  1 a 1 wreg ]
 [v Delay10KTCYx@unit unit `uc  1 a 1 wreg ]
-[v Delay10KTCYx@unit unit `uc  1 a 1 1 ]
+[v Delay10KTCYx@unit unit `uc  1 a 1 41 ]
 "13
 } 0
 "6 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
@@ -288,16 +740,21 @@
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
 {
 "103
-[v DelayFor18TCY@i i `i  1 a 2 0 ]
+[v DelayFor18TCY@i i `i  1 a 2 40 ]
 "106
 } 0
-"16 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+"45 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
 [v _ISR_LP ISR_LP `IIL(v  1 e 1 0 ]
 {
-"27
+"56
 } 0
-"11
+"47 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+[v i1_menuDraw menuDraw `(v  1 e 1 0 ]
+{
+"50
+} 0
+"40 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"14
+"43
 } 0

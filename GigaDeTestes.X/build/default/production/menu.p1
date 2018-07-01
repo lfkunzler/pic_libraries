@@ -1,0 +1,294 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[v F32 `uc ~T0 @X0 -> 16 `i t ]
+"9 display.h
+[s S1 `uc 1 `F32 -> 2 `i ]
+[n S1 . NeedsRedraw Memory ]
+[v F58 `(v ~T0 @X0 0 tf ]
+[v F60 `(v ~T0 @X0 0 tf ]
+[v F62 `(v ~T0 @X0 0 tf ]
+"14 menu.h
+[s S2 `*F58 1 `*F60 1 `*F62 1 ]
+[n S2 . Enter Render Exit ]
+"21
+[s S3 `*S1 1 `uc 1 `uc 1 `*S2 1 `*S2 -> -> 1 `i `ux ]
+[n S3 . lcd NeedsRedraw Index Current Items ]
+"3 menu.c
+[v __menuEnterPosition `(v ~T0 @X0 0 ef1`uc ]
+"37 menu.h
+[v _menuDraw `(v ~T0 @X0 0 ef ]
+"17 display.h
+[v _lcdRuntime `(v ~T0 @X0 0 ef1`*S1 ]
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+[; ;display.h: 9: typedef struct {
+[; ;display.h: 10: uint8_t NeedsRedraw;
+[; ;display.h: 11: uint8_t Memory[2][16];
+[; ;display.h: 12: } lcd_t;
+[; ;display.h: 14: void lcdInit(lcd_t *lcd);
+[; ;display.h: 15: void lcdMemClean(lcd_t *lcd);
+[; ;display.h: 16: int lcdWrite(lcd_t *lcd, uint8_t row, uint8_t col, char *string);
+[; ;display.h: 17: void lcdRuntime(lcd_t *lcd);
+[; ;display.h: 18: void lcdClean(void);
+[; ;display.h: 19: void lcdCleanAll(lcd_t *lcd);
+[; ;display.h: 21: void DelayFor18TCY(void);
+[; ;display.h: 22: void DelayPORXLCD(void);
+[; ;display.h: 23: void DelayXLCD(void);
+[; ;display.h: 25: extern void delay_ms(uint16_t milis);
+[; ;menu.h: 10: typedef void (*OnEnter)();
+[; ;menu.h: 11: typedef void (*OnRender)();
+[; ;menu.h: 12: typedef void (*OnExit)();
+[; ;menu.h: 14: typedef struct {
+[; ;menu.h: 15: OnEnter Enter;
+[; ;menu.h: 16: OnRender Render;
+[; ;menu.h: 17: OnExit Exit;
+[; ;menu.h: 18: } MenuItem;
+"27 menu.h
+[v _Menu `S3 ~T0 @X0 1 e ]
+[; ;menu.h: 20: struct
+[; ;menu.h: 21: {
+[; ;menu.h: 22: lcd_t *lcd;
+[; ;menu.h: 23: uint8_t NeedsRedraw;
+[; ;menu.h: 24: uint8_t Index;
+[; ;menu.h: 25: MenuItem *Current;
+[; ;menu.h: 26: MenuItem *Items[1];
+[; ;menu.h: 27: } Menu;
+[; ;menu.h: 29: void menuInit(lcd_t *lcd);
+[; ;menu.h: 30: void menuGoto(uint8_t pos);
+[; ;menu.h: 31: void menuSetPosition(uint8_t pos, MenuItem *item);
+[; ;menu.h: 32: void menuNext();
+[; ;menu.h: 33: void menuPrev();
+[; ;menu.h: 34: void menuReset();
+[; ;menu.h: 35: void menuRuntime();
+[; ;menu.h: 37: void menuDraw();
+[; ;menu.c: 3: void _menuEnterPosition(uint8_t pos);
+"5 menu.c
+[v _menuInit `(v ~T0 @X0 1 ef1`*S1 ]
+"6
+{
+[; ;menu.c: 5: void menuInit(lcd_t *lcd)
+[; ;menu.c: 6: {
+[e :U _menuInit ]
+"5
+[v _lcd `*S1 ~T0 @X0 1 r1 ]
+"6
+[f ]
+[; ;menu.c: 7: Menu.lcd = lcd;
+"7
+[e = . _Menu 0 _lcd ]
+[; ;menu.c: 8: }
+"8
+[e :UE 4 ]
+}
+"10
+[v _menuGoto `(v ~T0 @X0 1 ef1`uc ]
+"11
+{
+[; ;menu.c: 10: void menuGoto(uint8_t pos)
+[; ;menu.c: 11: {
+[e :U _menuGoto ]
+"10
+[v _pos `uc ~T0 @X0 1 r1 ]
+"11
+[f ]
+[; ;menu.c: 12: _menuEnterPosition(pos);
+"12
+[e ( __menuEnterPosition (1 _pos ]
+[; ;menu.c: 13: }
+"13
+[e :UE 5 ]
+}
+"15
+[v _menuSetPosition `(v ~T0 @X0 1 ef2`uc`*S2 ]
+"16
+{
+[; ;menu.c: 15: void menuSetPosition(uint8_t pos, MenuItem *item)
+[; ;menu.c: 16: {
+[e :U _menuSetPosition ]
+"15
+[v _pos `uc ~T0 @X0 1 r1 ]
+[v _item `*S2 ~T0 @X0 1 r2 ]
+"16
+[f ]
+[; ;menu.c: 17: Menu.Items[pos] = item;
+"17
+[e = *U + &U . _Menu 4 * -> _pos `ux -> -> # *U &U . _Menu 4 `ui `ux _item ]
+[; ;menu.c: 18: }
+"18
+[e :UE 6 ]
+}
+"20
+[v __menuEnterPosition `(v ~T0 @X0 1 ef1`uc ]
+"21
+{
+[; ;menu.c: 20: void _menuEnterPosition(uint8_t pos)
+[; ;menu.c: 21: {
+[e :U __menuEnterPosition ]
+"20
+[v _pos `uc ~T0 @X0 1 r1 ]
+"21
+[f ]
+[; ;menu.c: 22: Menu.Current = Menu.Items[pos];
+"22
+[e = . _Menu 3 *U + &U . _Menu 4 * -> _pos `ux -> -> # *U &U . _Menu 4 `ui `ux ]
+[; ;menu.c: 23: Menu.Current->Enter();
+"23
+[e ( *U . *U . _Menu 3 0 ..  ]
+[; ;menu.c: 24: menuDraw();
+"24
+[e ( _menuDraw ..  ]
+[; ;menu.c: 25: }
+"25
+[e :UE 7 ]
+}
+"27
+[v _menuNext `(v ~T0 @X0 1 ef ]
+"28
+{
+[; ;menu.c: 27: void menuNext()
+[; ;menu.c: 28: {
+[e :U _menuNext ]
+[f ]
+[; ;menu.c: 29: Menu.Index++;
+"29
+[e ++ . _Menu 2 -> -> 1 `i `uc ]
+[; ;menu.c: 31: Menu.Current->Exit();
+"31
+[e ( *U . *U . _Menu 3 2 ..  ]
+[; ;menu.c: 32: if (Menu.Index >= 1)
+"32
+[e $ ! >= -> . _Menu 2 `i -> 1 `i 9  ]
+[; ;menu.c: 33: Menu.Index = 0;
+"33
+[e = . _Menu 2 -> -> 0 `i `uc ]
+[e :U 9 ]
+[; ;menu.c: 35: _menuEnterPosition(Menu.Index);
+"35
+[e ( __menuEnterPosition (1 . _Menu 2 ]
+[; ;menu.c: 36: }
+"36
+[e :UE 8 ]
+}
+"38
+[v _menuPrev `(v ~T0 @X0 1 ef ]
+"39
+{
+[; ;menu.c: 38: void menuPrev()
+[; ;menu.c: 39: {
+[e :U _menuPrev ]
+[f ]
+[; ;menu.c: 40: Menu.Current->Exit();
+"40
+[e ( *U . *U . _Menu 3 2 ..  ]
+[; ;menu.c: 41: if (Menu.Index > 0)
+"41
+[e $ ! > -> . _Menu 2 `i -> 0 `i 11  ]
+[; ;menu.c: 42: Menu.Index--;
+"42
+[e -- . _Menu 2 -> -> 1 `i `uc ]
+[e :U 11 ]
+[; ;menu.c: 44: _menuEnterPosition(Menu.Index);
+"44
+[e ( __menuEnterPosition (1 . _Menu 2 ]
+[; ;menu.c: 45: }
+"45
+[e :UE 10 ]
+}
+"47
+[v _menuDraw `(v ~T0 @X0 1 ef ]
+"48
+{
+[; ;menu.c: 47: void menuDraw()
+[; ;menu.c: 48: {
+[e :U _menuDraw ]
+[f ]
+[; ;menu.c: 49: Menu.NeedsRedraw = 1;
+"49
+[e = . _Menu 1 -> -> 1 `i `uc ]
+[; ;menu.c: 50: }
+"50
+[e :UE 12 ]
+}
+"52
+[v _menuReset `(v ~T0 @X0 1 ef ]
+"53
+{
+[; ;menu.c: 52: void menuReset()
+[; ;menu.c: 53: {
+[e :U _menuReset ]
+[f ]
+[; ;menu.c: 54: Menu.Current->Exit();
+"54
+[e ( *U . *U . _Menu 3 2 ..  ]
+[; ;menu.c: 55: Menu.Index = 0;
+"55
+[e = . _Menu 2 -> -> 0 `i `uc ]
+[; ;menu.c: 56: _menuEnterPosition(Menu.Index);
+"56
+[e ( __menuEnterPosition (1 . _Menu 2 ]
+[; ;menu.c: 57: }
+"57
+[e :UE 13 ]
+}
+"59
+[v _menuRuntime `(v ~T0 @X0 1 ef ]
+"60
+{
+[; ;menu.c: 59: void menuRuntime()
+[; ;menu.c: 60: {
+[e :U _menuRuntime ]
+[f ]
+[; ;menu.c: 61: if (Menu.NeedsRedraw) {
+"61
+[e $ ! != -> . _Menu 1 `i -> -> -> 0 `i `uc `i 15  ]
+{
+[; ;menu.c: 62: Menu.NeedsRedraw = 0;
+"62
+[e = . _Menu 1 -> -> 0 `i `uc ]
+[; ;menu.c: 63: if (Menu.Current) {
+"63
+[e $ ! != . _Menu 3 -> -> 0 `i `*S2 16  ]
+{
+[; ;menu.c: 64: Menu.Current->Render();
+"64
+[e ( *U . *U . _Menu 3 1 ..  ]
+"65
+}
+[e :U 16 ]
+[; ;menu.c: 65: }
+[; ;menu.c: 66: lcdRuntime(Menu.lcd);
+"66
+[e ( _lcdRuntime (1 . _Menu 0 ]
+"67
+}
+[e :U 15 ]
+[; ;menu.c: 67: }
+[; ;menu.c: 68: }
+"68
+[e :UE 14 ]
+}

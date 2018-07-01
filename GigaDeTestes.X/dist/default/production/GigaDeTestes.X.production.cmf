@@ -11,44 +11,73 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
+$dist/default/production\GigaDeTestes.X.production.obj
+intcodelo CODE 0 18 18 D6 1
+cinit CODE 0 FDA FDA 46 1
+intcode_body CODE 0 DFC DFC 96 1
+text0 CODE 0 D5C D5C A0 1
+text1 CODE 0 12D2 12D2 1C 1
+text2 CODE 0 1020 1020 44 1
+text3 CODE 0 A5E A5E E6 1
+text4 CODE 0 112A 112A 3E 1
+text5 CODE 0 F8E F8E 4C 1
+text6 CODE 0 81A 81A 244 1
+text7 CODE 0 1278 1278 1E 1
+text8 CODE 0 120E 120E 26 1
+text9 CODE 0 1064 1064 44 1
+text10 CODE 0 EE8 EE8 54 1
+text11 CODE 0 B44 B44 BA 1
+text12 CODE 0 1378 1378 A 1
+text13 CODE 0 1382 1382 A 1
+text14 CODE 0 10EA 10EA 40 1
+text15 CODE 0 13AE 13AE 6 1
+text16 CODE 0 13BA 13BA 2 1
+text17 CODE 0 11E0 11E0 2E 1
+text18 CODE 0 BFE BFE B6 1
+text19 CODE 0 1296 1296 1E 1
+text20 CODE 0 136C 136C C 1
+text21 CODE 0 130A 130A 16 1
+text22 CODE 0 1320 1320 16 1
+text23 CODE 0 1234 1234 24 1
+text24 CODE 0 13A0 13A0 8 1
+text25 CODE 0 138C 138C A 1
+text26 CODE 0 1396 1396 A 1
+text27 CODE 0 10A8 10A8 42 1
+text28 CODE 0 134C 134C 12 1
+text29 CODE 0 E92 E92 56 1
+text30 CODE 0 12B4 12B4 1E 1
+text31 CODE 0 CB4 CB4 A8 1
+text32 CODE 0 1168 1168 3E 1
+text33 CODE 0 F3C F3C 52 1
+text34 CODE 0 135E 135E E 1
+text35 CODE 0 12EE 12EE 1C 1
+text36 CODE 0 1336 1336 16 1
+text37 CODE 0 11A6 11A6 3A 1
+text38 CODE 0 1258 1258 20 1
+text40 CODE 0 13B4 13B4 6 1
+cstackCOMRAM COMRAM 1 1 1 2E 1
+cstackBANK0 BANK0 1 A7 A7 1F 1
+temp COMRAM 1 37 37 1 1
+bssBANK0 BANK0 1 60 60 47 1
+intcode CODE 0 8 8 6 1
+smallconst SMALLCONST 0 800 800 1A 1
+idataBANK0 CODE 0 13A8 13A8 6 1
+dataBANK0 BANK0 1 C6 C6 6 1
+bssCOMRAM COMRAM 1 2F 2F 8 1
+$C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 EE EE 4 1
 reset_vec CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
-$dist/default/production\GigaDeTestes.X.production.obj
-intcodelo CODE 0 18 18 D6 1
-cinit CODE 0 C34 C34 1E 1
-intcode_body CODE 0 98E 98E 96 1
-text0 CODE 0 A24 A24 5E 1
-text1 CODE 0 81E 81E C8 1
-text2 CODE 0 B76 B76 42 1
-text3 CODE 0 C8E C8E 12 1
-text4 CODE 0 A82 A82 58 1
-text5 CODE 0 C14 C14 20 1
-text6 CODE 0 8E6 8E6 A8 1
-text7 CODE 0 B32 B32 44 1
-text8 CODE 0 ADA ADA 58 1
-text9 CODE 0 CA0 CA0 10 1
-text10 CODE 0 C52 C52 1E 1
-text11 CODE 0 C70 C70 1E 1
-text12 CODE 0 BB8 BB8 3A 1
-text13 CODE 0 BF2 BF2 22 1
-cstackCOMRAM COMRAM 1 1 1 28 1
-cstackBANK0 BANK0 1 60 60 9 1
-temp COMRAM 1 4A 4A 1 1
-intcode CODE 0 8 8 6 1
-smallconst SMALLCONST 0 800 800 1E 1
-bssCOMRAM COMRAM 1 29 29 21 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 69-7FF 1
+RAM CC-7FF 1
 SFR F60-FFF 1
-BANK0 69-FF 1
+BANK0 CC-FF 1
 BANK1 100-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
@@ -59,18 +88,18 @@ BANK7 700-7FF 1
 CONST 4-7 1
 CONST E-17 1
 CONST F2-7FF 1
-CONST CB0-7FFF 1
-STACK 69-7FF 1
-SMALLCONST CB0-7FFF 1
+CONST 13BC-7FFF 1
+STACK CC-7FF 1
+SMALLCONST 13BC-7FFF 1
 CODE 4-7 1
 CODE E-17 1
 CODE F2-7FF 1
-CODE CB0-7FFF 1
-BIGRAM 4B-5F 1
-BIGRAM 69-7FF 1
-COMRAM 4B-5F 1
+CODE 13BC-7FFF 1
+BIGRAM 38-5F 1
+BIGRAM CC-7FF 1
+COMRAM 38-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST CB0-7FFF 1
+MEDIUMCONST 13BC-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -86,200 +115,440 @@ MEDIUMCONST CB0-7FFF 1
 %LINETAB
 $dist/default/production\GigaDeTestes.X.production.obj
 18 intcodelo CODE >106:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-18 intcodelo CODE >16:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-6E intcodelo CODE >18:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-72 intcodelo CODE >19:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-74 intcodelo CODE >20:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-78 intcodelo CODE >21:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-7C intcodelo CODE >24:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-92 intcodelo CODE >25:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-96 intcodelo CODE >26:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-96 intcodelo CODE >27:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-8 intcode CODE >11:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-8 intcode CODE >27:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-98E intcode_body CODE >11:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-9D8 intcode_body CODE >14:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-BF2 text13 CODE >102:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-BF2 text13 CODE >103:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C12 text13 CODE >106:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-BB8 text12 CODE >6:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BB8 text12 CODE >8:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BBA text12 CODE >9:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BBC text12 CODE >10:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BC0 text12 CODE >11:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BC2 text12 CODE >12:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BC6 text12 CODE >29:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BCA text12 CODE >32:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BCC text12 CODE >33:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BD0 text12 CODE >34:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BD2 text12 CODE >35:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BD6 text12 CODE >36:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BD8 text12 CODE >37:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BDA text12 CODE >38:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BDC text12 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BDE text12 CODE >41:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BE0 text12 CODE >42:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BE4 text12 CODE >43:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BE6 text12 CODE >44:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BEA text12 CODE >45:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BEC text12 CODE >46:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-BEE text12 CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-C70 text11 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
-C74 text11 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
-C74 text11 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
-C86 text11 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
-C52 text10 CODE >72:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-C52 text10 CODE >75:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-CA0 text9 CODE >108:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-CA0 text9 CODE >109:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-CAE text9 CODE >110:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-ADA text8 CODE >266:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-ADE text8 CODE >285:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-AE2 text8 CODE >286:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-AE6 text8 CODE >287:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B04 text8 CODE >289:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B06 text8 CODE >290:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B08 text8 CODE >291:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B0C text8 CODE >292:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B0E text8 CODE >293:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B12 text8 CODE >294:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B14 text8 CODE >299:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B18 text8 CODE >300:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B20 text8 CODE >302:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B24 text8 CODE >303:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B26 text8 CODE >304:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B2A text8 CODE >305:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B2C text8 CODE >309:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B32 text7 CODE >315:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B36 text7 CODE >334:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B3A text7 CODE >335:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B3E text7 CODE >336:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B48 text7 CODE >338:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B4A text7 CODE >339:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B4C text7 CODE >340:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B50 text7 CODE >341:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B52 text7 CODE >342:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B56 text7 CODE >343:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B58 text7 CODE >348:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B5C text7 CODE >349:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B64 text7 CODE >351:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B68 text7 CODE >352:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B6A text7 CODE >353:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B6E text7 CODE >354:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-B70 text7 CODE >358:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8E6 text6 CODE >63:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8EA text6 CODE >75:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8EE text6 CODE >76:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8F2 text6 CODE >79:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8F4 text6 CODE >80:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8F6 text6 CODE >81:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8F8 text6 CODE >82:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8FA text6 CODE >83:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8FC text6 CODE >84:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-8FE text6 CODE >87:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-902 text6 CODE >89:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-908 text6 CODE >90:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-90E text6 CODE >92:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-914 text6 CODE >93:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-91A text6 CODE >96:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-920 text6 CODE >97:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-92A text6 CODE >102:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-934 text6 CODE >103:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-93C text6 CODE >106:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-946 text6 CODE >107:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-94C text6 CODE >108:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-956 text6 CODE >109:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-95C text6 CODE >112:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-966 text6 CODE >113:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-96C text6 CODE >116:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-976 text6 CODE >117:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-97C text6 CODE >120:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-986 text6 CODE >121:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
-C14 text5 CODE >30:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C14 text5 CODE >31:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C1E text5 CODE >32:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C24 text5 CODE >34:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C32 text5 CODE >35:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-A82 text4 CODE >38:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-A82 text4 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-A90 text4 CODE >40:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-AAC text4 CODE >41:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-AC8 text4 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-ACC text4 CODE >43:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-AD8 text4 CODE >44:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C8E text3 CODE >46:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C8E text3 CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C92 text3 CODE >48:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-C9E text3 CODE >49:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-B76 text2 CODE >16:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-B76 text2 CODE >17:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-B7A text2 CODE >19:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-B80 text2 CODE >20:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-B8A text2 CODE >21:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-B90 text2 CODE >22:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-B9A text2 CODE >23:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-BA0 text2 CODE >24:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-BAA text2 CODE >26:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-BB6 text2 CODE >27:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-81E text1 CODE >52:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-81E text1 CODE >54:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-83A text1 CODE >56:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-83A text1 CODE >58:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-83C text1 CODE >59:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-83E text1 CODE >61:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-846 text1 CODE >62:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-846 text1 CODE >63:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-86E text1 CODE >64:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-872 text1 CODE >62:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-872 text1 CODE >65:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-88A text1 CODE >66:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-88E text1 CODE >67:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-892 text1 CODE >71:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-894 text1 CODE >72:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-8BC text1 CODE >73:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-8C0 text1 CODE >71:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-8C0 text1 CODE >74:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-8D8 text1 CODE >76:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
-A24 text0 CODE >29:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A24 text0 CODE >31:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A28 text0 CODE >32:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A2C text0 CODE >34:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A30 text0 CODE >35:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A32 text0 CODE >38:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A34 text0 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A36 text0 CODE >40:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A38 text0 CODE >50:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A3A text0 CODE >51:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A3C text0 CODE >52:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A40 text0 CODE >53:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A42 text0 CODE >54:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A44 text0 CODE >55:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A46 text0 CODE >56:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A4A text0 CODE >57:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A4E text0 CODE >58:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A50 text0 CODE >59:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A52 text0 CODE >60:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A54 text0 CODE >63:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A62 text0 CODE >64:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-A80 text0 CODE >67:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
-C34 cinit CODE >1242:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C34 cinit CODE >1244:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C34 cinit CODE >1247:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C34 cinit CODE >1259:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C38 cinit CODE >1260:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C3A cinit CODE >1261:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C3A cinit CODE >1262:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C3C cinit CODE >1263:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C3E cinit CODE >1264:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C40 cinit CODE >1270:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C40 cinit CODE >1272:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C42 cinit CODE >1273:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C44 cinit CODE >1275:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C46 cinit CODE >1276:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C48 cinit CODE >1277:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C4A cinit CODE >1278:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C4C cinit CODE >1279:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
-C4E cinit CODE >1280:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
+18 intcodelo CODE >45:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+6E intcodelo CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+72 intcodelo CODE >48:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+74 intcodelo CODE >49:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+78 intcodelo CODE >50:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+7C intcodelo CODE >53:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+92 intcodelo CODE >54:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+96 intcodelo CODE >55:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+96 intcodelo CODE >56:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+8 intcode CODE >40:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+8 intcode CODE >50:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+DFC intcode_body CODE >40:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+E46 intcode_body CODE >43:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+13B4 text40 CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+13B4 text40 CODE >49:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+13B8 text40 CODE >50:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1258 text38 CODE >102:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+1258 text38 CODE >103:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+1276 text38 CODE >106:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+11A6 text37 CODE >6:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11A6 text37 CODE >8:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11A8 text37 CODE >9:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11AA text37 CODE >10:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11AE text37 CODE >11:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11B0 text37 CODE >12:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11B4 text37 CODE >29:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11B8 text37 CODE >32:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11BA text37 CODE >33:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11BE text37 CODE >34:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11C0 text37 CODE >35:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11C4 text37 CODE >36:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11C6 text37 CODE >37:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11C8 text37 CODE >38:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11CA text37 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11CC text37 CODE >41:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11CE text37 CODE >42:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11D2 text37 CODE >43:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11D4 text37 CODE >44:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11D8 text37 CODE >45:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11DA text37 CODE >46:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11DC text37 CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1336 text36 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
+1338 text36 CODE >10:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
+1338 text36 CODE >11:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
+1346 text36 CODE >12:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
+12EE text35 CODE >114:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+12EE text35 CODE >117:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+135E text34 CODE >108:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+135E text34 CODE >109:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+136A text34 CODE >110:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+F3C text33 CODE >266:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F3E text33 CODE >285:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F42 text33 CODE >286:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F46 text33 CODE >287:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F62 text33 CODE >289:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F64 text33 CODE >290:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F66 text33 CODE >291:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F6A text33 CODE >292:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F6C text33 CODE >293:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F70 text33 CODE >294:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F72 text33 CODE >299:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F76 text33 CODE >300:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F7C text33 CODE >302:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F80 text33 CODE >303:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F82 text33 CODE >304:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F86 text33 CODE >305:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+F88 text33 CODE >309:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1168 text32 CODE >315:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+116A text32 CODE >334:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+116E text32 CODE >335:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1172 text32 CODE >336:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+117A text32 CODE >338:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+117C text32 CODE >339:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+117E text32 CODE >340:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1182 text32 CODE >341:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1184 text32 CODE >342:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1188 text32 CODE >343:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+118A text32 CODE >348:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+118E text32 CODE >349:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1194 text32 CODE >351:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1198 text32 CODE >352:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+119A text32 CODE >353:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+119E text32 CODE >354:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+11A0 text32 CODE >358:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CB4 text31 CODE >63:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CB8 text31 CODE >75:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CBC text31 CODE >76:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CC0 text31 CODE >79:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CC2 text31 CODE >80:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CC4 text31 CODE >81:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CC6 text31 CODE >82:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CC8 text31 CODE >83:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CCA text31 CODE >84:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CCC text31 CODE >87:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CD0 text31 CODE >89:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CD6 text31 CODE >90:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CDC text31 CODE >92:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CE2 text31 CODE >93:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CE8 text31 CODE >96:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CEE text31 CODE >97:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+CF8 text31 CODE >102:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D02 text31 CODE >103:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D0A text31 CODE >106:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D14 text31 CODE >107:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D1A text31 CODE >108:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D24 text31 CODE >109:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D2A text31 CODE >112:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D34 text31 CODE >113:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D3A text31 CODE >116:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D44 text31 CODE >117:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D4A text31 CODE >120:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+D54 text31 CODE >121:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+12B4 text30 CODE >30:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+12B4 text30 CODE >31:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+12BE text30 CODE >32:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+12C4 text30 CODE >34:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+12D0 text30 CODE >35:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+E92 text29 CODE >38:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+E92 text29 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+E9E text29 CODE >40:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+EBA text29 CODE >41:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+ED6 text29 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+EDA text29 CODE >43:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+EE6 text29 CODE >44:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+134C text28 CODE >46:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+134C text28 CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+1350 text28 CODE >48:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+135C text28 CODE >49:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10A8 text27 CODE >16:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10A8 text27 CODE >17:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10AC text27 CODE >19:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10B2 text27 CODE >20:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10BC text27 CODE >21:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10C2 text27 CODE >22:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10CC text27 CODE >23:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10D2 text27 CODE >24:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10DC text27 CODE >26:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+10E8 text27 CODE >27:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+1396 text26 CODE >69:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1396 text26 CODE >71:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1398 text26 CODE >72:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+139A text26 CODE >73:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+138C text25 CODE >76:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+138C text25 CODE >78:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+138E text25 CODE >79:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1390 text25 CODE >80:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+13A0 text24 CODE >105:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+13A0 text24 CODE >107:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+13A4 text24 CODE >108:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+13A6 text24 CODE >109:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1234 text23 CODE >82:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1236 text23 CODE >85:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1238 text23 CODE >86:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+123C text23 CODE >87:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1240 text23 CODE >88:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1246 text23 CODE >89:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+124C text23 CODE >90:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+124C text23 CODE >91:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1250 text23 CODE >92:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1254 text23 CODE >93:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1320 text22 CODE >59:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1322 text22 CODE >61:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1326 text22 CODE >62:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+132A text22 CODE >63:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+132E text22 CODE >64:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1332 text22 CODE >65:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1332 text22 CODE >66:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+130A text21 CODE >45:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+130C text21 CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+130E text21 CODE >48:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1312 text21 CODE >49:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1314 text21 CODE >50:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1318 text21 CODE >52:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+131E text21 CODE >56:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+136C text20 CODE >96:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+136C text20 CODE >98:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+136E text20 CODE >99:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1372 text20 CODE >100:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1374 text20 CODE >101:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1296 text19 CODE >26:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1298 text19 CODE >28:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+1298 text19 CODE >30:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+129A text19 CODE >31:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+129E text19 CODE >32:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+12A0 text19 CODE >33:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+12A4 text19 CODE >35:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+12AA text19 CODE >36:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+12AE text19 CODE >38:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+12B2 text19 CODE >39:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\i2c.c
+BFE text18 CODE >18:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+BFE text18 CODE >20:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+C04 text18 CODE >21:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+C0A text18 CODE >22:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+C10 text18 CODE >24:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+C42 text18 CODE >25:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+C78 text18 CODE >26:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+CAE text18 CODE >27:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+CB2 text18 CODE >28:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\magnetometro.c
+11E0 text17 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
+11E0 text17 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
+11E8 text17 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
+11EA text17 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
+11FC text17 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\memset.c
+13BA text16 CODE >18:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+13BA text16 CODE >21:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+13AE text15 CODE >47:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+13AE text15 CODE >49:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+13B2 text15 CODE >50:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+10EA text14 CODE >20:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+10EC text14 CODE >22:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1104 text14 CODE >23:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1124 text14 CODE >24:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1128 text14 CODE >25:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1382 text13 CODE >10:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1384 text13 CODE >12:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+138A text13 CODE >13:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1378 text12 CODE >5:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1378 text12 CODE >7:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1380 text12 CODE >8:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+B44 text11 CODE >52:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B44 text11 CODE >54:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B5E text11 CODE >56:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B5E text11 CODE >58:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B60 text11 CODE >59:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B62 text11 CODE >61:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B6A text11 CODE >62:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B6A text11 CODE >63:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B90 text11 CODE >64:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B94 text11 CODE >62:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B94 text11 CODE >65:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BA8 text11 CODE >66:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BAC text11 CODE >67:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BB0 text11 CODE >71:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BB2 text11 CODE >72:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BD8 text11 CODE >73:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BDC text11 CODE >71:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BDC text11 CODE >74:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+BF0 text11 CODE >76:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+EE8 text10 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+EE8 text10 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+EF2 text10 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+EFA text10 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+EFE text10 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F00 text10 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F06 text10 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F08 text10 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F08 text10 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F0C text10 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F12 text10 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F1E text10 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F26 text10 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F28 text10 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F28 text10 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F2E text10 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F32 text10 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+F3A text10 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+1064 text9 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+1064 text9 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+106E text9 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+1072 text9 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+1074 text9 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+107A text9 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+107C text9 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+107C text9 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+1080 text9 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+108C text9 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+1094 text9 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+109A text9 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+109E text9 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+10A6 text9 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+120E text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+120E text8 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+121A text8 CODE >38:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+1222 text8 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+122A text8 CODE >52:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\Umul16.c
+1278 text7 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\isdigit.c
+127A text7 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\isdigit.c
+81A text6 CODE >492:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+81A text6 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+824 text6 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+826 text6 CODE >538:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+82E text6 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+83E text6 CODE >542:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+840 text6 CODE >543:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+840 text6 CODE >546:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+848 text6 CODE >548:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+84C text6 CODE >597:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+860 text6 CODE >598:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+86A text6 CODE >599:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+86A text6 CODE >600:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+886 text6 CODE >601:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+8B4 text6 CODE >602:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+8C8 text6 CODE >635:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+8F0 text6 CODE >822:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+8F0 text6 CODE >1259:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+90A text6 CODE >1261:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+90E text6 CODE >1262:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+912 text6 CODE >1263:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+91A text6 CODE >1264:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+91A text6 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+926 text6 CODE >1306:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+946 text6 CODE >1305:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+94A text6 CODE >1345:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+95E text6 CODE >1346:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+964 text6 CODE >1381:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+97A text6 CODE >1382:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+988 text6 CODE >1383:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+988 text6 CODE >1384:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+990 text6 CODE >1428:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+998 text6 CODE >1430:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+9A8 text6 CODE >1431:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+9B6 text6 CODE >1438:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+9C2 text6 CODE >1439:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+9D2 text6 CODE >1472:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+9D6 text6 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+9D8 text6 CODE >1489:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+A1E text6 CODE >1524:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+A2E text6 CODE >1474:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+A2E text6 CODE >1525:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+A36 text6 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+A50 text6 CODE >1538:C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+F8E text5 CODE >23:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+F8E text5 CODE >25:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+FBC text5 CODE >26:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+FD8 text5 CODE >27:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+112A text4 CODE >364:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+112C text4 CODE >383:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1130 text4 CODE >384:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1134 text4 CODE >385:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+113C text4 CODE >387:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+113E text4 CODE >388:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1140 text4 CODE >389:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1144 text4 CODE >390:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1146 text4 CODE >391:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+114A text4 CODE >392:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+114C text4 CODE >397:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1150 text4 CODE >398:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1156 text4 CODE >400:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+115A text4 CODE >401:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+115C text4 CODE >402:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1160 text4 CODE >403:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+1162 text4 CODE >407:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
+A5E text3 CODE >81:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+A5E text3 CODE >82:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+A68 text3 CODE >84:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+A76 text3 CODE >85:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+A7C text3 CODE >86:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+A96 text3 CODE >87:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+AA0 text3 CODE >88:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+AC0 text3 CODE >86:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+AD6 text3 CODE >90:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+ADC text3 CODE >91:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+AF6 text3 CODE >92:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B00 text3 CODE >93:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B20 text3 CODE >91:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+B36 text3 CODE >96:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\display.c
+1020 text2 CODE >59:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1020 text2 CODE >61:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1026 text2 CODE >62:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+102A text2 CODE >63:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1032 text2 CODE >64:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+1056 text2 CODE >66:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+12D2 text1 CODE >15:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+12D4 text1 CODE >17:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+12EC text1 CODE >18:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\menu.c
+D5C text0 CODE >58:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D5C text0 CODE >60:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D62 text0 CODE >62:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D7E text0 CODE >64:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D82 text0 CODE >65:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D86 text0 CODE >67:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D8A text0 CODE >68:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D8C text0 CODE >71:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D8E text0 CODE >72:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D90 text0 CODE >73:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D92 text0 CODE >83:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D94 text0 CODE >84:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D96 text0 CODE >85:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D9A text0 CODE >86:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D9C text0 CODE >87:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+D9E text0 CODE >88:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DA0 text0 CODE >89:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DA4 text0 CODE >90:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DA8 text0 CODE >91:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DAA text0 CODE >92:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DAC text0 CODE >93:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DAE text0 CODE >96:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DBC text0 CODE >97:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DC8 text0 CODE >98:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DD6 text0 CODE >99:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DDC text0 CODE >102:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DDE text0 CODE >103:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DDE text0 CODE >104:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DEA text0 CODE >107:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DEC text0 CODE >102:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DF6 text0 CODE >107:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DF6 text0 CODE >108:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+DFA text0 CODE >101:C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+FDA cinit CODE >2369:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FDA cinit CODE >2371:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FDA cinit CODE >2374:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FDA cinit CODE >2407:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FDC cinit CODE >2408:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FDE cinit CODE >2409:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FE0 cinit CODE >2410:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FE2 cinit CODE >2411:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FE4 cinit CODE >2412:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FE6 cinit CODE >2413:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FEA cinit CODE >2414:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FEE cinit CODE >2415:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FEE cinit CODE >2416:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FF0 cinit CODE >2417:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FF4 cinit CODE >2418:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FF6 cinit CODE >2419:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FF8 cinit CODE >2420:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FFA cinit CODE >2424:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+FFE cinit CODE >2425:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1000 cinit CODE >2426:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1000 cinit CODE >2427:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1002 cinit CODE >2428:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1004 cinit CODE >2429:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1006 cinit CODE >2432:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+100A cinit CODE >2433:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+100C cinit CODE >2434:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+100C cinit CODE >2435:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+100E cinit CODE >2436:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1010 cinit CODE >2437:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1012 cinit CODE >2443:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1012 cinit CODE >2445:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1014 cinit CODE >2446:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1016 cinit CODE >2448:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+1018 cinit CODE >2449:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+101A cinit CODE >2450:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
+101C cinit CODE >2451:C:\Users\LUISFE~1\AppData\Local\Temp\s16c.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -292,80 +561,153 @@ C4E cinit CODE >1280:C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-WriteCmdXLCD@cmd 62 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+WriteCmdXLCD@cmd 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+___lwmod@counter 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\GigaDeTestes.X.production.obj
 __Hspace_0 30000E 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__Hspace_1 69 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__Hspace_1 CC 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __size_of_lcdInit 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of_OnEnterMenu1 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __end_of_ISR_LP EE 0 CODE 0 intcodelo dist/default/production\GigaDeTestes.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\GigaDeTestes.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+__size_of_I2C_Ack 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\GigaDeTestes.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _T1CONbits FCD 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Ready 13A8 0 CODE 0 text24 dist/default/production\GigaDeTestes.X.production.obj
+__size_of_menuDraw 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of_menuGoto 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of_menuInit 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Write 1336 0 CODE 0 text22 dist/default/production\GigaDeTestes.X.production.obj
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\GigaDeTestes.X.production.obj
 _GIEH 7F97 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _IPEN 7E87 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_Menu 2F 0 COMRAM 1 bssCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 _PEIE 7F96 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-_main A24 0 CODE 0 text0 dist/default/production\GigaDeTestes.X.production.obj
-btemp 4A 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
-start EE 0 CODE 0 init C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
+_RCEN 7E2B 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_RCIF 7CF5 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_RSEN 7E29 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_TRMT 7D61 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_TXIF 7CF4 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+_cord A1 0 BANK0 1 bssBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_main D5C 0 CODE 0 text0 dist/default/production\GigaDeTestes.X.production.obj
+__size_of_I2C_Ready 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+btemp 37 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
+__size_of_I2C_Write 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_ofi1_menuDraw 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+start EE 0 CODE 0 init C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of___lwmod 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_menuRuntime 1064 0 CODE 0 text2 dist/default/production\GigaDeTestes.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\GigaDeTestes.X.production.obj
-_lcdCleanAll C8E 0 CODE 0 text3 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_OnEnterMenu1 13BC 0 CODE 0 text16 dist/default/production\GigaDeTestes.X.production.obj
+?___wmul 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__size_of_I2C_Nack 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of_I2C_Read 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of_I2C_Stop 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_lcdCleanAll 134C 0 CODE 0 text28 dist/default/production\GigaDeTestes.X.production.obj
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_I2C_Ready 13A0 0 CODE 0 text24 dist/default/production\GigaDeTestes.X.production.obj
 __Hpowerup EE 0 CODE 0 powerup dist/default/production\GigaDeTestes.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-intlevel0 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-intlevel1 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-intlevel2 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-intlevel3 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
+_I2C_Write 1320 0 CODE 0 text22 dist/default/production\GigaDeTestes.X.production.obj
+lcdRuntime@lcd A7 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+intlevel0 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+intlevel1 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+intlevel2 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+intlevel3 0 0 CODE 0 text C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __CFG_USBDIV$1 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\GigaDeTestes.X.production.obj
-wtemp6 4B 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
+wtemp6 38 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\GigaDeTestes.X.production.obj
+__size_of_magnetoGetCord 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\GigaDeTestes.X.production.obj
+_menuDraw 13AE 0 CODE 0 text15 dist/default/production\GigaDeTestes.X.production.obj
+_menuGoto 1382 0 CODE 0 text13 dist/default/production\GigaDeTestes.X.production.obj
+_menuInit 1378 0 CODE 0 text12 dist/default/production\GigaDeTestes.X.production.obj
+magnetoGetCord@coord 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+___wmul@multiplicand 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 _ADCON1 FC1 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__end_of_lcdInit BB8 0 CODE 0 text2 dist/default/production\GigaDeTestes.X.production.obj
-_Delay10KTCYx C70 0 CODE 0 text11 dist/default/production\GigaDeTestes.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
+_OnExitMenu1 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_lcdInit 10EA 0 CODE 0 text27 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_menuDraw 13B4 0 CODE 0 text15 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_menuGoto 138C 0 CODE 0 text13 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_menuInit 1382 0 CODE 0 text12 dist/default/production\GigaDeTestes.X.production.obj
+_Delay10KTCYx 1336 0 CODE 0 text36 dist/default/production\GigaDeTestes.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+_lcdRuntime A5E 0 CODE 0 text3 dist/default/production\GigaDeTestes.X.production.obj
+menuInit@lcd 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+_I2C_Nack 138C 0 CODE 0 text25 dist/default/production\GigaDeTestes.X.production.obj
+_I2C_Read 1234 0 CODE 0 text23 dist/default/production\GigaDeTestes.X.production.obj
+_I2C_Stop 136C 0 CODE 0 text20 dist/default/production\GigaDeTestes.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Ack 13A0 0 CODE 0 text26 dist/default/production\GigaDeTestes.X.production.obj
+__end_of___wmul 1234 0 CODE 0 text8 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_BusyXLCD 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\GigaDeTestes.X.production.obj
+__size_of_sprintf 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Nack 1396 0 CODE 0 text25 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Read 1258 0 CODE 0 text23 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Stop 1378 0 CODE 0 text20 dist/default/production\GigaDeTestes.X.production.obj
 __Hintcodelo EE 0 CODE 0 intcodelo dist/default/production\GigaDeTestes.X.production.obj
+___lwmod@divisor AC 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of___lwdiv F3C 0 CODE 0 text10 dist/default/production\GigaDeTestes.X.production.obj
+__end_of___lwmod 10A8 0 CODE 0 text9 dist/default/production\GigaDeTestes.X.production.obj
+__size_of_isdigit 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _ISR_LP 18 0 CODE 0 intcodelo dist/default/production\GigaDeTestes.X.production.obj
-lcdCleanAll@lcd 65 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-_lcdMemClean A82 0 CODE 0 text4 dist/default/production\GigaDeTestes.X.production.obj
+_dpowers 801 0 SMALLCONST 0 smallconst dist/default/production\GigaDeTestes.X.production.obj
+lcdCleanAll@lcd A7 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_lcdMemClean E92 0 CODE 0 text29 dist/default/production\GigaDeTestes.X.production.obj
+__end_of__menuEnterPosition 112A 0 CODE 0 text14 dist/default/production\GigaDeTestes.X.production.obj
+___lwdiv@quotient A8 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_Delay10KTCYx 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_WriteDataXLCD 112A 0 CODE 0 text4 dist/default/production\GigaDeTestes.X.production.obj
+___lwmod@dividend AA 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __Lintcodelo 18 0 CODE 0 intcodelo dist/default/production\GigaDeTestes.X.production.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-OpenXLCD@lcdtype 66 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-_DelayFor18TCY BF2 0 CODE 0 text13 dist/default/production\GigaDeTestes.X.production.obj
-start_initialization C34 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
+OpenXLCD@lcdtype A7 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_DelayFor18TCY 1258 0 CODE 0 text38 dist/default/production\GigaDeTestes.X.production.obj
+start_initialization FDA 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
 _OSCCON FD3 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\GigaDeTestes.X.production.obj
+_TRISAbits F92 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_ACKSTAT 7E2E 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _TRISDbits F95 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_lcdRuntime B44 0 CODE 0 text3 dist/default/production\GigaDeTestes.X.production.obj
+__size_of_menuRuntime 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 ___rparam_used 1 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-_BusyXLCD BB8 0 CODE 0 text12 dist/default/production\GigaDeTestes.X.production.obj
+_BusyXLCD 11A6 0 CODE 0 text37 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_memset 120E 0 CODE 0 text17 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-__end_of_Delay10KTCYx C8E 0 CODE 0 text11 dist/default/production\GigaDeTestes.X.production.obj
+__pcstackBANK0 A7 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__size_of_I2C_Repeated_Start 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SSPADD FC8 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SSPBUF FC9 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_Delay10KTCYx 134C 0 CODE 0 text36 dist/default/production\GigaDeTestes.X.production.obj
 _TMR1IE 7CE8 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _TMR1IF 7CF0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _TMR1IP 7CF8 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_TRISB0 7C98 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_TRISB1 7C99 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__menuEnterPosition 10EA 0 CODE 0 text14 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_ISR_LP 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__end_of_BusyXLCD BF2 0 CODE 0 text12 dist/default/production\GigaDeTestes.X.production.obj
-lcdWrite@string 64 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_BusyXLCD 11E0 0 CODE 0 text37 dist/default/production\GigaDeTestes.X.production.obj
+lcdWrite@string 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 dist/default/production\GigaDeTestes.X.production.obj
 __Hbank1 0 0 ABS 0 bank1 dist/default/production\GigaDeTestes.X.production.obj
 __Hbank2 0 0 ABS 0 bank2 dist/default/production\GigaDeTestes.X.production.obj
@@ -392,13 +734,17 @@ __Htext6 0 0 ABS 0 text6 dist/default/production\GigaDeTestes.X.production.obj
 __Htext7 0 0 ABS 0 text7 dist/default/production\GigaDeTestes.X.production.obj
 __Htext8 0 0 ABS 0 text8 dist/default/production\GigaDeTestes.X.production.obj
 __Htext9 0 0 ABS 0 text9 dist/default/production\GigaDeTestes.X.production.obj
+___lwdiv@counter A7 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__size_of_I2C_Start_Wait 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\GigaDeTestes.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\GigaDeTestes.X.production.obj
 __size_of_lcdClean 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
+__smallconst 800 0 SMALLCONST 0 smallconst C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
 __size_of_lcdWrite 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_sprintf A5E 0 CODE 0 text6 dist/default/production\GigaDeTestes.X.production.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\GigaDeTestes.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\GigaDeTestes.X.production.obj
+__end_of_menuSetPosition 12EE 0 CODE 0 text1 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\GigaDeTestes.X.production.obj
 __Lbank1 0 0 ABS 0 bank1 dist/default/production\GigaDeTestes.X.production.obj
@@ -408,6 +754,7 @@ __Lbank4 0 0 ABS 0 bank4 dist/default/production\GigaDeTestes.X.production.obj
 __Lbank5 0 0 ABS 0 bank5 dist/default/production\GigaDeTestes.X.production.obj
 __Lbank6 0 0 ABS 0 bank6 dist/default/production\GigaDeTestes.X.production.obj
 __Lbank7 0 0 ABS 0 bank7 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_isdigit 1296 0 CODE 0 text7 dist/default/production\GigaDeTestes.X.production.obj
 __Lcinit 0 0 ABS 0 cinit dist/default/production\GigaDeTestes.X.production.obj
 __Lconst 0 0 CONST 0 const dist/default/production\GigaDeTestes.X.production.obj
 __Lidata 0 0 CODE 0 idata dist/default/production\GigaDeTestes.X.production.obj
@@ -429,85 +776,173 @@ __Ltext9 0 0 ABS 0 text9 dist/default/production\GigaDeTestes.X.production.obj
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/production\GigaDeTestes.X.production.obj
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
 _PORTCbits F82 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-_SetDDRamAddr ADA 0 CODE 0 text8 dist/default/production\GigaDeTestes.X.production.obj
+lcdRuntime@i_343 AD 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_SetDDRamAddr F3C 0 CODE 0 text33 dist/default/production\GigaDeTestes.X.production.obj
 __Habs1 0 0 ABS 0 abs1 dist/default/production\GigaDeTestes.X.production.obj
 __Hdata 0 0 ABS 0 data dist/default/production\GigaDeTestes.X.production.obj
 __Hinit F2 0 CODE 0 init dist/default/production\GigaDeTestes.X.production.obj
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production\GigaDeTestes.X.production.obj
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production\GigaDeTestes.X.production.obj
-__Htemp 4B 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
+__Htemp 38 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
 __Htext 0 0 ABS 0 text dist/default/production\GigaDeTestes.X.production.obj
 __Labs1 0 0 ABS 0 abs1 dist/default/production\GigaDeTestes.X.production.obj
 __Ldata 0 0 ABS 0 data dist/default/production\GigaDeTestes.X.production.obj
 __Linit EE 0 CODE 0 init dist/default/production\GigaDeTestes.X.production.obj
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production\GigaDeTestes.X.production.obj
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production\GigaDeTestes.X.production.obj
-__Ltemp 4A 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
+__Ltemp 37 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
 __Ltext 0 0 ABS 0 text dist/default/production\GigaDeTestes.X.production.obj
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+memset@c 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+memset@n 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+memset@p A7 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+___wmul 120E 0 CODE 0 text8 dist/default/production\GigaDeTestes.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-int$flags 4A 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
+int$flags 37 0 COMRAM 1 temp dist/default/production\GigaDeTestes.X.production.obj
+I2C_Start_Wait@slave_write_address 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __Hintret 0 0 ABS 0 intret dist/default/production\GigaDeTestes.X.production.obj
 __Hirdata 0 0 CODE 0 irdata dist/default/production\GigaDeTestes.X.production.obj
 _ISR 8 0 CODE 0 intcode dist/default/production\GigaDeTestes.X.production.obj
+_PEN 7E2A 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __S0 30000E 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__S1 69 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__S1 CC 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __S2 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-_lcd 29 0 COMRAM 1 bssCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+_lcd 60 0 BANK0 1 bssBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__end_of_lcdCleanAll CA0 0 CODE 0 text3 dist/default/production\GigaDeTestes.X.production.obj
-DelayFor18TCY@i 60 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_lcdCleanAll 135E 0 CODE 0 text28 dist/default/production\GigaDeTestes.X.production.obj
+DelayFor18TCY@i 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__size_of_WriteDataXLCD 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_buffer 81 0 BANK0 1 bssBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_PLLDIV$1 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __size_of_DelayFor18TCY 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\GigaDeTestes.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\GigaDeTestes.X.production.obj
-__end_of_ISR A24 0 CODE 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
-_lcdClean C14 0 CODE 0 text5 dist/default/production\GigaDeTestes.X.production.obj
-int_func 98E 0 CODE 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
-_lcdWrite 81E 0 CODE 0 text1 dist/default/production\GigaDeTestes.X.production.obj
+sprintf@val C0 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_ISR E92 0 CODE 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
+_lcdClean 12B4 0 CODE 0 text30 dist/default/production\GigaDeTestes.X.production.obj
+int_func DFC 0 CODE 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
+_menuSetPosition 12D2 0 CODE 0 text1 dist/default/production\GigaDeTestes.X.production.obj
+_lcdWrite B44 0 CODE 0 text11 dist/default/production\GigaDeTestes.X.production.obj
 __Lintentry 0 0 ABS 0 intentry dist/default/production\GigaDeTestes.X.production.obj
-SetDDRamAddr@DDaddr 65 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-_lcdInit B76 0 CODE 0 text2 dist/default/production\GigaDeTestes.X.production.obj
+SetDDRamAddr@DDaddr 2E 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+_lcdInit 10A8 0 CODE 0 text27 dist/default/production\GigaDeTestes.X.production.obj
 __Hramtop 800 0 RAM 0 ramtop dist/default/production\GigaDeTestes.X.production.obj
 __size_of_SetDDRamAddr 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production\GigaDeTestes.X.production.obj
-__end_of_lcdClean C34 0 CODE 0 text5 dist/default/production\GigaDeTestes.X.production.obj
-__activetblptr 1 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_lcdClean 12D2 0 CODE 0 text30 dist/default/production\GigaDeTestes.X.production.obj
+__pdataBANK0 C6 0 BANK0 1 dataBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__activetblptr 2 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+I2C_Read@buffer 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __Hstruct 0 0 COMRAM 1 struct dist/default/production\GigaDeTestes.X.production.obj
-__end_of_lcdWrite 8E6 0 CODE 0 text1 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_lcdWrite BFE 0 CODE 0 text11 dist/default/production\GigaDeTestes.X.production.obj
+__size_of___wmul 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_WriteDataXLCD 1168 0 CODE 0 text4 dist/default/production\GigaDeTestes.X.production.obj
+_I2C_Ack 1396 0 CODE 0 text26 dist/default/production\GigaDeTestes.X.production.obj
 __Htext10 0 0 ABS 0 text10 dist/default/production\GigaDeTestes.X.production.obj
 __Htext11 0 0 ABS 0 text11 dist/default/production\GigaDeTestes.X.production.obj
 __Htext12 0 0 ABS 0 text12 dist/default/production\GigaDeTestes.X.production.obj
 __Htext13 0 0 ABS 0 text13 dist/default/production\GigaDeTestes.X.production.obj
+__Htext14 0 0 ABS 0 text14 dist/default/production\GigaDeTestes.X.production.obj
+__Htext15 0 0 ABS 0 text15 dist/default/production\GigaDeTestes.X.production.obj
+__Htext16 0 0 ABS 0 text16 dist/default/production\GigaDeTestes.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production\GigaDeTestes.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production\GigaDeTestes.X.production.obj
+__Htext19 0 0 ABS 0 text19 dist/default/production\GigaDeTestes.X.production.obj
+__Htext20 0 0 ABS 0 text20 dist/default/production\GigaDeTestes.X.production.obj
+__Htext21 0 0 ABS 0 text21 dist/default/production\GigaDeTestes.X.production.obj
+__Htext22 0 0 ABS 0 text22 dist/default/production\GigaDeTestes.X.production.obj
+__Htext23 0 0 ABS 0 text23 dist/default/production\GigaDeTestes.X.production.obj
+__Htext24 0 0 ABS 0 text24 dist/default/production\GigaDeTestes.X.production.obj
+__Htext25 0 0 ABS 0 text25 dist/default/production\GigaDeTestes.X.production.obj
+__Htext26 0 0 ABS 0 text26 dist/default/production\GigaDeTestes.X.production.obj
+__Htext27 0 0 ABS 0 text27 dist/default/production\GigaDeTestes.X.production.obj
+__Htext28 0 0 ABS 0 text28 dist/default/production\GigaDeTestes.X.production.obj
+__Htext29 0 0 ABS 0 text29 dist/default/production\GigaDeTestes.X.production.obj
+__Htext30 0 0 ABS 0 text30 dist/default/production\GigaDeTestes.X.production.obj
+__Htext31 0 0 ABS 0 text31 dist/default/production\GigaDeTestes.X.production.obj
+__Htext32 0 0 ABS 0 text32 dist/default/production\GigaDeTestes.X.production.obj
+__Htext33 0 0 ABS 0 text33 dist/default/production\GigaDeTestes.X.production.obj
+__Htext34 0 0 ABS 0 text34 dist/default/production\GigaDeTestes.X.production.obj
+__Htext35 0 0 ABS 0 text35 dist/default/production\GigaDeTestes.X.production.obj
+__Htext36 0 0 ABS 0 text36 dist/default/production\GigaDeTestes.X.production.obj
+__Htext37 0 0 ABS 0 text37 dist/default/production\GigaDeTestes.X.production.obj
+__Htext38 0 0 ABS 0 text38 dist/default/production\GigaDeTestes.X.production.obj
+__Htext40 0 0 ABS 0 text40 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_OpenXLCD 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__end_of_DelayFor18TCY C14 0 CODE 0 text13 dist/default/production\GigaDeTestes.X.production.obj
-lcdWrite@col 63 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-lcdWrite@lcd 60 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-lcdWrite@row 62 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-__ptext10 C52 0 CODE 0 text10 dist/default/production\GigaDeTestes.X.production.obj
-__ptext11 C70 0 CODE 0 text11 dist/default/production\GigaDeTestes.X.production.obj
-__ptext12 BB8 0 CODE 0 text12 dist/default/production\GigaDeTestes.X.production.obj
-__ptext13 BF2 0 CODE 0 text13 dist/default/production\GigaDeTestes.X.production.obj
-delay_ms@milis 60 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-__pintcode_body 98E 0 CODE 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
+__end_of_DelayFor18TCY 1278 0 CODE 0 text38 dist/default/production\GigaDeTestes.X.production.obj
+_RCSTAbits FAB 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+lcdRuntime@i AB 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_memset 11E0 0 CODE 0 text17 dist/default/production\GigaDeTestes.X.production.obj
+WriteDataXLCD@data 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+lcdWrite@col 2C 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+lcdWrite@lcd 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+lcdWrite@row 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+sprintf@flag BF 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+sprintf@prec BE 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+memset@p1 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__ptext10 EE8 0 CODE 0 text10 dist/default/production\GigaDeTestes.X.production.obj
+__ptext11 B44 0 CODE 0 text11 dist/default/production\GigaDeTestes.X.production.obj
+__ptext12 1378 0 CODE 0 text12 dist/default/production\GigaDeTestes.X.production.obj
+__ptext13 1382 0 CODE 0 text13 dist/default/production\GigaDeTestes.X.production.obj
+__ptext14 10EA 0 CODE 0 text14 dist/default/production\GigaDeTestes.X.production.obj
+__ptext15 13AE 0 CODE 0 text15 dist/default/production\GigaDeTestes.X.production.obj
+__ptext16 13BA 0 CODE 0 text16 dist/default/production\GigaDeTestes.X.production.obj
+__ptext17 11E0 0 CODE 0 text17 dist/default/production\GigaDeTestes.X.production.obj
+__ptext18 BFE 0 CODE 0 text18 dist/default/production\GigaDeTestes.X.production.obj
+__ptext19 1296 0 CODE 0 text19 dist/default/production\GigaDeTestes.X.production.obj
+__ptext20 136C 0 CODE 0 text20 dist/default/production\GigaDeTestes.X.production.obj
+__ptext21 130A 0 CODE 0 text21 dist/default/production\GigaDeTestes.X.production.obj
+__ptext22 1320 0 CODE 0 text22 dist/default/production\GigaDeTestes.X.production.obj
+__ptext23 1234 0 CODE 0 text23 dist/default/production\GigaDeTestes.X.production.obj
+__ptext24 13A0 0 CODE 0 text24 dist/default/production\GigaDeTestes.X.production.obj
+__ptext25 138C 0 CODE 0 text25 dist/default/production\GigaDeTestes.X.production.obj
+__ptext26 1396 0 CODE 0 text26 dist/default/production\GigaDeTestes.X.production.obj
+__ptext27 10A8 0 CODE 0 text27 dist/default/production\GigaDeTestes.X.production.obj
+__ptext28 134C 0 CODE 0 text28 dist/default/production\GigaDeTestes.X.production.obj
+__ptext29 E92 0 CODE 0 text29 dist/default/production\GigaDeTestes.X.production.obj
+__ptext30 12B4 0 CODE 0 text30 dist/default/production\GigaDeTestes.X.production.obj
+__ptext31 CB4 0 CODE 0 text31 dist/default/production\GigaDeTestes.X.production.obj
+__ptext32 1168 0 CODE 0 text32 dist/default/production\GigaDeTestes.X.production.obj
+__ptext33 F3C 0 CODE 0 text33 dist/default/production\GigaDeTestes.X.production.obj
+__ptext34 135E 0 CODE 0 text34 dist/default/production\GigaDeTestes.X.production.obj
+__ptext35 12EE 0 CODE 0 text35 dist/default/production\GigaDeTestes.X.production.obj
+__ptext36 1336 0 CODE 0 text36 dist/default/production\GigaDeTestes.X.production.obj
+__ptext37 11A6 0 CODE 0 text37 dist/default/production\GigaDeTestes.X.production.obj
+__ptext38 1258 0 CODE 0 text38 dist/default/production\GigaDeTestes.X.production.obj
+__ptext40 13B4 0 CODE 0 text40 dist/default/production\GigaDeTestes.X.production.obj
+_magnetoGetCord BFE 0 CODE 0 text18 dist/default/production\GigaDeTestes.X.production.obj
+delay_ms@milis 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+i1_menuDraw 13B4 0 CODE 0 text40 dist/default/production\GigaDeTestes.X.production.obj
+__pintcode_body DFC 0 CODE 0 intcode_body dist/default/production\GigaDeTestes.X.production.obj
+___lwdiv EE8 0 CODE 0 text10 dist/default/production\GigaDeTestes.X.production.obj
+___lwmod 1064 0 CODE 0 text9 dist/default/production\GigaDeTestes.X.production.obj
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\GigaDeTestes.X.production.obj
 __Lbigram 0 0 ABS 0 bigram dist/default/production\GigaDeTestes.X.production.obj
 __CFG_BOR$ON 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_BORV$2 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__end_of_SetDDRamAddr B32 0 CODE 0 text8 dist/default/production\GigaDeTestes.X.production.obj
-Delay10KTCYx@unit 61 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_SetDDRamAddr F8E 0 CODE 0 text33 dist/default/production\GigaDeTestes.X.production.obj
+Delay10KTCYx@unit 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __Lcomram 0 0 ABS 0 comram dist/default/production\GigaDeTestes.X.production.obj
 __Lconfig 300000 0 CONFIG 0 config dist/default/production\GigaDeTestes.X.production.obj
+___wmul@multiplier 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 _LATDbits F8C 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+I2C_Read@flag 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+_OnRenderMenu1 F8E 0 CODE 0 text5 dist/default/production\GigaDeTestes.X.production.obj
+__size_of_lcdRuntime 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\GigaDeTestes.X.production.obj
+___lwdiv@divisor 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+main@opcao C5 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\GigaDeTestes.X.production.obj
+menuSetPosition@item 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+_menuRuntime 1020 0 CODE 0 text2 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-stacklo 69 0 ABS 0 - C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
-__end_of_lcdMemClean ADA 0 CODE 0 text4 dist/default/production\GigaDeTestes.X.production.obj
-lcdInit@lcd 67 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+stackhi 7FF 0 ABS 0 - C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+stacklo CC 0 ABS 0 - C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+__end_of_lcdMemClean EE8 0 CODE 0 text29 dist/default/production\GigaDeTestes.X.production.obj
+lcdInit@lcd A9 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\GigaDeTestes.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\GigaDeTestes.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\GigaDeTestes.X.production.obj
@@ -515,77 +950,146 @@ __CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.ob
 __Lspace_0 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lspace_1 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lspace_2 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__pbssCOMRAM 29 0 COMRAM 1 bssCOMRAM dist/default/production\GigaDeTestes.X.production.obj
-_OpenXLCD 8E6 0 CODE 0 text6 dist/default/production\GigaDeTestes.X.production.obj
+__pbssCOMRAM 2F 0 COMRAM 1 bssCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__size_of_memset 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_OpenXLCD CB4 0 CODE 0 text31 dist/default/production\GigaDeTestes.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-delay_ms@t 64 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+delay_ms@t 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+I2C_Write@data 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __size_of_delay_ms 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
-_WriteCmdXLCD B32 0 CODE 0 text7 dist/default/production\GigaDeTestes.X.production.obj
+_WriteCmdXLCD 1168 0 CODE 0 text32 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-end_of_initialization C40 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
+__end_of_magnetoGetCord CB4 0 CODE 0 text18 dist/default/production\GigaDeTestes.X.production.obj
+end_of_initialization 1012 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
+__size_of__menuEnterPosition 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of_menuSetPosition 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\GigaDeTestes.X.production.obj
 __Hintentry 0 0 ABS 0 intentry dist/default/production\GigaDeTestes.X.production.obj
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__end_of_OpenXLCD 98E 0 CODE 0 text6 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_OpenXLCD D5C 0 CODE 0 text31 dist/default/production\GigaDeTestes.X.production.obj
+___lwdiv@dividend 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+?___lwdiv 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+?___lwmod AA 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_ofi1_menuDraw 13BA 0 CODE 0 text40 dist/default/production\GigaDeTestes.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production\GigaDeTestes.X.production.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_lcdCleanAll 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\GigaDeTestes.X.production.obj
+menuGoto@pos 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\GigaDeTestes.X.production.obj
-__pcinit C34 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
-__ptext0 A24 0 CODE 0 text0 dist/default/production\GigaDeTestes.X.production.obj
-__ptext1 81E 0 CODE 0 text1 dist/default/production\GigaDeTestes.X.production.obj
-__ptext2 B76 0 CODE 0 text2 dist/default/production\GigaDeTestes.X.production.obj
-__ptext3 C8E 0 CODE 0 text3 dist/default/production\GigaDeTestes.X.production.obj
-__ptext4 A82 0 CODE 0 text4 dist/default/production\GigaDeTestes.X.production.obj
-__ptext5 C14 0 CODE 0 text5 dist/default/production\GigaDeTestes.X.production.obj
-__ptext6 8E6 0 CODE 0 text6 dist/default/production\GigaDeTestes.X.production.obj
-__ptext7 B32 0 CODE 0 text7 dist/default/production\GigaDeTestes.X.production.obj
-__ptext8 ADA 0 CODE 0 text8 dist/default/production\GigaDeTestes.X.production.obj
-__ptext9 CA0 0 CODE 0 text9 dist/default/production\GigaDeTestes.X.production.obj
+__pcinit FDA 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
+_SSPCON2bits FC5 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__ptext0 D5C 0 CODE 0 text0 dist/default/production\GigaDeTestes.X.production.obj
+__ptext1 12D2 0 CODE 0 text1 dist/default/production\GigaDeTestes.X.production.obj
+__ptext2 1020 0 CODE 0 text2 dist/default/production\GigaDeTestes.X.production.obj
+__ptext3 A5E 0 CODE 0 text3 dist/default/production\GigaDeTestes.X.production.obj
+__ptext4 112A 0 CODE 0 text4 dist/default/production\GigaDeTestes.X.production.obj
+__ptext5 F8E 0 CODE 0 text5 dist/default/production\GigaDeTestes.X.production.obj
+__ptext6 81A 0 CODE 0 text6 dist/default/production\GigaDeTestes.X.production.obj
+__ptext7 1278 0 CODE 0 text7 dist/default/production\GigaDeTestes.X.production.obj
+__ptext8 120E 0 CODE 0 text8 dist/default/production\GigaDeTestes.X.production.obj
+__ptext9 1064 0 CODE 0 text9 dist/default/production\GigaDeTestes.X.production.obj
+menuSetPosition@pos 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\GigaDeTestes.X.production.obj
 __Ltext10 0 0 ABS 0 text10 dist/default/production\GigaDeTestes.X.production.obj
 __Ltext11 0 0 ABS 0 text11 dist/default/production\GigaDeTestes.X.production.obj
 __Ltext12 0 0 ABS 0 text12 dist/default/production\GigaDeTestes.X.production.obj
 __Ltext13 0 0 ABS 0 text13 dist/default/production\GigaDeTestes.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\LUISFE~1\AppData\Local\Temp\s7gs.obj
+__Ltext14 0 0 ABS 0 text14 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext19 0 0 ABS 0 text19 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext20 0 0 ABS 0 text20 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext21 0 0 ABS 0 text21 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext22 0 0 ABS 0 text22 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext23 0 0 ABS 0 text23 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext24 0 0 ABS 0 text24 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext25 0 0 ABS 0 text25 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext26 0 0 ABS 0 text26 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext27 0 0 ABS 0 text27 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext28 0 0 ABS 0 text28 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext29 0 0 ABS 0 text29 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext30 0 0 ABS 0 text30 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext31 0 0 ABS 0 text31 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext32 0 0 ABS 0 text32 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext33 0 0 ABS 0 text33 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext34 0 0 ABS 0 text34 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext35 0 0 ABS 0 text35 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext36 0 0 ABS 0 text36 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext37 0 0 ABS 0 text37 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext38 0 0 ABS 0 text38 dist/default/production\GigaDeTestes.X.production.obj
+__Ltext40 0 0 ABS 0 text40 dist/default/production\GigaDeTestes.X.production.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\LUISFE~1\AppData\Local\Temp\s16c.obj
+_sprintf 81A 0 CODE 0 text6 dist/default/production\GigaDeTestes.X.production.obj
 __Lpowerup EE 0 CODE 0 powerup dist/default/production\GigaDeTestes.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\GigaDeTestes.X.production.obj
-_DelayPORXLCD CA0 0 CODE 0 text9 dist/default/production\GigaDeTestes.X.production.obj
+sprintf@ap BC 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+sprintf@sp AE 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_isdigit 1278 0 CODE 0 text7 dist/default/production\GigaDeTestes.X.production.obj
+_DelayPORXLCD 135E 0 CODE 0 text34 dist/default/production\GigaDeTestes.X.production.obj
 __psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production\GigaDeTestes.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\GigaDeTestes.X.production.obj
 __size_of_WriteCmdXLCD 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__menuEnterPosition@pos 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 __CFG_FOSC$INTOSCIO_EC 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 ___param_bank 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\GigaDeTestes.X.production.obj
-__end_of__initialization C40 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
+__end_of__initialization 1012 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-_delay_ms C52 0 CODE 0 text10 dist/default/production\GigaDeTestes.X.production.obj
+_delay_ms 12EE 0 CODE 0 text35 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__size_of_OnRenderMenu1 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__pidataBANK0 13A8 0 CODE 0 idataBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\GigaDeTestes.X.production.obj
-lcdMemClean@i 62 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
-__end_of_delay_ms C70 0 CODE 0 text10 dist/default/production\GigaDeTestes.X.production.obj
+lcdMemClean@i 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+_I2C_Start_Wait 1296 0 CODE 0 text19 dist/default/production\GigaDeTestes.X.production.obj
+I2C_Repeated_Start@slave_read_address 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__end_of_delay_ms 130A 0 CODE 0 text35 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __pintcodelo 18 0 CODE 0 intcodelo dist/default/production\GigaDeTestes.X.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
-__end_of_WriteCmdXLCD B76 0 CODE 0 text7 dist/default/production\GigaDeTestes.X.production.obj
-lcdMemClean@lcd 60 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_WriteCmdXLCD 11A6 0 CODE 0 text32 dist/default/production\GigaDeTestes.X.production.obj
+_SSPCON1 FC6 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SSPCON2 FC5 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SSPSTAT FC7 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+lcdMemClean@lcd 29 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+sprintf@c C4 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+sprintf@f B0 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_DelayPORXLCD 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__end_of_main A82 0 CODE 0 text0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_main DFC 0 CODE 0 text0 dist/default/production\GigaDeTestes.X.production.obj
 __pintcode 8 0 CODE 0 intcode dist/default/production\GigaDeTestes.X.production.obj
+isdigit@c 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Repeated_Start 1320 0 CODE 0 text21 dist/default/production\GigaDeTestes.X.production.obj
+_ACKDT 7E2D 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_ACKEN 7E2C 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_dpowers 80B 0 SMALLCONST 0 smallconst dist/default/production\GigaDeTestes.X.production.obj
+_OnEnterMenu1 13BA 0 CODE 0 text16 dist/default/production\GigaDeTestes.X.production.obj
+?_sprintf AE 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
+_isdigit$1150 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
 _PORTD F83 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_RCREG FAE 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_RCSTA FAB 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SPBRG FAF 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SSPIE 7CEB 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SSPIF 7CF3 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _TMR1H FCF 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _TMR1L FCE 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _TRISC F94 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 _TRISD F95 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_TXREG FAD 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_TXSTA FAC 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__end_of_OnRenderMenu1 FDA 0 CODE 0 text5 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __HRAM 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
@@ -598,17 +1102,25 @@ __Lram 0 0 ABS 0 ram dist/default/production\GigaDeTestes.X.production.obj
 __Lsfr 0 0 ABS 0 sfr dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CP2$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CP3$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_menu1 C6 0 BANK0 1 dataBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+_SSPSTATbits FC7 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+sprintf@width C2 0 BANK0 1 cstackBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_ISR 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\GigaDeTestes.X.production.obj
 __size_of_lcdMemClean 0 0 ABS 0 - dist/default/production\GigaDeTestes.X.production.obj
-__initialization C34 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
-__end_of_DelayPORXLCD CB0 0 CODE 0 text9 dist/default/production\GigaDeTestes.X.production.obj
+__initialization FDA 0 CODE 0 cinit dist/default/production\GigaDeTestes.X.production.obj
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/production\GigaDeTestes.X.production.obj
+__end_of_DelayPORXLCD 136C 0 CODE 0 text34 dist/default/production\GigaDeTestes.X.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\GigaDeTestes.X.production.obj
-__Hsmallconst 81E 0 SMALLCONST 0 smallconst dist/default/production\GigaDeTestes.X.production.obj
+___wmul@product 2D 0 COMRAM 1 cstackCOMRAM dist/default/production\GigaDeTestes.X.production.obj
+__Hsmallconst 81A 0 SMALLCONST 0 smallconst dist/default/production\GigaDeTestes.X.production.obj
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\GigaDeTestes.X.production.obj
+__end_of_I2C_Start_Wait 12B4 0 CODE 0 text19 dist/default/production\GigaDeTestes.X.production.obj
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\GigaDeTestes.X.production.obj
 __Hintcode E 0 CODE 0 intcode dist/default/production\GigaDeTestes.X.production.obj
+_I2C_Repeated_Start 130A 0 CODE 0 text21 dist/default/production\GigaDeTestes.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -635,10 +1147,10 @@ __Hintcode E 0 CODE 0 intcode dist/default/production\GigaDeTestes.X.production.
 %SEGMENTS
 intcodelo 0 18 18 DA 1
 idloc 0 200000 200000 8 1
-text1 0 81E 81E 492 1
-cstackCOMRAM 1 1 1 4A 1
-cstackBANK0 1 60 60 9 1
+text6 0 81A 81A BA2 1
+cstackCOMRAM 1 1 1 37 1
 reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 6C 1
 intcode 0 8 8 6 1
-smallconst 0 800 800 1E 1
+smallconst 0 800 800 1A 1
 config 0 300000 300000 E 1
