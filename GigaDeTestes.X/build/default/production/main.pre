@@ -5845,7 +5845,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 11 "main.h"
+# 12 "main.h"
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
@@ -6024,10 +6024,33 @@ void OnExitMenu1()
 
 }
 
+
+void OnEnterMenu2()
+{
+
+}
+
+void OnRenderMenu2()
+{
+sprintf(buffer, "%4d %4d %4d\0", cord.x, cord.y, cord.z);
+lcdWrite(&lcd, 2, 1, buffer);
+}
+
+void OnExitMenu2()
+{
+
+}
+
 MenuItem menu1 = {
 OnEnterMenu1,
 OnRenderMenu1,
 OnExitMenu1
+};
+
+MenuItem menu2 = {
+OnEnterMenu2,
+OnRenderMenu2,
+OnExitMenu2
 };
 
 void interrupt ISR()
@@ -6037,10 +6060,10 @@ void interrupt ISR()
 
 void interrupt low_priority ISR_LP()
 {
-if (TMR1IF) {
-TMR1IF = 0;
-TMR1H = 0x63;
-TMR1L = 0xC0;
+if (TMR0IF) {
+TMR0IF = 0;
+TMR0H = 0x63;
+TMR0L = 0xC0;
 
 
 PORTCbits.RC0 = !PORTCbits.RC0;
@@ -6050,7 +6073,7 @@ menuDraw();
 
 void main(void)
 {
-uint8_t opcao = 1;
+uint8_t opcao;
 
 memset(buffer, 0, 32);
 
@@ -6065,34 +6088,40 @@ IPEN = 1;
 GIEH = 1;
 PEIE = 1;
 
-# 83
-T1CONbits.RD16 = 1;
-T1CONbits.T1RUN = 0;
-T1CONbits.T1CKPS = 0;
-T1CONbits.T1OSCEN = 0;
-T1CONbits.TMR1CS = 0;
-T1CONbits.TMR1ON = 1;
-TMR1H = 0x63;
-TMR1L = 0xC0;
-TMR1IF = 0;
-TMR1IE = 1;
-TMR1IP = 0;
+# 107
+T0CONbits.TMR0ON = 1;
+T0CONbits.T08BIT = 0;
+T0CONbits.T0CS = 0;
+T0CONbits.PSA = 1;
+
+TMR0H = 0x63;
+TMR0L = 0xC0;
+TMR0IF = 0;
+TMR0IE = 1;
+TMR0IP = 0;
 
 
 lcdInit(&lcd);
 menuInit(&lcd);
 menuSetPosition(0, &menu1);
-menuGoto(0);
+menuSetPosition(1, &menu2);
 
-while (1) {
+opcao = 2;
+
 switch (opcao) {
-case 1:
+case 0:
+magnetoInit();
+menuGoto(0);
+while (1) {
 magnetoGetCord(&cord);
+menuRuntime();
+}
+break;
+case 1:
 
 break;
 }
-menuRuntime();
-}
+
 
 return;
 }

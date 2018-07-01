@@ -19,12 +19,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "16 display.h
 [v _lcdWrite `(i ~T0 @X0 0 ef4`*S398`uc`uc`*uc ]
-"10185 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
-[v _TMR1IF `Vb ~T0 @X0 0 e@31984 ]
-"7530
-[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
-"7523
-[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"10175 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
+[v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
+"8151
+[v _TMR0H `Vuc ~T0 @X0 0 e@4055 ]
+"8144
+[v _TMR0L `Vuc ~T0 @X0 0 e@4054 ]
 "2567
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S106 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
@@ -62,34 +62,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _GIEH `Vb ~T0 @X0 0 e@32663 ]
 "9811
 [v _PEIE `Vb ~T0 @X0 0 e@32662 ]
-"7419
-[s S312 :2 `uc 1 :1 `uc 1 ]
-[n S312 . . NOT_T1SYNC ]
-"7423
-[s S313 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S313 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
-"7432
-[s S314 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S314 . . T1SYNC . T1CKPS0 T1CKPS1 ]
-"7439
-[s S315 :3 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S315 . . SOSCEN . T1RD16 ]
-"7418
-[u S311 `S312 1 `S313 1 `S314 1 `S315 1 ]
-[n S311 . . . . . ]
-"7446
-[v _T1CONbits `VS311 ~T0 @X0 0 e@4045 ]
-"10183
-[v _TMR1IE `Vb ~T0 @X0 0 e@31976 ]
-"10187
-[v _TMR1IP `Vb ~T0 @X0 0 e@31992 ]
+"8073
+[s S342 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S342 . T0PS PSA T0SE T0CS T08BIT TMR0ON ]
+"8081
+[s S343 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S343 . T0PS0 T0PS1 T0PS2 ]
+"8072
+[u S341 `S342 1 `S343 1 ]
+[n S341 . . . ]
+"8087
+[v _T0CONbits `VS341 ~T0 @X0 0 e@4053 ]
+"10173
+[v _TMR0IE `Vb ~T0 @X0 0 e@32661 ]
+"10177
+[v _TMR0IP `Vb ~T0 @X0 0 e@32650 ]
 "14 display.h
 [v _lcdInit `(v ~T0 @X0 0 ef1`*S398 ]
 "29 menu.h
 [v _menuInit `(v ~T0 @X0 0 ef1`*S398 ]
 "31
 [v _menuSetPosition `(v ~T0 @X0 0 ef2`uc`*S399 ]
-"30
+"12 magnetometro.h
+[v _magnetoInit `(v ~T0 @X0 0 ef ]
+"30 menu.h
 [v _menuGoto `(v ~T0 @X0 0 ef1`uc ]
 "13 magnetometro.h
 [v _magnetoGetCord `(v ~T0 @X0 0 ef1`*S401 ]
@@ -4302,83 +4298,83 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-"11 main.h
+"12 main.h
 [p x PLLDIV=1 ]
-"12
-[p x CPUDIV=OSC1_PLL2 ]
 "13
+[p x CPUDIV=OSC1_PLL2 ]
+"14
 [p x USBDIV=1 ]
-"16
-[p x FOSC=INTOSCIO_EC ]
 "17
-[p x FCMEN=OFF ]
+[p x FOSC=INTOSCIO_EC ]
 "18
+[p x FCMEN=OFF ]
+"19
 [p x IESO=OFF ]
-"21
-[p x PWRT=OFF ]
 "22
-[p x BOR=ON ]
+[p x PWRT=OFF ]
 "23
-[p x BORV=2 ]
+[p x BOR=ON ]
 "24
+[p x BORV=2 ]
+"25
 [p x VREGEN=OFF ]
-"27
-[p x WDT=OFF ]
 "28
+[p x WDT=OFF ]
+"29
 [p x WDTPS=32768 ]
-"31
-[p x CCP2MX=ON ]
 "32
-[p x PBADEN=OFF ]
+[p x CCP2MX=ON ]
 "33
-[p x LPT1OSC=OFF ]
+[p x PBADEN=OFF ]
 "34
+[p x LPT1OSC=OFF ]
+"35
 [p x MCLRE=ON ]
-"37
-[p x STVREN=ON ]
 "38
-[p x LVP=ON ]
+[p x STVREN=ON ]
 "39
-[p x ICPRT=OFF ]
+[p x LVP=ON ]
 "40
+[p x ICPRT=OFF ]
+"41
 [p x XINST=OFF ]
-"43
-[p x CP0=OFF ]
 "44
-[p x CP1=OFF ]
+[p x CP0=OFF ]
 "45
-[p x CP2=OFF ]
+[p x CP1=OFF ]
 "46
+[p x CP2=OFF ]
+"47
 [p x CP3=OFF ]
-"49
-[p x CPB=OFF ]
 "50
+[p x CPB=OFF ]
+"51
 [p x CPD=OFF ]
-"53
-[p x WRT0=OFF ]
 "54
-[p x WRT1=OFF ]
+[p x WRT0=OFF ]
 "55
-[p x WRT2=OFF ]
+[p x WRT1=OFF ]
 "56
+[p x WRT2=OFF ]
+"57
 [p x WRT3=OFF ]
-"59
-[p x WRTC=OFF ]
 "60
-[p x WRTB=OFF ]
+[p x WRTC=OFF ]
 "61
+[p x WRTB=OFF ]
+"62
 [p x WRTD=OFF ]
-"64
-[p x EBTR0=OFF ]
 "65
-[p x EBTR1=OFF ]
+[p x EBTR0=OFF ]
 "66
-[p x EBTR2=OFF ]
+[p x EBTR1=OFF ]
 "67
+[p x EBTR2=OFF ]
+"68
 [p x EBTR3=OFF ]
-"70
+"71
 [p x EBTRB=OFF ]
-[; ;main.h: 73: void delay_ms(uint16_t milis);
+[; ;main.h: 74: void delay_ms(uint16_t milis);
 [; ;xlcd_mod.h: 87: void OpenXLCD( unsigned char);
 [; ;xlcd_mod.h: 92: void SetCGRamAddr( unsigned char);
 [; ;xlcd_mod.h: 97: void SetDDRamAddr( unsigned char);
@@ -4488,238 +4484,308 @@ Version 3.2 HI-TECH Software Intermediate Code
 "32
 [e :UE 404 ]
 }
-"34
+"35
+[v _OnEnterMenu2 `(v ~T0 @X0 1 ef ]
+"36
+{
+[; ;main.c: 35: void OnEnterMenu2()
+[; ;main.c: 36: {
+[e :U _OnEnterMenu2 ]
+[f ]
+[; ;main.c: 38: }
+"38
+[e :UE 405 ]
+}
+"40
+[v _OnRenderMenu2 `(v ~T0 @X0 1 ef ]
+"41
+{
+[; ;main.c: 40: void OnRenderMenu2()
+[; ;main.c: 41: {
+[e :U _OnRenderMenu2 ]
+[f ]
+[; ;main.c: 42: sprintf(buffer, "%4d %4d %4d\0", cord.x, cord.y, cord.z);
+"42
+[e ( _sprintf (1 , , , (. , &U _buffer :s 2C . _cord 0 . _cord 1 . _cord 2 ]
+[; ;main.c: 43: lcdWrite(&lcd, 2, 1, buffer);
+"43
+[e ( _lcdWrite (4 , , , &U _lcd -> -> 2 `i `uc -> -> 1 `i `uc &U _buffer ]
+[; ;main.c: 44: }
+"44
+[e :UE 406 ]
+}
+"46
+[v _OnExitMenu2 `(v ~T0 @X0 1 ef ]
+"47
+{
+[; ;main.c: 46: void OnExitMenu2()
+[; ;main.c: 47: {
+[e :U _OnExitMenu2 ]
+[f ]
+[; ;main.c: 49: }
+"49
+[e :UE 407 ]
+}
+"51
 [v _menu1 `S399 ~T0 @X0 1 e ]
 [i _menu1
 :U ..
 :U ..
-"35
+"52
 &U _OnEnterMenu1
-"36
+"53
 &U _OnRenderMenu1
-"38
+"55
 &U _OnExitMenu1
 ..
 ..
 ]
-[; ;main.c: 34: MenuItem menu1 = {
-[; ;main.c: 35: OnEnterMenu1,
-[; ;main.c: 36: OnRenderMenu1,
-[; ;main.c: 37: OnExitMenu1
-[; ;main.c: 38: };
+[; ;main.c: 51: MenuItem menu1 = {
+[; ;main.c: 52: OnEnterMenu1,
+[; ;main.c: 53: OnRenderMenu1,
+[; ;main.c: 54: OnExitMenu1
+[; ;main.c: 55: };
+"57
+[v _menu2 `S399 ~T0 @X0 1 e ]
+[i _menu2
+:U ..
+:U ..
+"58
+&U _OnEnterMenu2
+"59
+&U _OnRenderMenu2
+"61
+&U _OnExitMenu2
+..
+..
+]
+[; ;main.c: 57: MenuItem menu2 = {
+[; ;main.c: 58: OnEnterMenu2,
+[; ;main.c: 59: OnRenderMenu2,
+[; ;main.c: 60: OnExitMenu2
+[; ;main.c: 61: };
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-[v F4820 `(v ~T0 @X0 1 tf ]
-"40
-[v _ISR `IF4820 ~T0 @X0 1 e ]
-"41
+[v F4827 `(v ~T0 @X0 1 tf ]
+"63
+[v _ISR `IF4827 ~T0 @X0 1 e ]
+"64
 {
-[; ;main.c: 40: void interrupt ISR()
-[; ;main.c: 41: {
+[; ;main.c: 63: void interrupt ISR()
+[; ;main.c: 64: {
 [e :U _ISR ]
 [f ]
-[; ;main.c: 43: }
-"43
-[e :UE 405 ]
-}
-[v $root$_ISR_LP `(v ~T0 @X0 0 e ]
-[v F4822 `(v ~T0 @X0 1 tf ]
-"45
-[v _ISR_LP `ILF4822 ~T0 @X0 1 e ]
-"46
-{
-[; ;main.c: 45: void interrupt low_priority ISR_LP()
-[; ;main.c: 46: {
-[e :U _ISR_LP ]
-[f ]
-[; ;main.c: 47: if (TMR1IF) {
-"47
-[e $ ! _TMR1IF 407  ]
-{
-[; ;main.c: 48: TMR1IF = 0;
-"48
-[e = _TMR1IF -> -> 0 `i `b ]
-[; ;main.c: 49: TMR1H = 0x63;
-"49
-[e = _TMR1H -> -> 99 `i `uc ]
-[; ;main.c: 50: TMR1L = 0xC0;
-"50
-[e = _TMR1L -> -> 192 `i `uc ]
-[; ;main.c: 53: PORTCbits.RC0 = !PORTCbits.RC0;
-"53
-[e = . . _PORTCbits 0 0 -> -> ! != -> . . _PORTCbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;main.c: 54: menuDraw();
-"54
-[e ( _menuDraw ..  ]
-"55
-}
-[e :U 407 ]
-[; ;main.c: 55: }
-[; ;main.c: 56: }
-"56
-[e :UE 406 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"58
-[v _main `(v ~T0 @X0 1 ef ]
-"59
-{
-[; ;main.c: 58: void main(void)
-[; ;main.c: 59: {
-[e :U _main ]
-[f ]
-"60
-[v _opcao `uc ~T0 @X0 1 a ]
-[; ;main.c: 60: uint8_t opcao = 1;
-[e = _opcao -> -> 1 `i `uc ]
-[; ;main.c: 62: memset(buffer, 0, 32);
-"62
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> -> 32 `i `ui ]
-[; ;main.c: 64: ADCON1 = 0x0F;
-"64
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;main.c: 65: OSCCON = 0x72;
-"65
-[e = _OSCCON -> -> 114 `i `uc ]
-[; ;main.c: 67: TRISC = 0xFE;
-"67
-[e = _TRISC -> -> 254 `i `uc ]
-[; ;main.c: 68: PORTCbits.RC0 = 1;
-"68
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 71: IPEN = 1;
-"71
-[e = _IPEN -> -> 1 `i `b ]
-[; ;main.c: 72: GIEH = 1;
-"72
-[e = _GIEH -> -> 1 `i `b ]
-[; ;main.c: 73: PEIE = 1;
-"73
-[e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 83: T1CONbits.RD16 = 1;
-"83
-[e = . . _T1CONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 84: T1CONbits.T1RUN = 0;
-"84
-[e = . . _T1CONbits 1 5 -> -> 0 `i `uc ]
-[; ;main.c: 85: T1CONbits.T1CKPS = 0;
-"85
-[e = . . _T1CONbits 1 4 -> -> 0 `i `uc ]
-[; ;main.c: 86: T1CONbits.T1OSCEN = 0;
-"86
-[e = . . _T1CONbits 1 3 -> -> 0 `i `uc ]
-[; ;main.c: 87: T1CONbits.TMR1CS = 0;
-"87
-[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
-[; ;main.c: 88: T1CONbits.TMR1ON = 1;
-"88
-[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
-[; ;main.c: 89: TMR1H = 0x63;
-"89
-[e = _TMR1H -> -> 99 `i `uc ]
-[; ;main.c: 90: TMR1L = 0xC0;
-"90
-[e = _TMR1L -> -> 192 `i `uc ]
-[; ;main.c: 91: TMR1IF = 0;
-"91
-[e = _TMR1IF -> -> 0 `i `b ]
-[; ;main.c: 92: TMR1IE = 1;
-"92
-[e = _TMR1IE -> -> 1 `i `b ]
-[; ;main.c: 93: TMR1IP = 0;
-"93
-[e = _TMR1IP -> -> 0 `i `b ]
-[; ;main.c: 96: lcdInit(&lcd);
-"96
-[e ( _lcdInit (1 &U _lcd ]
-[; ;main.c: 97: menuInit(&lcd);
-"97
-[e ( _menuInit (1 &U _lcd ]
-[; ;main.c: 98: menuSetPosition(0, &menu1);
-"98
-[e ( _menuSetPosition (2 , -> -> 0 `i `uc &U _menu1 ]
-[; ;main.c: 99: menuGoto(0);
-"99
-[e ( _menuGoto (1 -> -> 0 `i `uc ]
-[; ;main.c: 101: while (1) {
-"101
-[e :U 410 ]
-{
-[; ;main.c: 102: switch (opcao) {
-"102
-[e $U 413  ]
-{
-[; ;main.c: 103: case 1:
-"103
-[e :U 414 ]
-[; ;main.c: 104: magnetoGetCord(&cord);
-"104
-[e ( _magnetoGetCord (1 &U _cord ]
-[; ;main.c: 106: break;
-"106
-[e $U 412  ]
-"107
-}
-[; ;main.c: 107: }
-[e $U 412  ]
-"102
-[e :U 413 ]
-[e [\ _opcao , $ -> -> 1 `i `uc 414
- 412 ]
-"107
-[e :U 412 ]
-[; ;main.c: 108: menuRuntime();
-"108
-[e ( _menuRuntime ..  ]
-"109
-}
-[e :U 409 ]
-"101
-[e $U 410  ]
-[e :U 411 ]
-[; ;main.c: 109: }
-[; ;main.c: 111: return;
-"111
-[e $UE 408  ]
-[; ;main.c: 112: }
-"112
+[; ;main.c: 66: }
+"66
 [e :UE 408 ]
 }
-"114
-[v _delay_ms `(v ~T0 @X0 1 ef1`ui ]
-"115
+[v $root$_ISR_LP `(v ~T0 @X0 0 e ]
+[v F4829 `(v ~T0 @X0 1 tf ]
+"68
+[v _ISR_LP `ILF4829 ~T0 @X0 1 e ]
+"69
 {
-[; ;main.c: 114: void delay_ms(uint16_t milis)
-[; ;main.c: 115: {
-[e :U _delay_ms ]
-"114
-[v _milis `ui ~T0 @X0 1 r1 ]
-"115
+[; ;main.c: 68: void interrupt low_priority ISR_LP()
+[; ;main.c: 69: {
+[e :U _ISR_LP ]
 [f ]
-"116
-[v _t `uc ~T0 @X0 1 a ]
-[; ;main.c: 116: uint8_t t;
-[; ;main.c: 117: for (t = 0; t < milis; t++) {
-"117
+[; ;main.c: 70: if (TMR0IF) {
+"70
+[e $ ! _TMR0IF 410  ]
 {
-[e = _t -> -> 0 `i `uc ]
-[e $U 419  ]
+[; ;main.c: 71: TMR0IF = 0;
+"71
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;main.c: 72: TMR0H = 0x63;
+"72
+[e = _TMR0H -> -> 99 `i `uc ]
+[; ;main.c: 73: TMR0L = 0xC0;
+"73
+[e = _TMR0L -> -> 192 `i `uc ]
+[; ;main.c: 76: PORTCbits.RC0 = !PORTCbits.RC0;
+"76
+[e = . . _PORTCbits 0 0 -> -> ! != -> . . _PORTCbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
+[; ;main.c: 77: menuDraw();
+"77
+[e ( _menuDraw ..  ]
+"78
+}
+[e :U 410 ]
+[; ;main.c: 78: }
+[; ;main.c: 79: }
+"79
+[e :UE 409 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"81
+[v _main `(v ~T0 @X0 1 ef ]
+"82
+{
+[; ;main.c: 81: void main(void)
+[; ;main.c: 82: {
+[e :U _main ]
+[f ]
+"83
+[v _opcao `uc ~T0 @X0 1 a ]
+[; ;main.c: 83: uint8_t opcao;
+[; ;main.c: 85: memset(buffer, 0, 32);
+"85
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> -> 32 `i `ui ]
+[; ;main.c: 87: ADCON1 = 0x0F;
+"87
+[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;main.c: 88: OSCCON = 0x72;
+"88
+[e = _OSCCON -> -> 114 `i `uc ]
+[; ;main.c: 90: TRISC = 0xFE;
+"90
+[e = _TRISC -> -> 254 `i `uc ]
+[; ;main.c: 91: PORTCbits.RC0 = 1;
+"91
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 94: IPEN = 1;
+"94
+[e = _IPEN -> -> 1 `i `b ]
+[; ;main.c: 95: GIEH = 1;
+"95
+[e = _GIEH -> -> 1 `i `b ]
+[; ;main.c: 96: PEIE = 1;
+"96
+[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 107: T0CONbits.TMR0ON = 1;
+"107
+[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 108: T0CONbits.T08BIT = 0;
+"108
+[e = . . _T0CONbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 109: T0CONbits.T0CS = 0;
+"109
+[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 110: T0CONbits.PSA = 1;
+"110
+[e = . . _T0CONbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 112: TMR0H = 0x63;
+"112
+[e = _TMR0H -> -> 99 `i `uc ]
+[; ;main.c: 113: TMR0L = 0xC0;
+"113
+[e = _TMR0L -> -> 192 `i `uc ]
+[; ;main.c: 114: TMR0IF = 0;
+"114
+[e = _TMR0IF -> -> 0 `i `b ]
+[; ;main.c: 115: TMR0IE = 1;
+"115
+[e = _TMR0IE -> -> 1 `i `b ]
+[; ;main.c: 116: TMR0IP = 0;
+"116
+[e = _TMR0IP -> -> 0 `i `b ]
+[; ;main.c: 119: lcdInit(&lcd);
+"119
+[e ( _lcdInit (1 &U _lcd ]
+[; ;main.c: 120: menuInit(&lcd);
+"120
+[e ( _menuInit (1 &U _lcd ]
+[; ;main.c: 121: menuSetPosition(0, &menu1);
+"121
+[e ( _menuSetPosition (2 , -> -> 0 `i `uc &U _menu1 ]
+[; ;main.c: 122: menuSetPosition(1, &menu2);
+"122
+[e ( _menuSetPosition (2 , -> -> 1 `i `uc &U _menu2 ]
+[; ;main.c: 124: opcao = 2;
+"124
+[e = _opcao -> -> 2 `i `uc ]
+[; ;main.c: 126: switch (opcao) {
+"126
+[e $U 413  ]
+{
+[; ;main.c: 127: case 0:
+"127
+[e :U 414 ]
+[; ;main.c: 128: magnetoInit();
+"128
+[e ( _magnetoInit ..  ]
+[; ;main.c: 129: menuGoto(0);
+"129
+[e ( _menuGoto (1 -> -> 0 `i `uc ]
+[; ;main.c: 130: while (1) {
+"130
 [e :U 416 ]
 {
-[; ;main.c: 118: ;
-"119
+[; ;main.c: 131: magnetoGetCord(&cord);
+"131
+[e ( _magnetoGetCord (1 &U _cord ]
+[; ;main.c: 132: menuRuntime();
+"132
+[e ( _menuRuntime ..  ]
+"133
 }
-"117
-[e ++ _t -> -> 1 `i `uc ]
-[e :U 419 ]
-[e $ < -> _t `ui _milis 416  ]
+[e :U 415 ]
+"130
+[e $U 416  ]
 [e :U 417 ]
-"119
+[; ;main.c: 133: }
+[; ;main.c: 134: break;
+"134
+[e $U 412  ]
+[; ;main.c: 135: case 1:
+"135
+[e :U 418 ]
+[; ;main.c: 137: break;
+"137
+[e $U 412  ]
+"138
 }
-[; ;main.c: 119: }
-[; ;main.c: 120: }
-"120
-[e :UE 415 ]
+[; ;main.c: 138: }
+[e $U 412  ]
+"126
+[e :U 413 ]
+[e [\ _opcao , $ -> -> 0 `i `uc 414
+ , $ -> -> 1 `i `uc 418
+ 412 ]
+"138
+[e :U 412 ]
+[; ;main.c: 141: return;
+"141
+[e $UE 411  ]
+[; ;main.c: 142: }
+"142
+[e :UE 411 ]
+}
+"144
+[v _delay_ms `(v ~T0 @X0 1 ef1`ui ]
+"145
+{
+[; ;main.c: 144: void delay_ms(uint16_t milis)
+[; ;main.c: 145: {
+[e :U _delay_ms ]
+"144
+[v _milis `ui ~T0 @X0 1 r1 ]
+"145
+[f ]
+"146
+[v _t `uc ~T0 @X0 1 a ]
+[; ;main.c: 146: uint8_t t;
+[; ;main.c: 147: for (t = 0; t < milis; t++) {
+"147
+{
+[e = _t -> -> 0 `i `uc ]
+[e $U 423  ]
+[e :U 420 ]
+{
+[; ;main.c: 148: ;
+"149
+}
+"147
+[e ++ _t -> -> 1 `i `uc ]
+[e :U 423 ]
+[e $ < -> _t `ui _milis 420  ]
+[e :U 421 ]
+"149
+}
+[; ;main.c: 149: }
+[; ;main.c: 150: }
+"150
+[e :UE 419 ]
 }
 [p f _sprintf 8421504 ]
 [a 1C 37 52 100 32 37 52 100 32 37 52 100 0 0 ]
-
+[a 2C 37 52 100 32 37 52 100 32 37 52 100 0 0 ]

@@ -5761,7 +5761,7 @@ void magnetoInit(void);
 void magnetoGetCord(coordenadas_t *coord);
 
 
-# 11 "main.h"
+# 12 "main.h"
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1

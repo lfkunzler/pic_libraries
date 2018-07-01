@@ -4239,83 +4239,83 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-"11 main.h
+"12 main.h
 [p x PLLDIV=1 ]
-"12
-[p x CPUDIV=OSC1_PLL2 ]
 "13
+[p x CPUDIV=OSC1_PLL2 ]
+"14
 [p x USBDIV=1 ]
-"16
-[p x FOSC=INTOSCIO_EC ]
 "17
-[p x FCMEN=OFF ]
+[p x FOSC=INTOSCIO_EC ]
 "18
+[p x FCMEN=OFF ]
+"19
 [p x IESO=OFF ]
-"21
-[p x PWRT=OFF ]
 "22
-[p x BOR=ON ]
+[p x PWRT=OFF ]
 "23
-[p x BORV=2 ]
+[p x BOR=ON ]
 "24
+[p x BORV=2 ]
+"25
 [p x VREGEN=OFF ]
-"27
-[p x WDT=OFF ]
 "28
+[p x WDT=OFF ]
+"29
 [p x WDTPS=32768 ]
-"31
-[p x CCP2MX=ON ]
 "32
-[p x PBADEN=OFF ]
+[p x CCP2MX=ON ]
 "33
-[p x LPT1OSC=OFF ]
+[p x PBADEN=OFF ]
 "34
+[p x LPT1OSC=OFF ]
+"35
 [p x MCLRE=ON ]
-"37
-[p x STVREN=ON ]
 "38
-[p x LVP=ON ]
+[p x STVREN=ON ]
 "39
-[p x ICPRT=OFF ]
+[p x LVP=ON ]
 "40
+[p x ICPRT=OFF ]
+"41
 [p x XINST=OFF ]
-"43
-[p x CP0=OFF ]
 "44
-[p x CP1=OFF ]
+[p x CP0=OFF ]
 "45
-[p x CP2=OFF ]
+[p x CP1=OFF ]
 "46
+[p x CP2=OFF ]
+"47
 [p x CP3=OFF ]
-"49
-[p x CPB=OFF ]
 "50
+[p x CPB=OFF ]
+"51
 [p x CPD=OFF ]
-"53
-[p x WRT0=OFF ]
 "54
-[p x WRT1=OFF ]
+[p x WRT0=OFF ]
 "55
-[p x WRT2=OFF ]
+[p x WRT1=OFF ]
 "56
+[p x WRT2=OFF ]
+"57
 [p x WRT3=OFF ]
-"59
-[p x WRTC=OFF ]
 "60
-[p x WRTB=OFF ]
+[p x WRTC=OFF ]
 "61
+[p x WRTB=OFF ]
+"62
 [p x WRTD=OFF ]
-"64
-[p x EBTR0=OFF ]
 "65
-[p x EBTR1=OFF ]
+[p x EBTR0=OFF ]
 "66
-[p x EBTR2=OFF ]
+[p x EBTR1=OFF ]
 "67
+[p x EBTR2=OFF ]
+"68
 [p x EBTR3=OFF ]
-"70
+"71
 [p x EBTRB=OFF ]
-[; ;main.h: 73: void delay_ms(uint16_t milis);
+[; ;main.h: 74: void delay_ms(uint16_t milis);
 [; ;i2c.h: 9: void I2C_Ready();
 [; ;i2c.h: 10: void I2C_Init();
 [; ;i2c.h: 11: char I2C_Start(char);
