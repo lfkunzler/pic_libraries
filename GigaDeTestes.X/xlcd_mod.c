@@ -1,7 +1,7 @@
 #include <p18cxxx.h>
 //#include <delays.h>
 
-#include "xlcd.h"
+#include "xlcd_mod.h"
 
 unsigned char BusyXLCD(void)
 {

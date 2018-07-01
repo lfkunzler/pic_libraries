@@ -8,7 +8,7 @@
 #include <xc.h>
 #include <stdint.h>
 
-#include "xlcd.h"
+#include "xlcd_mod.h"
 #include "display.h"
 
 // Inicializa o LCD

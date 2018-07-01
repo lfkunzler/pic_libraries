@@ -5752,7 +5752,7 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 87 "xlcd.h"
+# 87 "xlcd_mod.h"
 void OpenXLCD( unsigned char);
 
 # 92

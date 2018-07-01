@@ -1,13 +1,12 @@
 #include <xc.h>
 
 #include "main.h"
-#include "xlcd.h"
+#include "xlcd_mod.h"
 #include "display.h"
 
 #define LED_TESTE PORTCbits.RC0
 
 volatile lcd_t lcd;
-
 
 void interrupt ISR()
 {
@@ -22,6 +21,7 @@ void interrupt low_priority ISR_LP()
         TMR1L = 0xC0;
 
         // TODO: rotinas que rodam a cada 20ms
+        LED_TESTE = !LED_TESTE;
         lcd.NeedsRedraw = 1;
     }
 }
@@ -62,9 +62,17 @@ void main(void)
     /* UTILIZACAO DO DISPLAY */
     lcdInit(&lcd);
     lcdWrite(&lcd, 1, 1, "pau no cu do        patric\0");
-    
-    
+
+
     while (1);
 
     return;
+}
+
+void delay_ms(uint16_t milis)
+{
+    uint8_t t;
+    for (t = 0; t < milis; t++) {
+        ;
+    }
 }

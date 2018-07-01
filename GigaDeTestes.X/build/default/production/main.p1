@@ -9,13 +9,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
 "7523
 [v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
-[p mainexit ]
-"6579
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"7984
-[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"3845
-[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
 "2567
 [s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S106 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
@@ -36,6 +29,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S105 . . . . . . ]
 "2603
 [v _PORTCbits `VS105 ~T0 @X0 0 e@3970 ]
+[p mainexit ]
+"6579
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"7984
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"3845
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
 "9557
 [v _IPEN `Vb ~T0 @X0 0 e@32391 ]
 "9461
@@ -4296,19 +4296,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 "69
 [p x EBTRB=OFF ]
 [; ;main.h: 72: void delay_ms(uint16_t milis);
-[; ;xlcd.h: 87: void OpenXLCD( unsigned char);
-[; ;xlcd.h: 92: void SetCGRamAddr( unsigned char);
-[; ;xlcd.h: 97: void SetDDRamAddr( unsigned char);
-[; ;xlcd.h: 102: unsigned char BusyXLCD(void);
-[; ;xlcd.h: 107: unsigned char ReadAddrXLCD(void);
-[; ;xlcd.h: 112: char ReadDataXLCD(void);
-[; ;xlcd.h: 117: void WriteCmdXLCD( unsigned char);
-[; ;xlcd.h: 122: void WriteDataXLCD( char);
-[; ;xlcd.h: 132: void putsXLCD( char *);
-[; ;xlcd.h: 137: void putrsXLCD(const char *);
-[; ;xlcd.h: 140: extern void DelayFor18TCY(void);
-[; ;xlcd.h: 141: extern void DelayPORXLCD(void);
-[; ;xlcd.h: 142: extern void DelayXLCD(void);
+[; ;xlcd_mod.h: 87: void OpenXLCD( unsigned char);
+[; ;xlcd_mod.h: 92: void SetCGRamAddr( unsigned char);
+[; ;xlcd_mod.h: 97: void SetDDRamAddr( unsigned char);
+[; ;xlcd_mod.h: 102: unsigned char BusyXLCD(void);
+[; ;xlcd_mod.h: 107: unsigned char ReadAddrXLCD(void);
+[; ;xlcd_mod.h: 112: char ReadDataXLCD(void);
+[; ;xlcd_mod.h: 117: void WriteCmdXLCD( unsigned char);
+[; ;xlcd_mod.h: 122: void WriteDataXLCD( char);
+[; ;xlcd_mod.h: 132: void putsXLCD( char *);
+[; ;xlcd_mod.h: 137: void putrsXLCD(const char *);
+[; ;xlcd_mod.h: 140: extern void DelayFor18TCY(void);
+[; ;xlcd_mod.h: 141: extern void DelayPORXLCD(void);
+[; ;xlcd_mod.h: 142: extern void DelayXLCD(void);
 [; ;display.h: 9: typedef struct {
 [; ;display.h: 10: uint8_t NeedsRedraw;
 [; ;display.h: 11: uint8_t Memory[2][16];
@@ -4328,41 +4328,44 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 9: volatile lcd_t lcd;
 [v $root$_ISR `(v ~T0 @X0 0 e ]
 [v F4627 `(v ~T0 @X0 1 tf ]
-"12
+"11
 [v _ISR `IF4627 ~T0 @X0 1 e ]
-"13
+"12
 {
-[; ;main.c: 12: void interrupt ISR()
-[; ;main.c: 13: {
+[; ;main.c: 11: void interrupt ISR()
+[; ;main.c: 12: {
 [e :U _ISR ]
 [f ]
-[; ;main.c: 15: }
-"15
+[; ;main.c: 14: }
+"14
 [e :UE 398 ]
 }
 [v $root$_ISR_LP `(v ~T0 @X0 0 e ]
 [v F4629 `(v ~T0 @X0 1 tf ]
-"17
+"16
 [v _ISR_LP `ILF4629 ~T0 @X0 1 e ]
-"18
+"17
 {
-[; ;main.c: 17: void interrupt low_priority ISR_LP()
-[; ;main.c: 18: {
+[; ;main.c: 16: void interrupt low_priority ISR_LP()
+[; ;main.c: 17: {
 [e :U _ISR_LP ]
 [f ]
-[; ;main.c: 19: if (TMR1IF) {
-"19
+[; ;main.c: 18: if (TMR1IF) {
+"18
 [e $ ! _TMR1IF 400  ]
 {
-[; ;main.c: 20: TMR1IF = 0;
-"20
+[; ;main.c: 19: TMR1IF = 0;
+"19
 [e = _TMR1IF -> -> 0 `i `b ]
-[; ;main.c: 21: TMR1H = 0x63;
-"21
+[; ;main.c: 20: TMR1H = 0x63;
+"20
 [e = _TMR1H -> -> 99 `i `uc ]
-[; ;main.c: 22: TMR1L = 0xC0;
-"22
+[; ;main.c: 21: TMR1L = 0xC0;
+"21
 [e = _TMR1L -> -> 192 `i `uc ]
+[; ;main.c: 24: PORTCbits.RC0 = !PORTCbits.RC0;
+"24
+[e = . . _PORTCbits 0 0 -> -> ! != -> . . _PORTCbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
 [; ;main.c: 25: lcd.NeedsRedraw = 1;
 "25
 [e = . _lcd 0 -> -> 1 `i `uc ]
@@ -4455,6 +4458,42 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 70: }
 "70
 [e :UE 401 ]
+}
+"72
+[v _delay_ms `(v ~T0 @X0 1 ef1`ui ]
+"73
+{
+[; ;main.c: 72: void delay_ms(uint16_t milis)
+[; ;main.c: 73: {
+[e :U _delay_ms ]
+"72
+[v _milis `ui ~T0 @X0 1 r1 ]
+"73
+[f ]
+"74
+[v _t `uc ~T0 @X0 1 a ]
+[; ;main.c: 74: uint8_t t;
+[; ;main.c: 75: for (t = 0; t < milis; t++) {
+"75
+{
+[e = _t -> -> 0 `i `uc ]
+[e $U 409  ]
+[e :U 406 ]
+{
+[; ;main.c: 76: ;
+"77
+}
+"75
+[e ++ _t -> -> 1 `i `uc ]
+[e :U 409 ]
+[e $ < -> _t `ui _milis 406  ]
+[e :U 407 ]
+"77
+}
+[; ;main.c: 77: }
+[; ;main.c: 78: }
+"78
+[e :UE 405 ]
 }
 [a 1C 112 97 117 32 110 111 32 99 117 32 100 111 32 32 32 32 32 32 32 32 112 97 116 114 105 99 0 0 ]
 

@@ -5818,7 +5818,7 @@ typedef uint16_t uintptr_t;
 
 void delay_ms(uint16_t milis);
 
-# 87 "xlcd.h"
+# 87 "xlcd_mod.h"
 void OpenXLCD( unsigned char);
 
 # 92
@@ -5875,7 +5875,6 @@ extern void delay_ms(uint16_t milis);
 # 9 "main.c"
 volatile lcd_t lcd;
 
-
 void interrupt ISR()
 {
 
@@ -5889,6 +5888,7 @@ TMR1H = 0x63;
 TMR1L = 0xC0;
 
 
+PORTCbits.RC0 = !PORTCbits.RC0;
 lcd.NeedsRedraw = 1;
 }
 }
@@ -5927,4 +5927,12 @@ lcdWrite(&lcd, 1, 1, "pau no cu do        patric\0");
 while (1);
 
 return;
+}
+
+void delay_ms(uint16_t milis)
+{
+uint8_t t;
+for (t = 0; t < milis; t++) {
+;
+}
 }

@@ -39,13 +39,15 @@
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
 "108
 [v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
-"12 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+"11 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
-"17
+"16
 [v _ISR_LP ISR_LP `IIL(v  1 e 1 0 ]
 "29
 [v _main main `(v  1 e 1 0 ]
-"6 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd.c
+"72
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+"6 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
 [v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
 "63
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
@@ -55,7 +57,7 @@
 [v _WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
 "364
 [v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
-[s S31 . 1 `uc 1 RC0 1 0 :1:0 
+[s S28 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -65,32 +67,32 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "2603 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic18f4550.h
-[s S40 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S37 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S47 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S44 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S54 . 1 `uc 1 . 1 0 :1:0 
+[s S51 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S58 . 1 `uc 1 . 1 0 :1:0 
+[s S55 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S61 . 1 `S31 1 . 1 0 `S40 1 . 1 0 `S47 1 . 1 0 `S54 1 . 1 0 `S58 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES61  1 e 1 @3970 ]
+[u S58 . 1 `S28 1 . 1 0 `S37 1 . 1 0 `S44 1 . 1 0 `S51 1 . 1 0 `S55 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES58  1 e 1 @3970 ]
 "2703
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-[s S202 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S270 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -100,7 +102,7 @@
 `uc 1 LATD7 1 0 :1:7 
 ]
 "3288
-[s S211 . 1 `uc 1 LD0 1 0 :1:0 
+[s S279 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -109,13 +111,13 @@
 `uc 1 LD6 1 0 :1:6 
 `uc 1 LD7 1 0 :1:7 
 ]
-[u S220 . 1 `S202 1 . 1 0 `S211 1 . 1 0 ]
-[v _LATDbits LATDbits `VES220  1 e 1 @3980 ]
+[u S288 . 1 `S270 1 . 1 0 `S279 1 . 1 0 ]
+[v _LATDbits LATDbits `VES288  1 e 1 @3980 ]
 "3845
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
 "3999
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S253 . 1 `uc 1 TRISD0 1 0 :1:0 
+[s S314 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -125,7 +127,7 @@
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "4031
-[s S262 . 1 `uc 1 RD0 1 0 :1:0 
+[s S323 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -134,8 +136,8 @@
 `uc 1 RD6 1 0 :1:6 
 `uc 1 RD7 1 0 :1:7 
 ]
-[u S271 . 1 `S253 1 . 1 0 `S262 1 . 1 0 ]
-[v _TRISDbits TRISDbits `VES271  1 e 1 @3989 ]
+[u S332 . 1 `S314 1 . 1 0 `S323 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES332  1 e 1 @3989 ]
 "6579
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 [s S101 . 1 `uc 1 . 1 0 :2:0 
@@ -210,7 +212,7 @@
 [v _lcdCleanAll lcdCleanAll `(v  1 e 1 0 ]
 {
 [s S22 . 33 `uc 1 NeedsRedraw 1 0 `[2][16]uc 1 Memory 32 1 ]
-[v lcdCleanAll@lcd lcd `*.39S22  1 p 2 3 ]
+[v lcdCleanAll@lcd lcd `*.39S22  1 p 2 5 ]
 "49
 } 0
 "38
@@ -228,7 +230,7 @@
 {
 "35
 } 0
-"63 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd.c
+"63 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
 {
 [v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
@@ -260,6 +262,15 @@
 {
 "110
 } 0
+"72 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+[v _delay_ms delay_ms `(v  1 e 1 0 ]
+{
+"74
+[v delay_ms@t t `uc  1 a 1 4 ]
+"72
+[v delay_ms@milis milis `ui  1 p 2 0 ]
+"78
+} 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic18\d10ktcyx.c
 [v _Delay10KTCYx Delay10KTCYx `(v  1 e 1 0 ]
 {
@@ -268,7 +279,7 @@
 [v Delay10KTCYx@unit unit `uc  1 a 1 1 ]
 "13
 } 0
-"6 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd.c
+"6 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\xlcd_mod.c
 [v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
 {
 "50
@@ -280,13 +291,13 @@
 [v DelayFor18TCY@i i `i  1 a 2 0 ]
 "106
 } 0
-"17 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
+"16 C:\Users\Luis Felipe Kunzler\Documents\UCS\2018-2\Micros\pic_libraries\GigaDeTestes.X\main.c
 [v _ISR_LP ISR_LP `IIL(v  1 e 1 0 ]
 {
 "27
 } 0
-"12
+"11
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"15
+"14
 } 0

@@ -4161,105 +4161,105 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;xlcd.h: 87: void OpenXLCD( unsigned char);
-[; ;xlcd.h: 92: void SetCGRamAddr( unsigned char);
-[; ;xlcd.h: 97: void SetDDRamAddr( unsigned char);
-[; ;xlcd.h: 102: unsigned char BusyXLCD(void);
-[; ;xlcd.h: 107: unsigned char ReadAddrXLCD(void);
-[; ;xlcd.h: 112: char ReadDataXLCD(void);
-[; ;xlcd.h: 117: void WriteCmdXLCD( unsigned char);
-[; ;xlcd.h: 122: void WriteDataXLCD( char);
-[; ;xlcd.h: 132: void putsXLCD( char *);
-[; ;xlcd.h: 137: void putrsXLCD(const char *);
-[; ;xlcd.h: 140: extern void DelayFor18TCY(void);
-[; ;xlcd.h: 141: extern void DelayPORXLCD(void);
-[; ;xlcd.h: 142: extern void DelayXLCD(void);
-"6 xlcd.c
+[; ;xlcd_mod.h: 87: void OpenXLCD( unsigned char);
+[; ;xlcd_mod.h: 92: void SetCGRamAddr( unsigned char);
+[; ;xlcd_mod.h: 97: void SetDDRamAddr( unsigned char);
+[; ;xlcd_mod.h: 102: unsigned char BusyXLCD(void);
+[; ;xlcd_mod.h: 107: unsigned char ReadAddrXLCD(void);
+[; ;xlcd_mod.h: 112: char ReadDataXLCD(void);
+[; ;xlcd_mod.h: 117: void WriteCmdXLCD( unsigned char);
+[; ;xlcd_mod.h: 122: void WriteDataXLCD( char);
+[; ;xlcd_mod.h: 132: void putsXLCD( char *);
+[; ;xlcd_mod.h: 137: void putrsXLCD(const char *);
+[; ;xlcd_mod.h: 140: extern void DelayFor18TCY(void);
+[; ;xlcd_mod.h: 141: extern void DelayPORXLCD(void);
+[; ;xlcd_mod.h: 142: extern void DelayXLCD(void);
+"6 xlcd_mod.c
 [v _BusyXLCD `(uc ~T0 @X0 1 ef ]
 "7
 {
-[; ;xlcd.c: 6: unsigned char BusyXLCD(void)
-[; ;xlcd.c: 7: {
+[; ;xlcd_mod.c: 6: unsigned char BusyXLCD(void)
+[; ;xlcd_mod.c: 7: {
 [e :U _BusyXLCD ]
 [f ]
-[; ;xlcd.c: 8: LATDbits.LATD5 = 1;
+[; ;xlcd_mod.c: 8: LATDbits.LATD5 = 1;
 "8
 [e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
-[; ;xlcd.c: 9: LATDbits.LATD6 = 0;
+[; ;xlcd_mod.c: 9: LATDbits.LATD6 = 0;
 "9
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 10: DelayFor18TCY();
+[; ;xlcd_mod.c: 10: DelayFor18TCY();
 "10
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 11: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 11: LATDbits.LATD4 = 1;
 "11
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 12: DelayFor18TCY();
+[; ;xlcd_mod.c: 12: DelayFor18TCY();
 "12
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 29: if (PORTD & 0x08)
+[; ;xlcd_mod.c: 29: if (PORTD & 0x08)
 "29
 [e $ ! != & -> _PORTD `i -> 8 `i -> 0 `i 398  ]
-[; ;xlcd.c: 31: {
+[; ;xlcd_mod.c: 31: {
 "31
 {
-[; ;xlcd.c: 32: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 32: LATDbits.LATD4 = 0;
 "32
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 33: DelayFor18TCY();
+[; ;xlcd_mod.c: 33: DelayFor18TCY();
 "33
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 34: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 34: LATDbits.LATD4 = 1;
 "34
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 35: DelayFor18TCY();
+[; ;xlcd_mod.c: 35: DelayFor18TCY();
 "35
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 36: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 36: LATDbits.LATD4 = 0;
 "36
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 37: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 37: LATDbits.LATD5 = 0;
 "37
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 38: return 1;
+[; ;xlcd_mod.c: 38: return 1;
 "38
 [e ) -> -> 1 `i `uc ]
 [e $UE 397  ]
 "39
 }
-[; ;xlcd.c: 39: } else
+[; ;xlcd_mod.c: 39: } else
 [e $U 399  ]
 [e :U 398 ]
-[; ;xlcd.c: 40: {
+[; ;xlcd_mod.c: 40: {
 "40
 {
-[; ;xlcd.c: 41: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 41: LATDbits.LATD4 = 0;
 "41
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 42: DelayFor18TCY();
+[; ;xlcd_mod.c: 42: DelayFor18TCY();
 "42
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 43: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 43: LATDbits.LATD4 = 1;
 "43
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 44: DelayFor18TCY();
+[; ;xlcd_mod.c: 44: DelayFor18TCY();
 "44
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 45: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 45: LATDbits.LATD4 = 0;
 "45
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 46: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 46: LATDbits.LATD5 = 0;
 "46
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 47: return 0;
+[; ;xlcd_mod.c: 47: return 0;
 "47
 [e ) -> -> 0 `i `uc ]
 [e $UE 397  ]
 "48
 }
 [e :U 399 ]
-[; ;xlcd.c: 48: }
-[; ;xlcd.c: 50: }
+[; ;xlcd_mod.c: 48: }
+[; ;xlcd_mod.c: 50: }
 "50
 [e :UE 397 ]
 }
@@ -4267,31 +4267,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _putrsXLCD `(v ~T0 @X0 1 ef1`*Cuc ]
 "53
 {
-[; ;xlcd.c: 52: void putrsXLCD(const char *buffer)
-[; ;xlcd.c: 53: {
+[; ;xlcd_mod.c: 52: void putrsXLCD(const char *buffer)
+[; ;xlcd_mod.c: 53: {
 [e :U _putrsXLCD ]
 "52
 [v _buffer `*Cuc ~T0 @X0 1 r1 ]
 "53
 [f ]
-[; ;xlcd.c: 54: while (*buffer)
+[; ;xlcd_mod.c: 54: while (*buffer)
 "54
 [e $U 401  ]
 [e :U 402 ]
-[; ;xlcd.c: 55: {
+[; ;xlcd_mod.c: 55: {
 "55
 {
-[; ;xlcd.c: 56: while (BusyXLCD());
+[; ;xlcd_mod.c: 56: while (BusyXLCD());
 "56
 [e $U 404  ]
 [e :U 405 ]
 [e :U 404 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 405  ]
 [e :U 406 ]
-[; ;xlcd.c: 57: WriteDataXLCD(*buffer);
+[; ;xlcd_mod.c: 57: WriteDataXLCD(*buffer);
 "57
 [e ( _WriteDataXLCD (1 *U _buffer ]
-[; ;xlcd.c: 58: buffer++;
+[; ;xlcd_mod.c: 58: buffer++;
 "58
 [e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
 "59
@@ -4300,11 +4300,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "54
 [e $ != -> *U _buffer `i -> -> -> 0 `i `Cuc `i 402  ]
 [e :U 403 ]
-[; ;xlcd.c: 59: }
-[; ;xlcd.c: 60: return;
+[; ;xlcd_mod.c: 59: }
+[; ;xlcd_mod.c: 60: return;
 "60
 [e $UE 400  ]
-[; ;xlcd.c: 61: }
+[; ;xlcd_mod.c: 61: }
 "61
 [e :UE 400 ]
 }
@@ -4312,126 +4312,126 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _OpenXLCD `(v ~T0 @X0 1 ef1`uc ]
 "64
 {
-[; ;xlcd.c: 63: void OpenXLCD(unsigned char lcdtype)
-[; ;xlcd.c: 64: {
+[; ;xlcd_mod.c: 63: void OpenXLCD(unsigned char lcdtype)
+[; ;xlcd_mod.c: 64: {
 [e :U _OpenXLCD ]
 "63
 [v _lcdtype `uc ~T0 @X0 1 r1 ]
 "64
 [f ]
-[; ;xlcd.c: 75: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 75: PORTD &= 0xf0;
 "75
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 76: TRISD &= 0xF0;
+[; ;xlcd_mod.c: 76: TRISD &= 0xF0;
 "76
 [e =& _TRISD -> -> 240 `i `uc ]
-[; ;xlcd.c: 79: TRISDbits.TRISD5 = 0;
+[; ;xlcd_mod.c: 79: TRISDbits.TRISD5 = 0;
 "79
 [e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 80: TRISDbits.TRISD6 = 0;
+[; ;xlcd_mod.c: 80: TRISDbits.TRISD6 = 0;
 "80
 [e = . . _TRISDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 81: TRISDbits.TRISD4 = 0;
+[; ;xlcd_mod.c: 81: TRISDbits.TRISD4 = 0;
 "81
 [e = . . _TRISDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 82: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 82: LATDbits.LATD5 = 0;
 "82
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 83: LATDbits.LATD6 = 0;
+[; ;xlcd_mod.c: 83: LATDbits.LATD6 = 0;
 "83
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 84: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 84: LATDbits.LATD4 = 0;
 "84
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 87: DelayPORXLCD();
+[; ;xlcd_mod.c: 87: DelayPORXLCD();
 "87
 [e ( _DelayPORXLCD ..  ]
-[; ;xlcd.c: 89: WriteCmdXLCD(0x30);
+[; ;xlcd_mod.c: 89: WriteCmdXLCD(0x30);
 "89
 [e ( _WriteCmdXLCD (1 -> -> 48 `i `uc ]
-[; ;xlcd.c: 90: Delay10KTCYx(0x05);
+[; ;xlcd_mod.c: 90: Delay10KTCYx(0x05);
 "90
 [e ( _Delay10KTCYx (1 -> -> 5 `i `uc ]
-[; ;xlcd.c: 92: WriteCmdXLCD(0x30);
+[; ;xlcd_mod.c: 92: WriteCmdXLCD(0x30);
 "92
 [e ( _WriteCmdXLCD (1 -> -> 48 `i `uc ]
-[; ;xlcd.c: 93: Delay10KTCYx(0x01);
+[; ;xlcd_mod.c: 93: Delay10KTCYx(0x01);
 "93
 [e ( _Delay10KTCYx (1 -> -> 1 `i `uc ]
-[; ;xlcd.c: 96: WriteCmdXLCD(0x32);
+[; ;xlcd_mod.c: 96: WriteCmdXLCD(0x32);
 "96
 [e ( _WriteCmdXLCD (1 -> -> 50 `i `uc ]
-[; ;xlcd.c: 97: while (BusyXLCD());
+[; ;xlcd_mod.c: 97: while (BusyXLCD());
 "97
 [e $U 408  ]
 [e :U 409 ]
 [e :U 408 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 409  ]
 [e :U 410 ]
-[; ;xlcd.c: 102: while (BusyXLCD());
+[; ;xlcd_mod.c: 102: while (BusyXLCD());
 "102
 [e $U 411  ]
 [e :U 412 ]
 [e :U 411 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 412  ]
 [e :U 413 ]
-[; ;xlcd.c: 103: WriteCmdXLCD(lcdtype);
+[; ;xlcd_mod.c: 103: WriteCmdXLCD(lcdtype);
 "103
 [e ( _WriteCmdXLCD (1 _lcdtype ]
-[; ;xlcd.c: 106: while (BusyXLCD());
+[; ;xlcd_mod.c: 106: while (BusyXLCD());
 "106
 [e $U 414  ]
 [e :U 415 ]
 [e :U 414 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 415  ]
 [e :U 416 ]
-[; ;xlcd.c: 107: WriteCmdXLCD(0b00001011 & 0b00001101 & 0b00001110);
+[; ;xlcd_mod.c: 107: WriteCmdXLCD(0b00001011 & 0b00001101 & 0b00001110);
 "107
 [e ( _WriteCmdXLCD (1 -> & & -> 11 `i -> 13 `i -> 14 `i `uc ]
-[; ;xlcd.c: 108: while (BusyXLCD());
+[; ;xlcd_mod.c: 108: while (BusyXLCD());
 "108
 [e $U 417  ]
 [e :U 418 ]
 [e :U 417 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 418  ]
 [e :U 419 ]
-[; ;xlcd.c: 109: WriteCmdXLCD(0b00001111 & 0b00001111 & 0b00001111);
+[; ;xlcd_mod.c: 109: WriteCmdXLCD(0b00001111 & 0b00001111 & 0b00001111);
 "109
 [e ( _WriteCmdXLCD (1 -> & & -> 15 `i -> 15 `i -> 15 `i `uc ]
-[; ;xlcd.c: 112: while (BusyXLCD());
+[; ;xlcd_mod.c: 112: while (BusyXLCD());
 "112
 [e $U 420  ]
 [e :U 421 ]
 [e :U 420 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 421  ]
 [e :U 422 ]
-[; ;xlcd.c: 113: WriteCmdXLCD(0x01);
+[; ;xlcd_mod.c: 113: WriteCmdXLCD(0x01);
 "113
 [e ( _WriteCmdXLCD (1 -> -> 1 `i `uc ]
-[; ;xlcd.c: 116: while (BusyXLCD());
+[; ;xlcd_mod.c: 116: while (BusyXLCD());
 "116
 [e $U 423  ]
 [e :U 424 ]
 [e :U 423 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 424  ]
 [e :U 425 ]
-[; ;xlcd.c: 117: WriteCmdXLCD(0b00000100);
+[; ;xlcd_mod.c: 117: WriteCmdXLCD(0b00000100);
 "117
 [e ( _WriteCmdXLCD (1 -> -> 4 `i `uc ]
-[; ;xlcd.c: 120: while (BusyXLCD());
+[; ;xlcd_mod.c: 120: while (BusyXLCD());
 "120
 [e $U 426  ]
 [e :U 427 ]
 [e :U 426 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 427  ]
 [e :U 428 ]
-[; ;xlcd.c: 121: SetDDRamAddr(0x80);
+[; ;xlcd_mod.c: 121: SetDDRamAddr(0x80);
 "121
 [e ( _SetDDRamAddr (1 -> -> 128 `i `uc ]
-[; ;xlcd.c: 123: return;
+[; ;xlcd_mod.c: 123: return;
 "123
 [e $UE 407  ]
-[; ;xlcd.c: 124: }
+[; ;xlcd_mod.c: 124: }
 "124
 [e :UE 407 ]
 }
@@ -4439,31 +4439,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _putsXLCD `(v ~T0 @X0 1 ef1`*uc ]
 "127
 {
-[; ;xlcd.c: 126: void putsXLCD(char *buffer)
-[; ;xlcd.c: 127: {
+[; ;xlcd_mod.c: 126: void putsXLCD(char *buffer)
+[; ;xlcd_mod.c: 127: {
 [e :U _putsXLCD ]
 "126
 [v _buffer `*uc ~T0 @X0 1 r1 ]
 "127
 [f ]
-[; ;xlcd.c: 128: while (*buffer)
+[; ;xlcd_mod.c: 128: while (*buffer)
 "128
 [e $U 430  ]
 [e :U 431 ]
-[; ;xlcd.c: 129: {
+[; ;xlcd_mod.c: 129: {
 "129
 {
-[; ;xlcd.c: 130: while (BusyXLCD());
+[; ;xlcd_mod.c: 130: while (BusyXLCD());
 "130
 [e $U 433  ]
 [e :U 434 ]
 [e :U 433 ]
 [e $ != -> ( _BusyXLCD ..  `i -> -> -> 0 `i `uc `i 434  ]
 [e :U 435 ]
-[; ;xlcd.c: 131: WriteDataXLCD(*buffer);
+[; ;xlcd_mod.c: 131: WriteDataXLCD(*buffer);
 "131
 [e ( _WriteDataXLCD (1 *U _buffer ]
-[; ;xlcd.c: 132: buffer++;
+[; ;xlcd_mod.c: 132: buffer++;
 "132
 [e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
 "133
@@ -4472,11 +4472,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "128
 [e $ != -> *U _buffer `i -> -> -> 0 `i `uc `i 431  ]
 [e :U 432 ]
-[; ;xlcd.c: 133: }
-[; ;xlcd.c: 134: return;
+[; ;xlcd_mod.c: 133: }
+[; ;xlcd_mod.c: 134: return;
 "134
 [e $UE 429  ]
-[; ;xlcd.c: 135: }
+[; ;xlcd_mod.c: 135: }
 "135
 [e :UE 429 ]
 }
@@ -4484,57 +4484,57 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ReadAddrXLCD `(uc ~T0 @X0 1 ef ]
 "138
 {
-[; ;xlcd.c: 137: unsigned char ReadAddrXLCD(void)
-[; ;xlcd.c: 138: {
+[; ;xlcd_mod.c: 137: unsigned char ReadAddrXLCD(void)
+[; ;xlcd_mod.c: 138: {
 [e :U _ReadAddrXLCD ]
 [f ]
 "139
 [v _data `uc ~T0 @X0 1 a ]
-[; ;xlcd.c: 139: char data;
-[; ;xlcd.c: 151: LATDbits.LATD5 = 1;
+[; ;xlcd_mod.c: 139: char data;
+[; ;xlcd_mod.c: 151: LATDbits.LATD5 = 1;
 "151
 [e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
-[; ;xlcd.c: 152: LATDbits.LATD6 = 0;
+[; ;xlcd_mod.c: 152: LATDbits.LATD6 = 0;
 "152
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 153: DelayFor18TCY();
+[; ;xlcd_mod.c: 153: DelayFor18TCY();
 "153
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 154: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 154: LATDbits.LATD4 = 1;
 "154
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 155: DelayFor18TCY();
+[; ;xlcd_mod.c: 155: DelayFor18TCY();
 "155
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 159: data = (PORTD << 4)&0xf0;
+[; ;xlcd_mod.c: 159: data = (PORTD << 4)&0xf0;
 "159
 [e = _data -> & << -> _PORTD `i -> 4 `i -> 240 `i `uc ]
-[; ;xlcd.c: 161: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 161: LATDbits.LATD4 = 0;
 "161
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 162: DelayFor18TCY();
+[; ;xlcd_mod.c: 162: DelayFor18TCY();
 "162
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 163: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 163: LATDbits.LATD4 = 1;
 "163
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 164: DelayFor18TCY();
+[; ;xlcd_mod.c: 164: DelayFor18TCY();
 "164
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 168: data |= PORTD & 0x0f;
+[; ;xlcd_mod.c: 168: data |= PORTD & 0x0f;
 "168
 [e =| _data -> & -> _PORTD `i -> 15 `i `uc ]
-[; ;xlcd.c: 170: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 170: LATDbits.LATD4 = 0;
 "170
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 171: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 171: LATDbits.LATD5 = 0;
 "171
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 173: return(data & 0x7f);
+[; ;xlcd_mod.c: 173: return(data & 0x7f);
 "173
 [e ) -> & -> _data `i -> 127 `i `uc ]
 [e $UE 436  ]
-[; ;xlcd.c: 174: }
+[; ;xlcd_mod.c: 174: }
 "174
 [e :UE 436 ]
 }
@@ -4542,60 +4542,60 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ReadDataXLCD `(uc ~T0 @X0 1 ef ]
 "177
 {
-[; ;xlcd.c: 176: char ReadDataXLCD(void)
-[; ;xlcd.c: 177: {
+[; ;xlcd_mod.c: 176: char ReadDataXLCD(void)
+[; ;xlcd_mod.c: 177: {
 [e :U _ReadDataXLCD ]
 [f ]
 "178
 [v _data `uc ~T0 @X0 1 a ]
-[; ;xlcd.c: 178: char data;
-[; ;xlcd.c: 191: LATDbits.LATD5 = 1;
+[; ;xlcd_mod.c: 178: char data;
+[; ;xlcd_mod.c: 191: LATDbits.LATD5 = 1;
 "191
 [e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
-[; ;xlcd.c: 192: LATDbits.LATD6 = 1;
+[; ;xlcd_mod.c: 192: LATDbits.LATD6 = 1;
 "192
 [e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[; ;xlcd.c: 193: DelayFor18TCY();
+[; ;xlcd_mod.c: 193: DelayFor18TCY();
 "193
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 194: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 194: LATDbits.LATD4 = 1;
 "194
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 195: DelayFor18TCY();
+[; ;xlcd_mod.c: 195: DelayFor18TCY();
 "195
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 199: data = (PORTD << 4)&0xf0;
+[; ;xlcd_mod.c: 199: data = (PORTD << 4)&0xf0;
 "199
 [e = _data -> & << -> _PORTD `i -> 4 `i -> 240 `i `uc ]
-[; ;xlcd.c: 201: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 201: LATDbits.LATD4 = 0;
 "201
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 202: DelayFor18TCY();
+[; ;xlcd_mod.c: 202: DelayFor18TCY();
 "202
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 203: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 203: LATDbits.LATD4 = 1;
 "203
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 204: DelayFor18TCY();
+[; ;xlcd_mod.c: 204: DelayFor18TCY();
 "204
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 208: data |= PORTD & 0x0f;
+[; ;xlcd_mod.c: 208: data |= PORTD & 0x0f;
 "208
 [e =| _data -> & -> _PORTD `i -> 15 `i `uc ]
-[; ;xlcd.c: 210: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 210: LATDbits.LATD4 = 0;
 "210
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 211: LATDbits.LATD6 = 0;
+[; ;xlcd_mod.c: 211: LATDbits.LATD6 = 0;
 "211
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 212: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 212: LATDbits.LATD5 = 0;
 "212
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 214: return(data);
+[; ;xlcd_mod.c: 214: return(data);
 "214
 [e ) _data ]
 [e $UE 437  ]
-[; ;xlcd.c: 215: }
+[; ;xlcd_mod.c: 215: }
 "215
 [e :UE 437 ]
 }
@@ -4603,65 +4603,65 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SetCGRamAddr `(v ~T0 @X0 1 ef1`uc ]
 "218
 {
-[; ;xlcd.c: 217: void SetCGRamAddr(unsigned char CGaddr)
-[; ;xlcd.c: 218: {
+[; ;xlcd_mod.c: 217: void SetCGRamAddr(unsigned char CGaddr)
+[; ;xlcd_mod.c: 218: {
 [e :U _SetCGRamAddr ]
 "217
 [v _CGaddr `uc ~T0 @X0 1 r1 ]
 "218
 [f ]
-[; ;xlcd.c: 236: TRISD &= 0xf0;
+[; ;xlcd_mod.c: 236: TRISD &= 0xf0;
 "236
 [e =& _TRISD -> -> 240 `i `uc ]
-[; ;xlcd.c: 237: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 237: PORTD &= 0xf0;
 "237
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 238: PORTD |= (((CGaddr | 0b01000000) >> 4) & 0x0f);
+[; ;xlcd_mod.c: 238: PORTD |= (((CGaddr | 0b01000000) >> 4) & 0x0f);
 "238
 [e =| _PORTD -> & >> | -> _CGaddr `i -> 64 `i -> 4 `i -> 15 `i `uc ]
-[; ;xlcd.c: 240: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 240: LATDbits.LATD5 = 0;
 "240
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 241: LATDbits.LATD6 = 0;
+[; ;xlcd_mod.c: 241: LATDbits.LATD6 = 0;
 "241
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 242: DelayFor18TCY();
+[; ;xlcd_mod.c: 242: DelayFor18TCY();
 "242
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 243: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 243: LATDbits.LATD4 = 1;
 "243
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 244: DelayFor18TCY();
+[; ;xlcd_mod.c: 244: DelayFor18TCY();
 "244
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 245: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 245: LATDbits.LATD4 = 0;
 "245
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 250: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 250: PORTD &= 0xf0;
 "250
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 251: PORTD |= (CGaddr & 0x0f);
+[; ;xlcd_mod.c: 251: PORTD |= (CGaddr & 0x0f);
 "251
 [e =| _PORTD -> & -> _CGaddr `i -> 15 `i `uc ]
-[; ;xlcd.c: 253: DelayFor18TCY();
+[; ;xlcd_mod.c: 253: DelayFor18TCY();
 "253
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 254: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 254: LATDbits.LATD4 = 1;
 "254
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 255: DelayFor18TCY();
+[; ;xlcd_mod.c: 255: DelayFor18TCY();
 "255
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 256: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 256: LATDbits.LATD4 = 0;
 "256
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 260: TRISD |= 0x0f;
+[; ;xlcd_mod.c: 260: TRISD |= 0x0f;
 "260
 [e =| _TRISD -> -> 15 `i `uc ]
-[; ;xlcd.c: 263: return;
+[; ;xlcd_mod.c: 263: return;
 "263
 [e $UE 438  ]
-[; ;xlcd.c: 264: }
+[; ;xlcd_mod.c: 264: }
 "264
 [e :UE 438 ]
 }
@@ -4669,65 +4669,65 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SetDDRamAddr `(v ~T0 @X0 1 ef1`uc ]
 "267
 {
-[; ;xlcd.c: 266: void SetDDRamAddr(unsigned char DDaddr)
-[; ;xlcd.c: 267: {
+[; ;xlcd_mod.c: 266: void SetDDRamAddr(unsigned char DDaddr)
+[; ;xlcd_mod.c: 267: {
 [e :U _SetDDRamAddr ]
 "266
 [v _DDaddr `uc ~T0 @X0 1 r1 ]
 "267
 [f ]
-[; ;xlcd.c: 285: TRISD &= 0xf0;
+[; ;xlcd_mod.c: 285: TRISD &= 0xf0;
 "285
 [e =& _TRISD -> -> 240 `i `uc ]
-[; ;xlcd.c: 286: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 286: PORTD &= 0xf0;
 "286
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 287: PORTD |= (((DDaddr | 0b10000000) >> 4) & 0x0f);
+[; ;xlcd_mod.c: 287: PORTD |= (((DDaddr | 0b10000000) >> 4) & 0x0f);
 "287
 [e =| _PORTD -> & >> | -> _DDaddr `i -> 128 `i -> 4 `i -> 15 `i `uc ]
-[; ;xlcd.c: 289: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 289: LATDbits.LATD5 = 0;
 "289
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 290: LATDbits.LATD6 = 0;
+[; ;xlcd_mod.c: 290: LATDbits.LATD6 = 0;
 "290
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 291: DelayFor18TCY();
+[; ;xlcd_mod.c: 291: DelayFor18TCY();
 "291
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 292: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 292: LATDbits.LATD4 = 1;
 "292
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 293: DelayFor18TCY();
+[; ;xlcd_mod.c: 293: DelayFor18TCY();
 "293
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 294: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 294: LATDbits.LATD4 = 0;
 "294
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 299: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 299: PORTD &= 0xf0;
 "299
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 300: PORTD |= (DDaddr & 0x0f);
+[; ;xlcd_mod.c: 300: PORTD |= (DDaddr & 0x0f);
 "300
 [e =| _PORTD -> & -> _DDaddr `i -> 15 `i `uc ]
-[; ;xlcd.c: 302: DelayFor18TCY();
+[; ;xlcd_mod.c: 302: DelayFor18TCY();
 "302
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 303: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 303: LATDbits.LATD4 = 1;
 "303
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 304: DelayFor18TCY();
+[; ;xlcd_mod.c: 304: DelayFor18TCY();
 "304
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 305: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 305: LATDbits.LATD4 = 0;
 "305
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 309: TRISD |= 0x0f;
+[; ;xlcd_mod.c: 309: TRISD |= 0x0f;
 "309
 [e =| _TRISD -> -> 15 `i `uc ]
-[; ;xlcd.c: 312: return;
+[; ;xlcd_mod.c: 312: return;
 "312
 [e $UE 439  ]
-[; ;xlcd.c: 313: }
+[; ;xlcd_mod.c: 313: }
 "313
 [e :UE 439 ]
 }
@@ -4735,65 +4735,65 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _WriteCmdXLCD `(v ~T0 @X0 1 ef1`uc ]
 "316
 {
-[; ;xlcd.c: 315: void WriteCmdXLCD(unsigned char cmd)
-[; ;xlcd.c: 316: {
+[; ;xlcd_mod.c: 315: void WriteCmdXLCD(unsigned char cmd)
+[; ;xlcd_mod.c: 316: {
 [e :U _WriteCmdXLCD ]
 "315
 [v _cmd `uc ~T0 @X0 1 r1 ]
 "316
 [f ]
-[; ;xlcd.c: 334: TRISD &= 0xf0;
+[; ;xlcd_mod.c: 334: TRISD &= 0xf0;
 "334
 [e =& _TRISD -> -> 240 `i `uc ]
-[; ;xlcd.c: 335: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 335: PORTD &= 0xf0;
 "335
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 336: PORTD |= (cmd >> 4)&0x0f;
+[; ;xlcd_mod.c: 336: PORTD |= (cmd >> 4)&0x0f;
 "336
 [e =| _PORTD -> & >> -> _cmd `i -> 4 `i -> 15 `i `uc ]
-[; ;xlcd.c: 338: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 338: LATDbits.LATD5 = 0;
 "338
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 339: LATDbits.LATD6 = 0;
+[; ;xlcd_mod.c: 339: LATDbits.LATD6 = 0;
 "339
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
-[; ;xlcd.c: 340: DelayFor18TCY();
+[; ;xlcd_mod.c: 340: DelayFor18TCY();
 "340
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 341: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 341: LATDbits.LATD4 = 1;
 "341
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 342: DelayFor18TCY();
+[; ;xlcd_mod.c: 342: DelayFor18TCY();
 "342
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 343: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 343: LATDbits.LATD4 = 0;
 "343
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 348: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 348: PORTD &= 0xf0;
 "348
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 349: PORTD |= cmd & 0x0f;
+[; ;xlcd_mod.c: 349: PORTD |= cmd & 0x0f;
 "349
 [e =| _PORTD -> & -> _cmd `i -> 15 `i `uc ]
-[; ;xlcd.c: 351: DelayFor18TCY();
+[; ;xlcd_mod.c: 351: DelayFor18TCY();
 "351
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 352: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 352: LATDbits.LATD4 = 1;
 "352
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 353: DelayFor18TCY();
+[; ;xlcd_mod.c: 353: DelayFor18TCY();
 "353
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 354: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 354: LATDbits.LATD4 = 0;
 "354
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 358: TRISD |= 0x0f;
+[; ;xlcd_mod.c: 358: TRISD |= 0x0f;
 "358
 [e =| _TRISD -> -> 15 `i `uc ]
-[; ;xlcd.c: 361: return;
+[; ;xlcd_mod.c: 361: return;
 "361
 [e $UE 440  ]
-[; ;xlcd.c: 362: }
+[; ;xlcd_mod.c: 362: }
 "362
 [e :UE 440 ]
 }
@@ -4801,65 +4801,65 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _WriteDataXLCD `(v ~T0 @X0 1 ef1`uc ]
 "365
 {
-[; ;xlcd.c: 364: void WriteDataXLCD(char data)
-[; ;xlcd.c: 365: {
+[; ;xlcd_mod.c: 364: void WriteDataXLCD(char data)
+[; ;xlcd_mod.c: 365: {
 [e :U _WriteDataXLCD ]
 "364
 [v _data `uc ~T0 @X0 1 r1 ]
 "365
 [f ]
-[; ;xlcd.c: 383: TRISD &= 0xf0;
+[; ;xlcd_mod.c: 383: TRISD &= 0xf0;
 "383
 [e =& _TRISD -> -> 240 `i `uc ]
-[; ;xlcd.c: 384: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 384: PORTD &= 0xf0;
 "384
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 385: PORTD |= ((data >> 4)&0x0f);
+[; ;xlcd_mod.c: 385: PORTD |= ((data >> 4)&0x0f);
 "385
 [e =| _PORTD -> & >> -> _data `i -> 4 `i -> 15 `i `uc ]
-[; ;xlcd.c: 387: LATDbits.LATD6 = 1;
+[; ;xlcd_mod.c: 387: LATDbits.LATD6 = 1;
 "387
 [e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
-[; ;xlcd.c: 388: LATDbits.LATD5 = 0;
+[; ;xlcd_mod.c: 388: LATDbits.LATD5 = 0;
 "388
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
-[; ;xlcd.c: 389: DelayFor18TCY();
+[; ;xlcd_mod.c: 389: DelayFor18TCY();
 "389
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 390: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 390: LATDbits.LATD4 = 1;
 "390
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 391: DelayFor18TCY();
+[; ;xlcd_mod.c: 391: DelayFor18TCY();
 "391
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 392: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 392: LATDbits.LATD4 = 0;
 "392
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 397: PORTD &= 0xf0;
+[; ;xlcd_mod.c: 397: PORTD &= 0xf0;
 "397
 [e =& _PORTD -> -> 240 `i `uc ]
-[; ;xlcd.c: 398: PORTD |= (data & 0x0f);
+[; ;xlcd_mod.c: 398: PORTD |= (data & 0x0f);
 "398
 [e =| _PORTD -> & -> _data `i -> 15 `i `uc ]
-[; ;xlcd.c: 400: DelayFor18TCY();
+[; ;xlcd_mod.c: 400: DelayFor18TCY();
 "400
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 401: LATDbits.LATD4 = 1;
+[; ;xlcd_mod.c: 401: LATDbits.LATD4 = 1;
 "401
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
-[; ;xlcd.c: 402: DelayFor18TCY();
+[; ;xlcd_mod.c: 402: DelayFor18TCY();
 "402
 [e ( _DelayFor18TCY ..  ]
-[; ;xlcd.c: 403: LATDbits.LATD4 = 0;
+[; ;xlcd_mod.c: 403: LATDbits.LATD4 = 0;
 "403
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
-[; ;xlcd.c: 407: TRISD |= 0x0f;
+[; ;xlcd_mod.c: 407: TRISD |= 0x0f;
 "407
 [e =| _TRISD -> -> 15 `i `uc ]
-[; ;xlcd.c: 410: return;
+[; ;xlcd_mod.c: 410: return;
 "410
 [e $UE 441  ]
-[; ;xlcd.c: 411: }
+[; ;xlcd_mod.c: 411: }
 "411
 [e :UE 441 ]
 }

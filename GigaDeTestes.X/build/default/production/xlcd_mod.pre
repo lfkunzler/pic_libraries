@@ -1,5 +1,5 @@
 
-# 1 "xlcd.c"
+# 1 "xlcd_mod.c"
 
 # 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -5662,7 +5662,7 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 87 "xlcd.h"
+# 87 "xlcd_mod.h"
 void OpenXLCD( unsigned char);
 
 # 92
@@ -5697,7 +5697,7 @@ extern void DelayFor18TCY(void);
 extern void DelayPORXLCD(void);
 extern void DelayXLCD(void);
 
-# 6 "xlcd.c"
+# 6 "xlcd_mod.c"
 unsigned char BusyXLCD(void)
 {
 LATDbits.LATD5 = 1;
